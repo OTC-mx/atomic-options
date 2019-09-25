@@ -41,7 +41,7 @@ def setup(_issuer: address, _buyer: address,
           _maturity_time: timestamp, _expiry_time: timestamp):
     assert (self.state == STATE_UNINITIALIZED)
     assert (_base_addr != _asset_addr)
-    assert (_expiry_time > block.timestamp)
+    assert (_expiry_time > block.timestamp) and (_expiry_time > _maturity_time)
 
     self.issuer = _issuer
     self.buyer = _buyer
@@ -84,7 +84,7 @@ def relay_fee():
 
     self.state = STATE_ACTIVE
 
-## Exercises the option.
+## Exercises the option and refunds the issuer for unused volume.
 # Can only be called by buyer.
 @public
 def exercise():
@@ -99,3 +99,13 @@ def exercise():
         self.asset.transfer(self.issuer, self.volume - volume_exercised)
 
     self.state = STATE_EXERCISED
+
+## Marks option as expired and refunds issuer.
+@public
+def expire():
+    assert (self.expiry_time <= block.timestamp)
+    assert (self.state != STATE_EXERCISED) and (self.state != STATE_EXPIRED)
+    asset_balance: uint256 = self.asset.balanceOf(self)
+    self.asset.transfer(self.issuer, asset_balance)
+
+    self.state = STATE_EXPIRED
