@@ -90,13 +90,14 @@ def relay_fee():
 def exercise():
     assert (msg.sender == self.buyer)
     assert (self.expiry_time > block.timestamp) and (self.maturity_time <= block.timestamp)
+    assert (self.state == STATE_ACTIVE) or (self.state == STATE_EXERCISED)
     base_balance: uint256 = self.base.balanceOf(self)
     volume_exercised: uint256 = (base_balance * self.strike_price_base) / self.strike_price_quote
     assert (volume_exercised <= self.volume)
     self.base.transfer(self.issuer, base_balance)
     self.asset.transfer(self.buyer, volume_exercised)
-    if volume_exercised != self.volume:
-        self.asset.transfer(self.issuer, self.volume - volume_exercised)
+
+    self.volume = self.volume - volume_exercised
 
     self.state = STATE_EXERCISED
 
@@ -104,7 +105,7 @@ def exercise():
 @public
 def expire():
     assert (self.expiry_time <= block.timestamp)
-    assert (self.state != STATE_EXERCISED) and (self.state != STATE_EXPIRED)
+    assert (self.state != STATE_EXPIRED)
     asset_balance: uint256 = self.asset.balanceOf(self)
     self.asset.transfer(self.issuer, asset_balance)
 
