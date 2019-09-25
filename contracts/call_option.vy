@@ -9,9 +9,11 @@ base_addr: address
 asset_addr: address
 
 ## Financial information
-# Fee and strike price (in base), volume (of asset)
+# Fee
 fee: uint256
-strike_price: uint256
+# Strike price [i.e. (strike_price_base * base_volume) / strike_price_quote = asset_volume]
+strike_price_base: uint256
+strike_price_quote: uint256
 volume: uint256
 # Option can be exercised between maturity_time and expiry_time
 maturity_time: timestamp
@@ -34,7 +36,8 @@ asset: ERC20
 @public
 def setup(_issuer: address, _buyer: address,
           _base_addr: address, _asset_addr: address,
-          _fee: uint256, _strike_price: uint256, _volume: uint256,
+          _fee: uint256, _strike_price_base: uint256, _strike_price_quote: uint256,
+          _volume: uint256,
           _maturity_time: timestamp, _expiry_time: timestamp):
     assert (self.state == STATE_UNINITIALIZED)
     assert (_base_addr != _asset_addr)
@@ -45,7 +48,8 @@ def setup(_issuer: address, _buyer: address,
     self.base_addr = _base_addr
     self.asset_addr = _asset_addr
     self.fee = _fee
-    self.strike_price = _strike_price
+    self.strike_price_base = _strike_price_base
+    self.strike_price_quote = _strike_price_quote
     self.volume = _volume
     self.maturity_time = _maturity_time
     self.expiry_time = _expiry_time
@@ -55,7 +59,7 @@ def setup(_issuer: address, _buyer: address,
 
     self.state = STATE_INITIALIZED
 
-## Checks that option has been collateralized by issuer
+## Checks that option has been collateralized by issuer.
 @public
 def check_collateralization():
     assert (self.state == STATE_INITIALIZED)
@@ -67,15 +71,31 @@ def check_collateralization():
 
     self.state = STATE_COLLATERALIZED
 
-## Checks that fee has been paid, relays to issuer
+## Checks that fee has been paid, relays to issuer.
 @public
 def relay_fee():
     assert (self.state == STATE_COLLATERALIZED)
     assert (self.expiry_time > block.timestamp)
-    base_balance: uint256 =  self.base.balanceOf(self)
+    base_balance: uint256 = self.base.balanceOf(self)
     assert (base_balance >= self.fee)
     self.base.transfer(self.issuer, self.fee)
     if base_balance > self.fee:
         self.base.transfer(self.buyer, base_balance - self.fee)
 
     self.state = STATE_ACTIVE
+
+## Exercises the option.
+# Can only be called by buyer.
+@public
+def exercise():
+    assert (msg.sender == self.buyer)
+    assert (self.expiry_time > block.timestamp) and (self.maturity_time <= block.timestamp)
+    base_balance: uint256 = self.base.balanceOf(self)
+    volume_exercised: uint256 = (base_balance * self.strike_price_base) / self.strike_price_quote
+    assert (volume_exercised <= self.volume)
+    self.base.transfer(self.issuer, base_balance)
+    self.asset.transfer(self.buyer, volume_exercised)
+    if volume_exercised != self.volume:
+        self.asset.transfer(self.issuer, self.volume - volume_exercised)
+
+    self.state = STATE_EXERCISED
