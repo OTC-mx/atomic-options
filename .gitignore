@@ -1,0 +1,4 @@
+/build
+/migrations
+/test
+truffle-config.js
