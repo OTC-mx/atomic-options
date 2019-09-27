@@ -5,7 +5,7 @@ contract Option():
               _volume: uint256,
               _maturity_time: timestamp, _expiry_time: timestamp): modifying
 
-template: address
+template: public(address)
 
 @public
 def initializeFactory(_template: address):

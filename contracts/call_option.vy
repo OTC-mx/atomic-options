@@ -2,25 +2,25 @@ from vyper.interfaces import ERC20
 
 ## Basic information
 # Buyer and issuer of the option
-issuer: address
-buyer: address
+issuer: public(address)
+buyer: public(address)
 # Address of the base (that you pay), asset (being bought)
-base_addr: address
-asset_addr: address
+base_addr: public(address)
+asset_addr: public(address)
 
 ## Financial information
 # Fee
-fee: uint256
+fee: public(uint256)
 # Strike price [i.e. (strike_price_base * base_volume) / strike_price_quote = asset_volume]
-strike_price_base: uint256
-strike_price_quote: uint256
-volume: uint256
+strike_price_base: public(uint256)
+strike_price_quote: public(uint256)
+volume: public(uint256)
 # Option can be exercised between maturity_time and expiry_time
-maturity_time: timestamp
-expiry_time: timestamp
+maturity_time: public(timestamp)
+expiry_time: public(timestamp)
 
 ## Contract states
-state: uint256
+state: public(uint256)
 STATE_UNINITIALIZED: constant(uint256) = 0
 STATE_INITIALIZED: constant(uint256) = 1
 STATE_COLLATERALIZED: constant(uint256) = 2

@@ -1,4 +1,6 @@
 /build
 /migrations
 /test
+/installed_contracts
 truffle-config.js
+Migrations.sol
