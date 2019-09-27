@@ -1,6 +1,7 @@
 /build
+truffle-config.js
+
+# Below this line are temporary
 /migrations
 /test
 /installed_contracts
-truffle-config.js
-Migrations.sol
