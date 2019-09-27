@@ -5,6 +5,9 @@ contract Option():
               _volume: uint256,
               _maturity_time: timestamp, _expiry_time: timestamp): modifying
 
+Initialized: event({template: address})
+NewOption: event({option: address})
+
 template: public(address)
 
 @public
@@ -23,4 +26,5 @@ def createOption(_issuer: address, _buyer: address,
                         _base_addr, _asset_addr,
                         _fee, _strike_price_base, _strike_price_quote,
                         _volume, _maturity_time, _expiry_time)
+    log.NewOption(option)
     return option
