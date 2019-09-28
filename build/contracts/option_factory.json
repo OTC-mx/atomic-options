@@ -1,0 +1,171 @@
+{
+  "contractName": "option_factory",
+  "abi": [
+    {
+      "name": "Initialized",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "template",
+          "indexed": false
+        }
+      ],
+      "anonymous": false,
+      "type": "event"
+    },
+    {
+      "name": "NewOption",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "option",
+          "indexed": false
+        }
+      ],
+      "anonymous": false,
+      "type": "event"
+    },
+    {
+      "name": "initializeFactory",
+      "outputs": [],
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_template"
+        }
+      ],
+      "constant": false,
+      "payable": false,
+      "type": "function",
+      "gas": 35645
+    },
+    {
+      "name": "createOption",
+      "outputs": [
+        {
+          "type": "address",
+          "name": "out"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "address",
+          "name": "_issuer"
+        },
+        {
+          "type": "address",
+          "name": "_buyer"
+        },
+        {
+          "type": "address",
+          "name": "_base_addr"
+        },
+        {
+          "type": "address",
+          "name": "_asset_addr"
+        },
+        {
+          "type": "uint256",
+          "name": "_fee"
+        },
+        {
+          "type": "uint256",
+          "name": "_strike_price_base"
+        },
+        {
+          "type": "uint256",
+          "name": "_strike_price_quote"
+        },
+        {
+          "type": "uint256",
+          "name": "_volume"
+        },
+        {
+          "type": "uint256",
+          "unit": "sec",
+          "name": "_maturity_time"
+        },
+        {
+          "type": "uint256",
+          "unit": "sec",
+          "name": "_expiry_time"
+        }
+      ],
+      "constant": false,
+      "payable": false,
+      "type": "function",
+      "gas": 47101
+    },
+    {
+      "name": "template",
+      "outputs": [
+        {
+          "type": "address",
+          "name": "out"
+        }
+      ],
+      "inputs": [],
+      "constant": true,
+      "payable": false,
+      "type": "function",
+      "gas": 611
+    }
+  ],
+  "bytecode": "0x6102b156600436101561000d576102a7565b600035601c52740100000000000000000000000000000000000000006020526f7fffffffffffffffffffffffffffffff6040527fffffffffffffffffffffffffffffffff8000000000000000000000000000000060605274012a05f1fffffffffffffffffffffffffdabf41c006080527ffffffffffffffffffffffffed5fa0e000000000000000000000000000000000060a05263538a3f0e60005114156100e15734156100ba57600080fd5b60043560205181106100cb57600080fd5b50600054156100d957600080fd5b600435600055005b6370cec866600051141561027f5734156100fa57600080fd5b600435602051811061010b57600080fd5b50602435602051811061011d57600080fd5b50604435602051811061012f57600080fd5b50606435602051811061014157600080fd5b507f6033600c60003960336000f33660006000376110006000366000730000000000610160526c010000000000000000000000006000540261017b527f5af4602c57600080fd5b6110006000f30000000000000000000000000000000061018f5260606101606000f0806101b457600080fd5b61014052610140513b6101c657600080fd5b6101405130186101d557600080fd5b6000600061014463c31721ec61020052600435610220526024356102405260443561026052606435610280526084356102a05260a4356102c05260c4356102e05260e435610300526101043561032052610124356103405261021c6000610140515af161024157600080fd5b610140516103a0527f927c4ca180dbb5c7c47fbea3d98025d87248119df45da897c7d00fcca433f83760206103a0a16101405160005260206000f350005b636f2ddd9360005114156102a657341561029857600080fd5b60005460005260206000f350005b5b60006000fd5b6100046102b1036100046000396100046102b1036000f3",
+  "deployedBytecode": "0x600436101561000d576102a7565b600035601c52740100000000000000000000000000000000000000006020526f7fffffffffffffffffffffffffffffff6040527fffffffffffffffffffffffffffffffff8000000000000000000000000000000060605274012a05f1fffffffffffffffffffffffffdabf41c006080527ffffffffffffffffffffffffed5fa0e000000000000000000000000000000000060a05263538a3f0e60005114156100e15734156100ba57600080fd5b60043560205181106100cb57600080fd5b50600054156100d957600080fd5b600435600055005b6370cec866600051141561027f5734156100fa57600080fd5b600435602051811061010b57600080fd5b50602435602051811061011d57600080fd5b50604435602051811061012f57600080fd5b50606435602051811061014157600080fd5b507f6033600c60003960336000f33660006000376110006000366000730000000000610160526c010000000000000000000000006000540261017b527f5af4602c57600080fd5b6110006000f30000000000000000000000000000000061018f5260606101606000f0806101b457600080fd5b61014052610140513b6101c657600080fd5b6101405130186101d557600080fd5b6000600061014463c31721ec61020052600435610220526024356102405260443561026052606435610280526084356102a05260a4356102c05260c4356102e05260e435610300526101043561032052610124356103405261021c6000610140515af161024157600080fd5b610140516103a0527f927c4ca180dbb5c7c47fbea3d98025d87248119df45da897c7d00fcca433f83760206103a0a16101405160005260206000f350005b636f2ddd9360005114156102a657341561029857600080fd5b60005460005260206000f350005b5b60006000fd",
+  "source": "contract Option():\n    def setup(_issuer: address, _buyer: address,\n              _base_addr: address, _asset_addr: address,\n              _fee: uint256, _strike_price_base: uint256, _strike_price_quote: uint256,\n              _volume: uint256,\n              _maturity_time: timestamp, _expiry_time: timestamp): modifying\n\nInitialized: event({template: address})\nNewOption: event({option: address})\n\ntemplate: public(address)\n\n@public\ndef initializeFactory(_template: address):\n    assert self.template == ZERO_ADDRESS\n    self.template = _template\n\n@public\ndef createOption(_issuer: address, _buyer: address,\n                _base_addr: address, _asset_addr: address,\n                _fee: uint256, _strike_price_base: uint256, _strike_price_quote: uint256,\n                _volume: uint256,\n                _maturity_time: timestamp, _expiry_time: timestamp) -> address:\n    option: address = create_forwarder_to(self.template)\n    Option(option).setup(_issuer, _buyer,\n                        _base_addr, _asset_addr,\n                        _fee, _strike_price_base, _strike_price_quote,\n                        _volume, _maturity_time, _expiry_time)\n    log.NewOption(option)\n    return option\n",
+  "sourcePath": "/Users/Karim/Desktop/atomicoptions/contracts/option_factory.vy",
+  "compiler": {
+    "name": "vyper",
+    "version": "0.1.0b12+commit.32ce6c9"
+  },
+  "networks": {
+    "1569596394161": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0x47df76327695ae55fa725b9274294a50a0073d655e0aa65bb706265fb0de6d89"
+    },
+    "1569597887881": {
+      "events": {},
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0x47df76327695ae55fa725b9274294a50a0073d655e0aa65bb706265fb0de6d89"
+    },
+    "1569654368394": {
+      "events": {
+        "0x908408e307fc569b417f6cbec5d5a06f44a0a505ac0479b47d421a4b2fd6a1e6": {
+          "name": "Initialized",
+          "inputs": [
+            {
+              "type": "address",
+              "name": "template",
+              "indexed": false
+            }
+          ],
+          "anonymous": false,
+          "type": "event",
+          "signature": "0x908408e307fc569b417f6cbec5d5a06f44a0a505ac0479b47d421a4b2fd6a1e6"
+        },
+        "0x927c4ca180dbb5c7c47fbea3d98025d87248119df45da897c7d00fcca433f837": {
+          "name": "NewOption",
+          "inputs": [
+            {
+              "type": "address",
+              "name": "option",
+              "indexed": false
+            }
+          ],
+          "anonymous": false,
+          "type": "event",
+          "signature": "0x927c4ca180dbb5c7c47fbea3d98025d87248119df45da897c7d00fcca433f837"
+        }
+      },
+      "links": {},
+      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
+      "transactionHash": "0xebc23bc5fdc28ba9073d36b23a4a93db7d6586ed79d2a8baecbc3067a61f051c"
+    }
+  },
+  "schemaVersion": "3.0.16",
+  "updatedAt": "2019-09-28T07:06:22.020Z"
+}

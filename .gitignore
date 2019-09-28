@@ -1,5 +1,3 @@
-/build
 truffle-config.js
 
-# Below this line are temporary
 /installed_contracts
