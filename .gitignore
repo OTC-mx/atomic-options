@@ -2,6 +2,4 @@
 truffle-config.js
 
 # Below this line are temporary
-/migrations
-/test
 /installed_contracts
