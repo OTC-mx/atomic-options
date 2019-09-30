@@ -300,8 +300,14 @@
       "links": {},
       "address": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
       "transactionHash": "0x59c4cad78d8623d0a0d73dbad7517ee04b4516c165a9ea30f906641c1e2818d3"
+    },
+    "1569778904463": {
+      "events": {},
+      "links": {},
+      "address": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+      "transactionHash": "0x59c4cad78d8623d0a0d73dbad7517ee04b4516c165a9ea30f906641c1e2818d3"
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-09-28T07:06:22.017Z"
+  "updatedAt": "2019-09-29T17:41:57.636Z"
 }
