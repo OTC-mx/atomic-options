@@ -112,7 +112,7 @@ def exercise(strike_price_base: uint256, strike_price_quote: uint256, salt: byte
 # Can only be called by issuer
 @public
 def expire():
-    assert (msg.sender == self.issuer)
+    assert (msg.sender == self.buyer) or (msg.sender == self.issuer)
     assert (self.expiry_time <= block.timestamp) or (self.state == STATE_COLLATERALIZED)
     assert (self.state != STATE_EXPIRED)
     asset_balance: uint256 = self.asset.balanceOf(self)
