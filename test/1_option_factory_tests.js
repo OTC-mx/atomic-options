@@ -75,6 +75,8 @@ contract("1st OptionFactory test suite", async accounts => {
     let maturity_time_observed = await call_option.methods.maturity_time().call();
     let expiry_time_observed = await call_option.methods.expiry_time().call();
 
+    let info_observed = await call_option.methods.get_info().call();
+
     let expected = [issuer, buyer, base_addr, asset_addr, fee,
       strike_price_base, strike_price_quote, volume, maturity_time, expiry_time]
 
@@ -85,7 +87,9 @@ contract("1st OptionFactory test suite", async accounts => {
 
     for (var i = 0; i < expected.length; i++) {
       assert.equal(expected[i], observed[i]);
+      assert.equal(expected[i], info_observed[i]);
     }
+    assert.equal(info_observed[i], 1);
   });
 
 });
