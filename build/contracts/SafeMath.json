@@ -2426,7 +2426,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-09-30T22:06:13.462Z",
+  "updatedAt": "2019-10-01T01:55:18.807Z",
   "devdoc": {
     "details": "Math operations with safety checks that throw on error",
     "methods": {},

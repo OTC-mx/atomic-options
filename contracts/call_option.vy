@@ -125,10 +125,20 @@ def withdraw_excess_base(amount: uint256):
     assert (base_balance >= amount) and (amount >= 0)
     self.asset.transfer(self.buyer, amount)
 
-# Cam only be called by issuer
+# Can only be called by issuer
 @public
 def withdraw_excess_asset(amount: uint256):
     assert (msg.sender == self.issuer)
     asset_balance: uint256 = self.asset.balanceOf(self)
     assert (asset_balance >= amount + self.volume) and (amount >= 0)
     self.asset.transfer(self.issuer, amount)
+
+# Returns all information about the contract in one go
+@public
+@constant
+def get_info() -> (address, address, address, address,
+                    uint256, uint256, uint256,
+                    uint256, timestamp, timestamp, uint256):
+    return (self.issuer, self.buyer, self.base_addr, self.asset_addr,
+            self.fee, self.strike_price_base, self.strike_price_quote,
+            self.volume, self.maturity_time, self.expiry_time, self.state)
