@@ -1,5 +1,9 @@
 from vyper.interfaces import ERC20
 
+OptionInfo: event({issuer: address, buyer: address, base_addr: address, asset_addr: address,
+        fee: uint256, strike_price_base: uint256, strike_price_quote: uint256,
+        volume: uint256, maturity_time: timestamp, expiry_time: timestamp, state: uint256})
+
 ## Basic information
 # Buyer and issuer of the option
 issuer: public(address)
@@ -139,6 +143,9 @@ def withdraw_excess_asset(amount: uint256):
 def get_info() -> (address, address, address, address,
                     uint256, uint256, uint256,
                     uint256, timestamp, timestamp, uint256):
+    log.OptionInfo(self.issuer, self.buyer, self.base_addr, self.asset_addr,
+            self.fee, self.strike_price_base, self.strike_price_quote,
+            self.volume, self.maturity_time, self.expiry_time, self.state)
     return (self.issuer, self.buyer, self.base_addr, self.asset_addr,
             self.fee, self.strike_price_base, self.strike_price_quote,
             self.volume, self.maturity_time, self.expiry_time, self.state)
