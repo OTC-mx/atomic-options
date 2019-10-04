@@ -1,4 +1,4 @@
-const CallOption = artifacts.require("call_option");
+const Option = artifacts.require("option");
 const OptionFactory = artifacts.require("option_factory");
 const TokenA = artifacts.require("TokenA");
 const TokenB = artifacts.require("TokenB");
@@ -20,18 +20,18 @@ contract("1st OptionFactory test suite", async accounts => {
   let option_address;
 
   it("should update template", async () => {
-    let call_option_template = await CallOption.deployed();
+    let option_template = await Option.deployed();
     let option_factory = await OptionFactory.deployed();
 
     // Initialize the option factory
     let initialize_call = await (option_factory
-      .initializeFactory(call_option_template.address, { from: accounts[0] }));
+      .initializeFactory(option_template.address, { from: accounts[0] }));
     let template_value = await option_factory.template();
 
-    assert.equal(template_value, call_option_template.address);
+    assert.equal(template_value, option_template.address);
   });
 
-  it("should create CallOption contract", async () => {
+  it("should create Option contract", async () => {
     let option_factory = await OptionFactory.deployed();
     let token_a = await TokenA.deployed();
     let token_b = await TokenB.deployed();
@@ -63,19 +63,19 @@ contract("1st OptionFactory test suite", async accounts => {
 
   it("should output contract with correct variables", async () => {
     // Variables consistent with createOption
-    let call_option = new web3.eth.Contract(CallOption.abi, option_address);
-    let issuer_observed = await call_option.methods.issuer().call();
-    let buyer_observed = await call_option.methods.buyer().call();
-    let base_addr_observed = await call_option.methods.base_addr().call();
-    let asset_addr_observed = await call_option.methods.asset_addr().call();
-    let fee_observed = await call_option.methods.fee().call();
-    let strike_price_base_observed = await call_option.methods.strike_price_base().call();
-    let strike_price_quote_observed = await await call_option.methods.strike_price_quote().call();
-    let volume_observed = await call_option.methods.volume().call();
-    let maturity_time_observed = await call_option.methods.maturity_time().call();
-    let expiry_time_observed = await call_option.methods.expiry_time().call();
+    let option = new web3.eth.Contract(Option.abi, option_address);
+    let issuer_observed = await option.methods.issuer().call();
+    let buyer_observed = await option.methods.buyer().call();
+    let base_addr_observed = await option.methods.base_addr().call();
+    let asset_addr_observed = await option.methods.asset_addr().call();
+    let fee_observed = await option.methods.fee().call();
+    let strike_price_base_observed = await option.methods.strike_price_base().call();
+    let strike_price_quote_observed = await await option.methods.strike_price_quote().call();
+    let volume_observed = await option.methods.volume().call();
+    let maturity_time_observed = await option.methods.maturity_time().call();
+    let expiry_time_observed = await option.methods.expiry_time().call();
 
-    let info_observed = await call_option.methods.get_info().call();
+    let info_observed = await option.methods.get_info().call();
 
     let expected = [issuer, buyer, base_addr, asset_addr, fee,
       strike_price_base, strike_price_quote, volume, maturity_time, expiry_time]
