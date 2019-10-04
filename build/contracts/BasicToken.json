@@ -2101,7 +2101,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-04T19:53:47.359Z",
+  "updatedAt": "2019-10-04T20:04:12.995Z",
   "devdoc": {
     "details": "Basic version of StandardToken, with no allowances.",
     "methods": {
