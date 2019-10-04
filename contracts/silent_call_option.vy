@@ -65,24 +65,19 @@ def collateralize():
     assert (msg.sender == self.issuer)
     assert (self.state == STATE_INITIALIZED)
     assert (self.expiry_time > block.timestamp)
-    assert ((self.asset.balanceOf(self.issuer) > self.volume) and
-            (self.asset.allowance(self.issuer, self) > self.volume))
 
-    self.asset.transferFrom(self.issuer, self, self.volume)
+    assert self.asset.transferFrom(self.issuer, self, self.volume)
 
     self.state = STATE_COLLATERALIZED
 
-
-## Checks that fee has been paid, relays to issuer.
+## Pays fee to issuer
 @public
-def relay_fee():
+def pay_fee():
+    assert (msg.sender == self.buyer)
     assert (self.state == STATE_COLLATERALIZED)
     assert (self.expiry_time > block.timestamp)
-    base_balance: uint256 = self.base.balanceOf(self)
-    assert (base_balance >= self.fee)
-    self.base.transfer(self.issuer, self.fee)
-    if base_balance > self.fee:
-        self.base.transfer(self.buyer, base_balance - self.fee)
+
+    assert self.base.transferFrom(self.buyer, self.issuer, self.fee)
 
     self.state = STATE_ACTIVE
 
