@@ -66,7 +66,8 @@ def collateralize():
     assert (self.state == STATE_INITIALIZED)
     assert (self.expiry_time > block.timestamp)
 
-    assert self.asset.transferFrom(self.issuer, self, self.volume)
+    asset_transfer: bool = self.asset.transferFrom(self.issuer, self, self.volume)
+    assert asset_transfer
 
     self.state = STATE_COLLATERALIZED
 
@@ -77,26 +78,48 @@ def pay_fee():
     assert (self.state == STATE_COLLATERALIZED)
     assert (self.expiry_time > block.timestamp)
 
-    assert self.base.transferFrom(self.buyer, self.issuer, self.fee)
+    base_transfer: bool = self.base.transferFrom(self.buyer, self.issuer, self.fee)
+    assert base_transfer
 
     self.state = STATE_ACTIVE
 
 ## Exercises the option and refunds the issuer for unused volume.
-# Can only be called by buyer.
-@public
-def exercise():
-    assert (msg.sender == self.buyer)
+# Internal function for core logic
+@private
+def exercise_internal(base_volume_exercised: uint256, asset_volume_exercised: uint256):
     assert (self.expiry_time > block.timestamp) and (self.maturity_time <= block.timestamp)
     assert (self.state == STATE_ACTIVE) or (self.state == STATE_EXERCISED)
-    base_balance: uint256 = self.base.balanceOf(self)
-    volume_exercised: uint256 = (base_balance * self.strike_price_base) / self.strike_price_quote
-    assert (volume_exercised <= self.volume)
-    self.base.transfer(self.issuer, base_balance)
-    self.asset.transfer(self.buyer, volume_exercised)
+    assert (base_volume_exercised > 0)
+    assert (asset_volume_exercised > 0) and (asset_volume_exercised <= self.volume)
 
-    self.volume = self.volume - volume_exercised
+    base_transfer: bool = self.base.transferFrom(self.buyer, self.issuer, base_volume_exercised)
+    assert base_transfer
+    asset_transfer: bool = self.asset.transferFrom(self.issuer, self.buyer, asset_volume_exercised)
+    assert asset_transfer
+
+    self.volume = self.volume - asset_volume_exercised
 
     self.state = STATE_EXERCISED
+
+## Exercise wrappers: can only be called by buyer.
+# Specify how many to buy
+@public
+def exercise_from_asset(asset_volume_exercised: uint256):
+    assert (msg.sender == self.buyer)
+
+    base_volume_exercised: uint256 = (asset_volume_exercised * self.strike_price_quote) / self.strike_price_base
+
+    self.exercise_internal(base_volume_exercised, asset_volume_exercised)
+
+
+# Specify how many to sell
+@public
+def exercise_from_base(base_volume_exercised: uint256):
+    assert (msg.sender == self.buyer)
+
+    asset_volume_exercised: uint256 = (base_volume_exercised * self.strike_price_base) / self.strike_price_quote
+
+    self.exercise_internal(base_volume_exercised, asset_volume_exercised)
 
 ## Marks option as expired and refunds issuer.
 # Can call either before activation (to abort) or after exipry time
