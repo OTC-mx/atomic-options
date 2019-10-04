@@ -138,36 +138,18 @@ def exercise_from_base(strike_price_base: uint256, strike_price_quote: uint256,
 
 
 ## Marks option as expired and refunds issuer.
-# Can call either before activation (to abort) or after exipry time
+# Can call either before activation (to abort) or after expiry time
 # Can only be called by issuer
 @public
 def expire():
-    assert (msg.sender == self.buyer) or (msg.sender == self.issuer)
+    assert (msg.sender == self.issuer)
     assert (self.expiry_time <= block.timestamp) or (self.state == STATE_COLLATERALIZED)
     assert (self.state != STATE_EXPIRED)
-    asset_balance: uint256 = self.asset.balanceOf(self)
-    self.asset.transfer(self.issuer, asset_balance)
+
+    asset_transfer: bool = self.asset.transfer(self.issuer, self.volume)
+    assert asset_transfer
 
     self.state = STATE_EXPIRED
-
-## Excess withdrawal functions
-# Allow buyer/issuer to withdraw excess base/asset
-
-# Can only be called by buyer
-@public
-def withdraw_excess_base(amount: uint256):
-    assert (msg.sender == self.buyer)
-    base_balance: uint256 = self.base.balanceOf(self)
-    assert (base_balance >= amount) and (amount >= 0)
-    self.asset.transfer(self.buyer, amount)
-
-# Can only be called by issuer
-@public
-def withdraw_excess_asset(amount: uint256):
-    assert (msg.sender == self.issuer)
-    asset_balance: uint256 = self.asset.balanceOf(self)
-    assert (asset_balance >= amount + self.volume) and (amount >= 0)
-    self.asset.transfer(self.issuer, amount)
 
 # Returns all information about the contract in one go
 @public
