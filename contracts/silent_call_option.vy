@@ -59,17 +59,19 @@ def setup(_issuer: address, _buyer: address,
 
     self.state = STATE_INITIALIZED
 
-## Checks that option has been collateralized by issuer.
+## Collateralizes option
 @public
-def check_collateralization():
+def collateralize():
+    assert (msg.sender == self.issuer)
     assert (self.state == STATE_INITIALIZED)
     assert (self.expiry_time > block.timestamp)
-    asset_balance: uint256 = self.asset.balanceOf(self)
-    assert (asset_balance >= self.volume)
-    if asset_balance > self.volume:
-        self.asset.transfer(self.issuer, asset_balance - self.volume)
+    assert ((self.asset.balanceOf(self.issuer) > self.volume) and
+            (self.asset.allowance(self.issuer, self) > self.volume))
+
+    self.asset.transferFrom(self.issuer, self, self.volume)
 
     self.state = STATE_COLLATERALIZED
+
 
 ## Checks that fee has been paid, relays to issuer.
 @public
