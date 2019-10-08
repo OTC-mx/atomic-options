@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@truffle/hdwallet-provider": "^1.0.20",
+    "@truffle/hdwallet-provider": "1.0.18",
     "web3": "^1.2.1"
   },
   "name": "atomicoptions",
