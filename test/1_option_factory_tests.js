@@ -23,6 +23,8 @@ contract("OptionFactory test suite", async accounts => {
     let option_template = await Option.deployed();
     let option_factory = await OptionFactory.deployed();
 
+    console.log("Option Factory Address:", option_factory.address);
+
     // Initialize the option factory
     let initialize_call = await (option_factory
       .initializeFactory(option_template.address, { from: accounts[0] }));
