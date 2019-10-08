@@ -3,7 +3,7 @@ const OptionFactory = artifacts.require("option_factory");
 const TokenA = artifacts.require("TokenA");
 const TokenB = artifacts.require("TokenB");
 
-contract("1st OptionFactory test suite", async accounts => {
+contract("OptionFactory test suite", async accounts => {
   // Variables consistent with createOption
   let issuer;
   let buyer;
@@ -27,7 +27,6 @@ contract("1st OptionFactory test suite", async accounts => {
     let initialize_call = await (option_factory
       .initializeFactory(option_template.address, { from: accounts[0] }));
     let template_value = await option_factory.template();
-
     assert.equal(template_value, option_template.address);
   });
 

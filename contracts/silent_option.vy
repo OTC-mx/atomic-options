@@ -114,7 +114,7 @@ def exercise_internal(strike_price_base: uint256, strike_price_quote: uint256,
 # Specify how many to buy
 @public
 def exercise_from_asset(strike_price_base: uint256, strike_price_quote: uint256,
-                        salt: bytes32,asset_volume_exercised: uint256):
+                        salt: bytes32, asset_volume_exercised: uint256):
     assert (msg.sender == self.buyer)
 
     base_volume_exercised: uint256 = (asset_volume_exercised * strike_price_quote) / strike_price_base

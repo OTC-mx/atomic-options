@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.0.20",
+    "web3": "^1.2.1"
+  },
+  "name": "atomicoptions",
+  "version": "0.1.0",
+  "description": "OTC.mx smart contract suite",
+  "main": "index.js",
+  "repository": "https://github.com/khelmy/atomicoptions.git",
+  "author": "Karim Helmy <karim@timelock.cc>",
+  "license": "MIT"
+}
