@@ -22,7 +22,6 @@ contract("OptionFactory test suite", async accounts => {
   it("should update template", async () => {
     let option_template = await Option.deployed();
     let option_factory = await OptionFactory.deployed();
-
     console.log("Option Factory Address:", option_factory.address);
 
     // Initialize the option factory
@@ -36,6 +35,8 @@ contract("OptionFactory test suite", async accounts => {
     let option_factory = await OptionFactory.deployed();
     let token_a = await TokenA.deployed();
     let token_b = await TokenB.deployed();
+    console.log("Base Token Address:", token_b.address);
+    console.log("Asset Token Address:", token_a.address);
 
     // Variables consistent with createOption
     issuer = accounts[0];
@@ -48,9 +49,6 @@ contract("OptionFactory test suite", async accounts => {
     volume = '5' + ('0'.repeat(21));
     maturity_time = '0';
     expiry_time = '1577836800';
-
-    console.log("Base Token Address:", base_addr);
-    console.log("Asset Token Address:", asset_addr);
 
     let create_option_call = await (option_factory
       .createOption(issuer, buyer,

@@ -353,7 +353,14 @@
     "name": "vyper",
     "version": "0.1.0b12+commit.32ce6c9"
   },
-  "networks": {},
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x32cF8DC0cF11996C4ab9c34De409795065aF4EBC",
+      "transactionHash": "0xfed33e3cb04e85c97fef7963b16a124df99df7c8d02dd5b81bbb931c3bebab63"
+    }
+  },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-08T02:34:14.332Z"
+  "updatedAt": "2019-10-08T22:50:27.410Z"
 }

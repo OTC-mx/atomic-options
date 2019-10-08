@@ -27,9 +27,8 @@ contract("SilentOptionFactory test suite", async accounts => {
   it("should update template", async () => {
     let silent_option_template = await SilentOption.deployed();
     let silent_option_factory = await SilentOptionFactory.deployed();
-
     console.log("Silent Option Factory Address:", silent_option_factory.address);
-
+    
     // Initialize the option factory
     let initialize_call = await (silent_option_factory
       .initializeFactory(silent_option_template.address, { from: accounts[0] }));
