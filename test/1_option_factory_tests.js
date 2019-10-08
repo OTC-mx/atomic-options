@@ -49,6 +49,9 @@ contract("OptionFactory test suite", async accounts => {
     maturity_time = '0';
     expiry_time = '1577836800';
 
+    console.log("Base Token Address:", base_addr);
+    console.log("Asset Token Address:", asset_addr);
+
     let create_option_call = await (option_factory
       .createOption(issuer, buyer,
         base_addr, asset_addr,
@@ -58,6 +61,7 @@ contract("OptionFactory test suite", async accounts => {
         { from: accounts[0] })
     );
     option_address = create_option_call.logs[0].args[0];
+    console.log("Address of Option Created:", option_address);
 
     assert.equal(Boolean(option_address), true);
   });

@@ -16,8 +16,8 @@ contract("SilentOptionFactory test suite", async accounts => {
   let maturity_time;
   let expiry_time;
 
-  // Non-template option address
-  let option_address;
+  // Non-template silent option address
+  let silent_option_address;
 
   // Salt and exchange rate (not known by contract)
   let salt;
@@ -58,7 +58,7 @@ contract("SilentOptionFactory test suite", async accounts => {
     maturity_time = '0';
     expiry_time = '1577836800';
 
-    let create_option_call = await (silent_option_factory
+    let create_silent_option_call = await (silent_option_factory
       .createSilentOption(issuer, buyer,
         base_addr, asset_addr,
         fee, strike_price_base_hash, strike_price_quote_hash,
@@ -66,14 +66,15 @@ contract("SilentOptionFactory test suite", async accounts => {
         maturity_time, expiry_time,
         { from: accounts[0] })
     );
-    option_address = create_option_call.logs[0].args[0];
+    silent_option_address = create_silent_option_call.logs[0].args[0];
+    console.log("Address of Silent Option Created:", silent_option_address);
 
-    assert.equal(Boolean(option_address), true);
+    assert.equal(Boolean(silent_option_address), true);
   });
 
   it("should output contract with correct variables", async () => {
     // Variables consistent with createOption
-    let silent_option = new web3.eth.Contract(SilentOption.abi, option_address);
+    let silent_option = new web3.eth.Contract(SilentOption.abi, silent_option_address);
     let issuer_observed = await silent_option.methods.issuer().call();
     let buyer_observed = await silent_option.methods.buyer().call();
     let base_addr_observed = await silent_option.methods.base_addr().call();
