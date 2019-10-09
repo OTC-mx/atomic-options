@@ -103,7 +103,7 @@ def exercise_internal(strike_price_base: uint256, strike_price_quote: uint256,
 
     base_transfer: bool = self.base.transferFrom(self.buyer, self.issuer, base_volume_exercised)
     assert base_transfer
-    asset_transfer: bool = self.asset.transferFrom(self.issuer, self.buyer, asset_volume_exercised)
+    asset_transfer: bool = self.asset.transfer(self.buyer, asset_volume_exercised)
     assert asset_transfer
 
     self.volume = self.volume - asset_volume_exercised

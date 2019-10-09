@@ -130,7 +130,32 @@ contract("OptionFactory/Option test suite", async accounts => {
 
     let info_observed = await option.methods.get_info().call();
     let base_balance_observed = await token_b.balanceOf(accounts[0]);
-    assert.equal(base_balance_observed, fee)
-    assert.equal(info_observed[10], common.state_vals.active)
+    assert.equal(base_balance_observed, fee);
+    assert.equal(info_observed[10], common.state_vals.active);
+  });
+
+  it("option should be exercisable from asset", async () => {
+    let token_a = await TokenA.deployed();
+    let token_b = await TokenB.deployed();
+    let asset_balance_initial = await token_a.balanceOf(accounts[1]);
+
+    let asset_exercised = web3.utils.toBN(volume).div(web3.utils.toBN(2));
+    let base_exercised = (asset_exercised
+      .mul(web3.utils.toBN(strike_price_quote))
+      .div(web3.utils.toBN(strike_price_base))
+    );
+
+    let approve_call = await token_b.approve(option_address, base_exercised.toString(), { from: accounts[1] });
+    let exercise_call = await (
+      option
+      .methods
+      .exercise_from_asset(asset_exercised.toString())
+      .send({ from: accounts[1] })
+    );
+
+    let info_observed = await option.methods.get_info().call();
+    let asset_balance_observed = await token_a.balanceOf(accounts[1]);
+    assert.equal(asset_balance_observed.sub(asset_balance_initial).toString(), asset_exercised.toString());
+    assert.equal(info_observed[10], common.state_vals.exercised);
   });
 });
