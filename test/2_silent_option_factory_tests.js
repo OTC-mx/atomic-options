@@ -3,6 +3,8 @@ const SilentOptionFactory = artifacts.require("silent_option_factory");
 const TokenA = artifacts.require("TokenA");
 const TokenB = artifacts.require("TokenB");
 
+const common = require("./common.js")
+
 contract("SilentOptionFactory test suite", async accounts => {
   // Variables consistent with createOption
   let issuer;
@@ -16,7 +18,8 @@ contract("SilentOptionFactory test suite", async accounts => {
   let maturity_time;
   let expiry_time;
 
-  // Non-template silent option address
+  // Non-template silent option
+  let silent_option;
   let silent_option_address;
 
   // Salt and exchange rate (not known by contract)
@@ -76,7 +79,7 @@ contract("SilentOptionFactory test suite", async accounts => {
 
   it("should output contract with correct variables", async () => {
     // Variables consistent with createOption
-    let silent_option = new web3.eth.Contract(SilentOption.abi, silent_option_address);
+    silent_option = new web3.eth.Contract(SilentOption.abi, silent_option_address);
     let issuer_observed = await silent_option.methods.issuer().call();
     let buyer_observed = await silent_option.methods.buyer().call();
     let base_addr_observed = await silent_option.methods.base_addr().call();
@@ -87,22 +90,41 @@ contract("SilentOptionFactory test suite", async accounts => {
     let volume_observed = await silent_option.methods.volume().call();
     let maturity_time_observed = await silent_option.methods.maturity_time().call();
     let expiry_time_observed = await silent_option.methods.expiry_time().call();
+    let state_observed = await silent_option.methods.state().call();
 
     let info_observed = await silent_option.methods.get_info().call();
 
     let expected = [issuer, buyer, base_addr, asset_addr, fee,
-      strike_price_base_hash, strike_price_quote_hash, volume, maturity_time, expiry_time]
+      strike_price_base_hash, strike_price_quote_hash, volume, maturity_time, expiry_time,
+      common.state_vals.initialized]
 
     let observed = [issuer_observed, buyer_observed, base_addr_observed,
       asset_addr_observed, fee_observed, strike_price_base_hash_observed,
       strike_price_quote_hash_observed, volume_observed,
-      maturity_time_observed, expiry_time_observed]
+      maturity_time_observed, expiry_time_observed,
+      state_observed]
 
     for (var i = 0; i < expected.length; i++) {
       assert.equal(expected[i], observed[i]);
       assert.equal(expected[i], info_observed[i]);
     }
-    assert.equal(info_observed[i], 1);
+  });
+
+  it("should output a collateralizable silent option", async () => {
+    let token_a = await TokenA.deployed();
+
+    let approve_call = await token_a.approve(silent_option_address, volume, { from: accounts[0] });
+    let collateralize_call = await (
+      silent_option
+      .methods
+      .collateralize()
+      .send({ from: accounts[0] })
+    );
+
+    let info_observed = await silent_option.methods.get_info().call();
+    let asset_balance_observed = await token_a.balanceOf(silent_option_address);
+    assert.equal(asset_balance_observed, volume)
+    assert.equal(info_observed[10], common.state_vals.collateralized)
   });
 
 });

@@ -152,8 +152,41 @@
       "links": {},
       "address": "0x17AA62658Ca821Cd6a7179157DfF615703F90a87",
       "transactionHash": "0xada565f4685e3f9652773eb3ec0c43660f6928c2933faff89c4df8d1243300f6"
+    },
+    "1570643096904": {
+      "events": {
+        "0x908408e307fc569b417f6cbec5d5a06f44a0a505ac0479b47d421a4b2fd6a1e6": {
+          "name": "Initialized",
+          "inputs": [
+            {
+              "type": "address",
+              "name": "template",
+              "indexed": false
+            }
+          ],
+          "anonymous": false,
+          "type": "event",
+          "signature": "0x908408e307fc569b417f6cbec5d5a06f44a0a505ac0479b47d421a4b2fd6a1e6"
+        },
+        "0xfaa68c609961515d6a428850f037e3720721a5e3f5b11d218df762fed1ac8c24": {
+          "name": "NewSilentOption",
+          "inputs": [
+            {
+              "type": "address",
+              "name": "silentOption",
+              "indexed": false
+            }
+          ],
+          "anonymous": false,
+          "type": "event",
+          "signature": "0xfaa68c609961515d6a428850f037e3720721a5e3f5b11d218df762fed1ac8c24"
+        }
+      },
+      "links": {},
+      "address": "0x9561C133DD8580860B6b7E504bC5Aa500f0f06a7",
+      "transactionHash": "0x61bcac51b14a6046be87ee7b2dae234e30eba5a2cc1129c01189ad884079153f"
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-08T22:50:27.413Z"
+  "updatedAt": "2019-10-09T17:45:04.468Z"
 }

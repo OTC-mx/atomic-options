@@ -3,7 +3,9 @@ const OptionFactory = artifacts.require("option_factory");
 const TokenA = artifacts.require("TokenA");
 const TokenB = artifacts.require("TokenB");
 
-contract("OptionFactory test suite", async accounts => {
+const common = require("./common.js")
+
+contract("OptionFactory/Option test suite", async accounts => {
   // Variables consistent with createOption
   let issuer;
   let buyer;
@@ -16,7 +18,8 @@ contract("OptionFactory test suite", async accounts => {
   let maturity_time;
   let expiry_time;
 
-  // Non-template option address
+  // Non-template option
+  let option;
   let option_address;
 
   it("should update template", async () => {
@@ -66,33 +69,51 @@ contract("OptionFactory test suite", async accounts => {
 
   it("should output contract with correct variables", async () => {
     // Variables consistent with createOption
-    let option = new web3.eth.Contract(Option.abi, option_address);
+    option = new web3.eth.Contract(Option.abi, option_address);
     let issuer_observed = await option.methods.issuer().call();
     let buyer_observed = await option.methods.buyer().call();
     let base_addr_observed = await option.methods.base_addr().call();
     let asset_addr_observed = await option.methods.asset_addr().call();
     let fee_observed = await option.methods.fee().call();
     let strike_price_base_observed = await option.methods.strike_price_base().call();
-    let strike_price_quote_observed = await await option.methods.strike_price_quote().call();
+    let strike_price_quote_observed = await option.methods.strike_price_quote().call();
     let volume_observed = await option.methods.volume().call();
     let maturity_time_observed = await option.methods.maturity_time().call();
     let expiry_time_observed = await option.methods.expiry_time().call();
+    let state_observed = await option.methods.state().call();
 
     let info_observed = await option.methods.get_info().call();
 
     let expected = [issuer, buyer, base_addr, asset_addr, fee,
-      strike_price_base, strike_price_quote, volume, maturity_time, expiry_time]
+      strike_price_base, strike_price_quote, volume, maturity_time, expiry_time,
+      common.state_vals.initialized]
 
     let observed = [issuer_observed, buyer_observed, base_addr_observed,
       asset_addr_observed, fee_observed, strike_price_base_observed,
       strike_price_quote_observed, volume_observed,
-      maturity_time_observed, expiry_time_observed]
+      maturity_time_observed, expiry_time_observed,
+      state_observed]
 
     for (var i = 0; i < expected.length; i++) {
       assert.equal(expected[i], observed[i]);
       assert.equal(expected[i], info_observed[i]);
     }
-    assert.equal(info_observed[i], 1);
   });
 
+  it("should output a collateralizable option", async () => {
+    let token_a = await TokenA.deployed();
+
+    let approve_call = await token_a.approve(option_address, volume, { from: accounts[0] });
+    let collateralize_call = await (
+      option
+      .methods
+      .collateralize()
+      .send({ from: accounts[0] })
+    );
+
+    let info_observed = await option.methods.get_info().call();
+    let asset_balance_observed = await token_a.balanceOf(option_address);
+    assert.equal(asset_balance_observed, volume)
+    assert.equal(info_observed[10], common.state_vals.collateralized)
+  });
 });
