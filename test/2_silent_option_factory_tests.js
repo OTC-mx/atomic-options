@@ -110,7 +110,7 @@ contract("SilentOptionFactory test suite", async accounts => {
     }
   });
 
-  it("should output a collateralizable silent option", async () => {
+  it("silent option should be collateralizable", async () => {
     let token_a = await TokenA.deployed();
 
     let approve_call = await token_a.approve(silent_option_address, volume, { from: accounts[0] });
@@ -127,4 +127,20 @@ contract("SilentOptionFactory test suite", async accounts => {
     assert.equal(info_observed[10], common.state_vals.collateralized)
   });
 
+  it("silent option should be fee-payable", async () => {
+    let token_b = await TokenB.deployed();
+
+    let approve_call = await token_b.approve(silent_option_address, fee, { from: accounts[1] });
+    let pay_fee_call = await (
+      silent_option
+      .methods
+      .pay_fee()
+      .send({ from: accounts[1] })
+    );
+
+    let info_observed = await silent_option.methods.get_info().call();
+    let base_balance_observed = await token_b.balanceOf(accounts[0]);
+    assert.equal(base_balance_observed, fee)
+    assert.equal(info_observed[10], common.state_vals.active)
+  });
 });
