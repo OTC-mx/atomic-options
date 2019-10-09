@@ -11,7 +11,7 @@ asset_addr: public(address)
 ## Financial information
 # Fee
 fee: public(uint256)
-# Strike price [i.e. (strike_price_base * base_volume) / strike_price_quote = asset_volume]
+# Strike price [i.e. (strike_price_quote * base_volume) / strike_price_base  = asset_volume]
 strike_price_base: public(uint256)
 strike_price_quote: public(uint256)
 volume: public(uint256)
@@ -107,7 +107,7 @@ def exercise_internal(base_volume_exercised: uint256, asset_volume_exercised: ui
 def exercise_from_asset(asset_volume_exercised: uint256):
     assert (msg.sender == self.buyer)
 
-    base_volume_exercised: uint256 = (asset_volume_exercised * self.strike_price_quote) / self.strike_price_base
+    base_volume_exercised: uint256 = (asset_volume_exercised * self.strike_price_base) / self.strike_price_quote
 
     self.exercise_internal(base_volume_exercised, asset_volume_exercised)
 
@@ -117,7 +117,7 @@ def exercise_from_asset(asset_volume_exercised: uint256):
 def exercise_from_base(base_volume_exercised: uint256):
     assert (msg.sender == self.buyer)
 
-    asset_volume_exercised: uint256 = (base_volume_exercised * self.strike_price_base) / self.strike_price_quote
+    asset_volume_exercised: uint256 = (base_volume_exercised * self.strike_price_quote) / self.strike_price_base
 
     self.exercise_internal(base_volume_exercised, asset_volume_exercised)
 

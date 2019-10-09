@@ -6294,7 +6294,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-09T19:18:56.625Z",
+  "updatedAt": "2019-10-09T22:54:09.766Z",
   "devdoc": {
     "details": "Implementation of the basic standard token.https://github.com/ethereum/EIPs/issues/20Based on code by FirstBlood: https://github.com/Firstbloodio/token/blob/master/smart_contract/FirstBloodToken.sol",
     "methods": {

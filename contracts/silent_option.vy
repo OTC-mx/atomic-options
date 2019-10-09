@@ -117,7 +117,7 @@ def exercise_from_asset(strike_price_base: uint256, strike_price_quote: uint256,
                         salt: bytes32, asset_volume_exercised: uint256):
     assert (msg.sender == self.buyer)
 
-    base_volume_exercised: uint256 = (asset_volume_exercised * strike_price_quote) / strike_price_base
+    base_volume_exercised: uint256 = (asset_volume_exercised * strike_price_base) / strike_price_quote
 
     self.exercise_internal(strike_price_base, strike_price_quote,
                           salt,
@@ -130,7 +130,7 @@ def exercise_from_base(strike_price_base: uint256, strike_price_quote: uint256,
                         salt: bytes32, base_volume_exercised: uint256):
     assert (msg.sender == self.buyer)
 
-    asset_volume_exercised: uint256 = (base_volume_exercised * strike_price_base) / strike_price_quote
+    asset_volume_exercised: uint256 = (base_volume_exercised * strike_price_quote) / strike_price_base
 
     self.exercise_internal(strike_price_base, strike_price_quote,
                           salt,

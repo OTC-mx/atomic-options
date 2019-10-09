@@ -141,8 +141,8 @@ contract("OptionFactory/Option test suite", async accounts => {
 
     let asset_exercised = web3.utils.toBN(volume).div(web3.utils.toBN(2));
     let base_exercised = (asset_exercised
-      .mul(web3.utils.toBN(strike_price_quote))
-      .div(web3.utils.toBN(strike_price_base))
+      .mul(web3.utils.toBN(strike_price_base))
+      .div(web3.utils.toBN(strike_price_quote))
     );
 
     let approve_call = await token_b.approve(option_address, base_exercised.toString(), { from: accounts[1] });
