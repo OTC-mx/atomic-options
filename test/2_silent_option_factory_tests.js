@@ -28,7 +28,7 @@ contract("SilentOptionFactory test suite", async accounts => {
     let silent_option_template = await SilentOption.deployed();
     let silent_option_factory = await SilentOptionFactory.deployed();
     console.log("Silent Option Factory Address:", silent_option_factory.address);
-    
+
     // Initialize the option factory
     let initialize_call = await (silent_option_factory
       .initializeFactory(silent_option_template.address, { from: accounts[0] }));
@@ -56,6 +56,9 @@ contract("SilentOptionFactory test suite", async accounts => {
     volume = '5' + ('0'.repeat(21));
     maturity_time = '0';
     expiry_time = '1577836800';
+
+    console.log('Base Strike Price Hash:', strike_price_base_hash);
+    console.log('Quote Strike Price Hash:', strike_price_quote_hash);
 
     let create_silent_option_call = await (silent_option_factory
       .createSilentOption(issuer, buyer,
