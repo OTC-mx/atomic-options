@@ -4,6 +4,6 @@
 # Current Status
 Live on Rinkeby testnet! Addresses:
 ```
-option_factory: 0xF746f1E86617920c9933A2a39CAbAc7dCeaAB5E8
-silent_option_factory: 0xF34291C4b024c2D40497163E1cc31ab5D87cD0a7
+option_factory: 0xafF7c772D52E153C4Dbef94f2B86102bB232F70d
+silent_option_factory: 0x502eB5D30cd4714A67bF0Da78D348FD5D78E6a06
 ```
