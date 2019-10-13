@@ -1,6 +1,6 @@
 pragma solidity >=0.4.21 <0.6.0;
 
-
+// Modified from OpenZeppelin: https://github.com/OpenZeppelin/openzeppelin-contracts
 /**
  * @title SafeMath
  * @dev Math operations with safety checks that throw on error

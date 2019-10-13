@@ -4,7 +4,7 @@ pragma solidity >=0.4.21 <0.6.0;
 import './ERC20Basic.sol';
 import './SafeMath.sol';
 
-
+// Modified from OpenZeppelin: https://github.com/OpenZeppelin/openzeppelin-contracts
 /**
  * @title Basic token
  * @dev Basic version of StandardToken, with no allowances.

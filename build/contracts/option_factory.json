@@ -119,74 +119,7 @@
     "name": "vyper",
     "version": "0.1.0b12+commit.32ce6c9"
   },
-  "networks": {
-    "4": {
-      "events": {
-        "0x908408e307fc569b417f6cbec5d5a06f44a0a505ac0479b47d421a4b2fd6a1e6": {
-          "name": "Initialized",
-          "inputs": [
-            {
-              "type": "address",
-              "name": "template",
-              "indexed": false
-            }
-          ],
-          "anonymous": false,
-          "type": "event",
-          "signature": "0x908408e307fc569b417f6cbec5d5a06f44a0a505ac0479b47d421a4b2fd6a1e6"
-        },
-        "0x927c4ca180dbb5c7c47fbea3d98025d87248119df45da897c7d00fcca433f837": {
-          "name": "NewOption",
-          "inputs": [
-            {
-              "type": "address",
-              "name": "option",
-              "indexed": false
-            }
-          ],
-          "anonymous": false,
-          "type": "event",
-          "signature": "0x927c4ca180dbb5c7c47fbea3d98025d87248119df45da897c7d00fcca433f837"
-        }
-      },
-      "links": {},
-      "address": "0x40169F22378948420EE6F2fa8Dd5FAC16C625ae5",
-      "transactionHash": "0xcc17b8ed8f22165791b0fe2eb803586d28aa1fcd9551ad0aaac062fad69ec51c"
-    },
-    "1570643096904": {
-      "events": {
-        "0x908408e307fc569b417f6cbec5d5a06f44a0a505ac0479b47d421a4b2fd6a1e6": {
-          "name": "Initialized",
-          "inputs": [
-            {
-              "type": "address",
-              "name": "template",
-              "indexed": false
-            }
-          ],
-          "anonymous": false,
-          "type": "event",
-          "signature": "0x908408e307fc569b417f6cbec5d5a06f44a0a505ac0479b47d421a4b2fd6a1e6"
-        },
-        "0x927c4ca180dbb5c7c47fbea3d98025d87248119df45da897c7d00fcca433f837": {
-          "name": "NewOption",
-          "inputs": [
-            {
-              "type": "address",
-              "name": "option",
-              "indexed": false
-            }
-          ],
-          "anonymous": false,
-          "type": "event",
-          "signature": "0x927c4ca180dbb5c7c47fbea3d98025d87248119df45da897c7d00fcca433f837"
-        }
-      },
-      "links": {},
-      "address": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B",
-      "transactionHash": "0xebc23bc5fdc28ba9073d36b23a4a93db7d6586ed79d2a8baecbc3067a61f051c"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-09T17:45:04.044Z"
+  "updatedAt": "2019-10-13T17:36:09.956Z"
 }

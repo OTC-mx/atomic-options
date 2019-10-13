@@ -353,20 +353,7 @@
     "name": "vyper",
     "version": "0.1.0b12+commit.32ce6c9"
   },
-  "networks": {
-    "4": {
-      "events": {},
-      "links": {},
-      "address": "0x32cF8DC0cF11996C4ab9c34De409795065aF4EBC",
-      "transactionHash": "0xfed33e3cb04e85c97fef7963b16a124df99df7c8d02dd5b81bbb931c3bebab63"
-    },
-    "1570643096904": {
-      "events": {},
-      "links": {},
-      "address": "0xD833215cBcc3f914bD1C9ece3EE7BF8B14f841bb",
-      "transactionHash": "0x435ca9330d6bab45f83f3c4136e780c3bd98c10ff72c8281bc5ddecac960f4fa"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-09T22:54:10.964Z"
+  "updatedAt": "2019-10-13T17:36:09.957Z"
 }

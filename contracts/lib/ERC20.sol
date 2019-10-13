@@ -3,7 +3,7 @@ pragma solidity >=0.4.21 <0.6.0;
 
 import './ERC20Basic.sol';
 
-
+// Modified from OpenZeppelin: https://github.com/OpenZeppelin/openzeppelin-contracts
 /**
  * @title ERC20 interface
  * @dev see https://github.com/ethereum/EIPs/issues/20

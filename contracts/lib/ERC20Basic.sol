@@ -1,6 +1,6 @@
 pragma solidity >=0.4.21 <0.6.0;
 
-
+// Modified from OpenZeppelin: https://github.com/OpenZeppelin/openzeppelin-contracts
 /**
  * @title ERC20Basic
  * @dev Simpler version of ERC20 interface
