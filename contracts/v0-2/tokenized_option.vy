@@ -165,10 +165,10 @@ def exercise_from_base(base_volume_exercised: uint256):
 
 ## Marks option as expired and refunds issuer.
 # Can call either before activation (to abort) or after expiry time
+# OR can call after all options have been exercised
 @public
 def expire():
-    assert (self.expiry_time <= block.timestamp) or (self.state == STATE_COLLATERALIZED)
-    assert (self.state != STATE_EXPIRED)
+    assert (self.expiry_time <= block.timestamp) or (self.state == STATE_COLLATERALIZED) or (self.volume == 0)
 
     sender_collateral_claim_balance: uint256 = self.collateral_claim.balanceOf(msg.sender)
     asset_claimed: uint256 = (sender_collateral_claim_balance * self.volume) / self.collateral_claim_supply
