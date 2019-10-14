@@ -1,13 +1,12 @@
 pragma solidity >=0.4.21 <0.6.0;
 
-import "../lib/ERC20.sol";
+import "../../lib/ERC20.sol";
 
 /**
  * @title OptionCommon
  * @dev Template for entire Option family
  */
 contract OptionCommon {
-
   // // Basic information
   // Buyer and issuer of the option
   address public issuer;
@@ -62,6 +61,4 @@ contract OptionCommon {
 
     state = STATE_ACTIVE;
   }
-
-
 }
