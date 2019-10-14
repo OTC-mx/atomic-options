@@ -38,6 +38,29 @@ contract OptionCommon {
   ERC20 public base;
   ERC20 public asset;
 
+  constructor(address _issuer, address _buyer,
+              address _base_addr, address _asset_addr,
+              uint256 _fee,
+              uint256 _volume,
+              uint256 _maturity_time, uint256 _expiry_time) public {
+    require(_base_addr != _asset_addr);
+    require((_expiry_time > block.timestamp) && (_expiry_time > _maturity_time));
+
+    issuer = _issuer;
+    buyer = _buyer;
+    base_addr = _base_addr;
+    asset_addr = _asset_addr;
+    fee = _fee;
+    volume = _volume;
+    maturity_time = _maturity_time;
+    expiry_time = _expiry_time;
+
+    base = ERC20(_base_addr);
+    asset = ERC20(_asset_addr);
+
+    state = STATE_INITIALIZED;
+  }
+
   // // Collateralizes option
   function collateralize() public {
     require(msg.sender == issuer);

@@ -1,6 +1,7 @@
 pragma solidity >=0.4.21 <0.6.0;
 
 import "../../lib/ERC20.sol";
+import "../parent_contracts/OptionCommon.sol";
 import "../parent_contracts/IndivisibleCommon.sol";
 
 /**
@@ -17,36 +18,16 @@ contract SilentOption is IndivisibleCommon {
               uint256 _fee,
               bytes32 _strike_price_base_hash, bytes32 _strike_price_quote_hash,
               uint256 _volume,
-              uint256 _maturity_time, uint256 _expiry_time) public {
-    require(state == STATE_UNINITIALIZED);
-    require(_base_addr != _asset_addr);
-    require((_expiry_time > block.timestamp) && (_expiry_time > _maturity_time));
-
-    issuer = _issuer;
-    buyer = _buyer;
-    base_addr = _base_addr;
-    asset_addr = _asset_addr;
-    fee = _fee;
+              uint256 _maturity_time, uint256 _expiry_time)
+    OptionCommon(_issuer, _buyer,
+                  _base_addr, _asset_addr,
+                  _fee,
+                  _volume,
+                  _maturity_time, _expiry_time) public {
     strike_price_base_hash = _strike_price_base_hash;
     strike_price_quote_hash = _strike_price_quote_hash;
-    volume = _volume;
-    maturity_time = _maturity_time;
-    expiry_time = _expiry_time;
-
-    base = ERC20(_base_addr);
-    asset = ERC20(_asset_addr);
-
-    state = STATE_INITIALIZED;
   }
 
-  /*
-  strike_price_base_bytes: bytes32 = convert(strike_price_base, bytes32)
-  strike_price_quote_bytes: bytes32 = convert(strike_price_quote, bytes32)
-  strike_price_base_hash_claimed: bytes32 = keccak256(concat(strike_price_base_bytes, salt))
-  strike_price_quote_hash_claimed: bytes32 = keccak256(concat(strike_price_quote_bytes, salt))
-  assert (strike_price_base_hash_claimed == self.strike_price_base_hash)
-  assert (strike_price_quote_hash_claimed == self.strike_price_quote_hash)
-  */
   function check_hashes(uint256 strike_price_base,
                         uint256 strike_price_quote,
                         bytes32 salt) public view returns (bool) {
