@@ -43,10 +43,10 @@ contract SilentOption is OptionCommon {
 
   // // Exercise wrappers: can only be called by buyer.
   // Specify how many to buy
-  function exercise_from_asset(uint256 asset_volume_exercised,
-                                uint256 strike_price_base,
+  function exercise_from_asset(uint256 strike_price_base,
                                 uint256 strike_price_quote,
-                                bytes32 salt) public {
+                                bytes32 salt,
+                                uint256 asset_volume_exercised) public {
     require(msg.sender == buyer);
 
     bool hashes_valid = check_hashes(strike_price_base, strike_price_quote, salt);
@@ -57,10 +57,10 @@ contract SilentOption is OptionCommon {
   }
 
   // Specify how many to sell
-  function exercise_from_base(uint256 base_volume_exercised,
-                                uint256 strike_price_base,
-                                uint256 strike_price_quote,
-                                bytes32 salt) public {
+  function exercise_from_base(uint256 strike_price_base,
+                              uint256 strike_price_quote,
+                              bytes32 salt,
+                              uint256 base_volume_exercised) public {
     assert(msg.sender == buyer);
 
     bool hashes_valid = check_hashes(strike_price_base, strike_price_quote, salt);

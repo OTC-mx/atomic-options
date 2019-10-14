@@ -1,5 +1,5 @@
-const Option = artifacts.require("option");
-const OptionFactory = artifacts.require("option_factory");
+const Option = artifacts.require("Option");
+const OptionFactory = artifacts.require("OptionFactory");
 const TokenA = artifacts.require("TokenA");
 const TokenB = artifacts.require("TokenB");
 
@@ -18,21 +18,9 @@ contract("OptionFactory/Option test suite", async accounts => {
   let maturity_time;
   let expiry_time;
 
-  // Non-template option
+  // Option
   let option;
   let option_address;
-
-  it("should update template", async () => {
-    let option_template = await Option.deployed();
-    let option_factory = await OptionFactory.deployed();
-    console.log("Option Factory Address:", option_factory.address);
-
-    // Initialize the option factory
-    let initialize_call = await (option_factory
-      .initializeFactory(option_template.address, { from: accounts[0] }));
-    let template_value = await option_factory.template();
-    assert.equal(template_value, option_template.address);
-  });
 
   it("should create Option contract", async () => {
     let option_factory = await OptionFactory.deployed();
@@ -41,7 +29,7 @@ contract("OptionFactory/Option test suite", async accounts => {
     console.log("Base Token Address:", token_b.address);
     console.log("Asset Token Address:", token_a.address);
 
-    // Variables consistent with createOption
+    // Variables consistent with create_option
     issuer = accounts[0];
     buyer = accounts[1];
     base_addr = token_b.address;
@@ -54,7 +42,7 @@ contract("OptionFactory/Option test suite", async accounts => {
     expiry_time = '1577836800';
 
     let create_option_call = await (option_factory
-      .createOption(issuer, buyer,
+      .create_option(issuer, buyer,
         base_addr, asset_addr,
         fee, strike_price_base, strike_price_quote,
         volume,
@@ -68,7 +56,7 @@ contract("OptionFactory/Option test suite", async accounts => {
   });
 
   it("should output contract with correct variables", async () => {
-    // Variables consistent with createOption
+    // Variables consistent with create_option
     option = new web3.eth.Contract(Option.abi, option_address);
     let issuer_observed = await option.methods.issuer().call();
     let buyer_observed = await option.methods.buyer().call();

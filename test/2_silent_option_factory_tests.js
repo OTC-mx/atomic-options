@@ -1,5 +1,5 @@
-const SilentOption = artifacts.require("silent_option");
-const SilentOptionFactory = artifacts.require("silent_option_factory");
+const SilentOption = artifacts.require("SilentOption");
+const SilentOptionFactory = artifacts.require("SilentOptionFactory");
 const TokenA = artifacts.require("TokenA");
 const TokenB = artifacts.require("TokenB");
 
@@ -19,7 +19,7 @@ contract("SilentOptionFactory test suite", async accounts => {
   let maturity_time;
   let expiry_time;
 
-  // Non-template silent option
+  // Silent option
   let silent_option;
   let silent_option_address;
 
@@ -27,18 +27,6 @@ contract("SilentOptionFactory test suite", async accounts => {
   let salt;
   let strike_price_base;
   let strike_price_quote;
-
-  it("should update template", async () => {
-    let silent_option_template = await SilentOption.deployed();
-    let silent_option_factory = await SilentOptionFactory.deployed();
-    console.log("Silent Option Factory Address:", silent_option_factory.address);
-
-    // Initialize the option factory
-    let initialize_call = await (silent_option_factory
-      .initializeFactory(silent_option_template.address, { from: accounts[0] }));
-    let template_value = await silent_option_factory.template();
-    assert.equal(template_value, silent_option_template.address);
-  });
 
   it("should create SilentOption contract", async () => {
     let silent_option_factory = await SilentOptionFactory.deployed();
@@ -52,7 +40,7 @@ contract("SilentOptionFactory test suite", async accounts => {
     let strike_price_base_hex = ethers.utils.hexZeroPad(ethers.utils.hexlify(strike_price_base), 32);
     let strike_price_quote_hex = ethers.utils.hexZeroPad(ethers.utils.hexlify(strike_price_quote), 32);
 
-    // Variables consistent with createOption
+    // Variables consistent with create_silent_option
     issuer = accounts[0];
     buyer = accounts[1];
     base_addr = token_b.address;
@@ -68,7 +56,7 @@ contract("SilentOptionFactory test suite", async accounts => {
     console.log('Quote Strike Price Hash:', strike_price_quote_hash);
 
     let create_silent_option_call = await (silent_option_factory
-      .createSilentOption(issuer, buyer,
+      .create_silent_option(issuer, buyer,
         base_addr, asset_addr,
         fee, strike_price_base_hash, strike_price_quote_hash,
         volume,
@@ -82,7 +70,7 @@ contract("SilentOptionFactory test suite", async accounts => {
   });
 
   it("should output contract with correct variables", async () => {
-    // Variables consistent with createOption
+    // Variables consistent with create_silent_option
     silent_option = new web3.eth.Contract(SilentOption.abi, silent_option_address);
     let issuer_observed = await silent_option.methods.issuer().call();
     let buyer_observed = await silent_option.methods.buyer().call();

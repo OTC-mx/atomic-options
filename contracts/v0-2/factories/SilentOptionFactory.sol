@@ -3,7 +3,8 @@ pragma solidity >=0.4.21 <0.6.0;
 import "../options/SilentOption.sol";
 
 contract SilentOptionFactory {
-  function create_standard_option(address _issuer, address _buyer,
+  event NewSilentOption(address silent_option);
+  function create_silent_option(address _issuer, address _buyer,
                                   address _base_addr, address _asset_addr,
                                   uint256 _fee,
                                   bytes32 _strike_price_base_hash, bytes32 _strike_price_quote_hash,
@@ -17,6 +18,7 @@ contract SilentOptionFactory {
                                     _strike_price_base_hash, _strike_price_quote_hash,
                                     _volume,
                                     _maturity_time, _expiry_time);
+    emit NewSilentOption(address(silent_option));
     return address(silent_option);
   }
 }

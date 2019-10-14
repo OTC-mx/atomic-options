@@ -3,6 +3,7 @@ pragma solidity >=0.4.21 <0.6.0;
 import "../options/Option.sol";
 
 contract OptionFactory {
+  event NewOption(address option);
   function create_option(address _issuer, address _buyer,
                           address _base_addr, address _asset_addr,
                           uint256 _fee,
@@ -16,6 +17,7 @@ contract OptionFactory {
                                 _strike_price_base, _strike_price_quote,
                                 _volume,
                                 _maturity_time, _expiry_time);
+    emit NewOption(address(option));
     return address(option);
   }
 }
