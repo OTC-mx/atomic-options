@@ -1,14 +1,13 @@
 pragma solidity >=0.4.21 <0.6.0;
 
-import "../../lib/ERC20.sol";
-import "./StandardOption.sol";
+import "./Option.sol";
 import "../auxiliary/PoolToken.sol";
 
 /**
  * @title TokenizedOption
  * @dev Option where you can trade claims on the collateral and options
  */
-contract TokenizedOption is StandardOption {
+contract TokenizedOption is Option {
   // Addresses of the pool tokens
   address public option_claim_addr;
   address public collateral_claim_addr;
@@ -27,12 +26,12 @@ contract TokenizedOption is StandardOption {
               uint256 _strike_price_base, uint256 _strike_price_quote,
               uint256 _volume,
               uint256 _maturity_time, uint256 _expiry_time)
-    StandardOption(_issuer, _buyer,
-                    _base_addr, _asset_addr,
-                    _fee,
-                    _strike_price_base, _strike_price_quote,
-                    _volume,
-                    _maturity_time, _expiry_time) public {
+    Option(_issuer, _buyer,
+            _base_addr, _asset_addr,
+            _fee,
+            _strike_price_base, _strike_price_quote,
+            _volume,
+            _maturity_time, _expiry_time) public {
     option_claim_supply = (_volume * _strike_price_base) / _strike_price_quote;
     collateral_claim_supply = _volume;
 

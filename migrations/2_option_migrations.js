@@ -1,7 +1,7 @@
-const Option = artifacts.require("option");
-const OptionFactory = artifacts.require("option_factory")
+const Option = artifacts.require("Option");
+const OptionFactory = artifacts.require("OptionFactory")
 
 module.exports = function(deployer) {
-  deployer.deploy(Option);
+  deployer.deploy(StandardOption);
   deployer.deploy(OptionFactory);
 };

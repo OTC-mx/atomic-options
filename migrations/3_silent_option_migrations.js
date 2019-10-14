@@ -1,5 +1,5 @@
-const SilentOption = artifacts.require("silent_option");
-const SilentOptionFactory = artifacts.require("silent_option_factory")
+const SilentOption = artifacts.require("SilentOption");
+const SilentOptionFactory = artifacts.require("SilentOptionFactory")
 
 module.exports = function(deployer) {
   deployer.deploy(SilentOption);

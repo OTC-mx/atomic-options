@@ -4,10 +4,10 @@ import "../../lib/ERC20.sol";
 import "../parent_contracts/OptionCommon.sol";
 
 /**
- * @title StandardOption
+ * @title Option
  * @dev Basic Option
  */
-contract StandardOption is OptionCommon {
+contract Option is OptionCommon {
   // // Strike price [i.e. (strike_price_quote * base_volume) / strike_price_base  = asset_volume]
   uint256 public strike_price_base;
   uint256 public strike_price_quote;
