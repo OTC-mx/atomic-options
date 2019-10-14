@@ -33,7 +33,7 @@ asset: ERC20
 
 ### Tokenizable Option variables
 # Pool token template
-template: public(address)
+token_template: public(address)
 
 # Address of the pool tokens
 option_claim_addr: public(address)
@@ -62,7 +62,7 @@ def setup(_issuer: address, _buyer: address,
           _fee: uint256, _strike_price_base: uint256, _strike_price_quote: uint256,
           _volume: uint256,
           _maturity_time: timestamp, _expiry_time: timestamp,
-          _template: address):
+          _token_template: address):
     assert (self.state == STATE_UNINITIALIZED)
     assert (_base_addr != _asset_addr)
     assert (_expiry_time > block.timestamp) and (_expiry_time > _maturity_time)
@@ -83,13 +83,13 @@ def setup(_issuer: address, _buyer: address,
     self.asset = ERC20(_asset_addr)
 
     # Tokenizable Option Variables
-    self.template = _template
+    self.token_template = _token_template
     self.option_claim_supply = (_volume * _strike_price_base) / _strike_price_quote
     self.collateral_claim_supply = _volume
-    self.option_claim_addr = create_forwarder_to(_template)
+    self.option_claim_addr = create_forwarder_to(_token_template)
     self.option_claim = PoolToken(self.option_claim_addr)
     self.option_claim.setup(self.option_claim_supply)
-    self.collateral_claim_addr = create_forwarder_to(_template)
+    self.collateral_claim_addr = create_forwarder_to(_token_template)
     self.collateral_claim = PoolToken(self.collateral_claim_addr)
     self.collateral_claim.setup(self.collateral_claim_supply)
 
@@ -196,6 +196,6 @@ def get_info() -> (address, address, address, address,
     return (self.issuer, self.buyer, self.base_addr, self.asset_addr,
             self.fee, self.strike_price_base, self.strike_price_quote,
             self.volume, self.maturity_time, self.expiry_time,
-            self.template, self.option_claim_addr, self.collateral_claim_addr,
+            self.token_template, self.option_claim_addr, self.collateral_claim_addr,
             self.option_claim_supply, self.collateral_claim_supply,
             self.state)
