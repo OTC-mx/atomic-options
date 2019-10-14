@@ -314,9 +314,9 @@
           }
         ],
         "contractDependencies": [
-          76,
           119,
-          148
+          148,
+          76
         ],
         "contractKind": "contract",
         "documentation": "@title Standard ERC20 token\n * @dev Implementation of the basic standard token.\n@dev https://github.com/ethereum/EIPs/issues/20\n@dev Based on code by FirstBlood: https://github.com/Firstbloodio/token/blob/master/smart_contract/FirstBloodToken.sol",
@@ -505,10 +505,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        960,
-                        961
+                        1927,
+                        1928
                       ],
-                      "referencedDeclaration": 960,
+                      "referencedDeclaration": 1927,
                       "src": "915:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -617,7 +617,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 957,
+                        "referencedDeclaration": 1924,
                         "src": "984:3:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1015,7 +1015,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "1262:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1411,7 +1411,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 957,
+                            "referencedDeclaration": 1924,
                             "src": "2069:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1505,7 +1505,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "2119:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1957,7 +1957,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 957,
+                            "referencedDeclaration": 1924,
                             "src": "2989:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2066,7 +2066,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 957,
+                                "referencedDeclaration": 1924,
                                 "src": "3021:3:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -2173,7 +2173,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "3079:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2233,7 +2233,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 957,
+                              "referencedDeclaration": 1924,
                               "src": "3109:3:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -2532,7 +2532,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "3288:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2677,7 +2677,7 @@
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 957,
+                                  "referencedDeclaration": 1924,
                                   "src": "3418:3:4",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
@@ -2855,7 +2855,7 @@
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 957,
+                                  "referencedDeclaration": 1924,
                                   "src": "3364:3:4",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
@@ -2957,7 +2957,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "3498:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -3017,7 +3017,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 957,
+                              "referencedDeclaration": 1924,
                               "src": "3528:3:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -3344,9 +3344,9 @@
           }
         ],
         "contractDependencies": [
-          76,
           119,
-          148
+          148,
+          76
         ],
         "contractKind": "contract",
         "documentation": "@title Standard ERC20 token\n * @dev Implementation of the basic standard token.\n@dev https://github.com/ethereum/EIPs/issues/20\n@dev Based on code by FirstBlood: https://github.com/Firstbloodio/token/blob/master/smart_contract/FirstBloodToken.sol",
@@ -3535,10 +3535,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        960,
-                        961
+                        1927,
+                        1928
                       ],
-                      "referencedDeclaration": 960,
+                      "referencedDeclaration": 1927,
                       "src": "915:7:4",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3647,7 +3647,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 957,
+                        "referencedDeclaration": 1924,
                         "src": "984:3:4",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -4045,7 +4045,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "1262:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -4441,7 +4441,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 957,
+                            "referencedDeclaration": 1924,
                             "src": "2069:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -4535,7 +4535,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "2119:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -4987,7 +4987,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 957,
+                            "referencedDeclaration": 1924,
                             "src": "2989:3:4",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -5096,7 +5096,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 957,
+                                "referencedDeclaration": 1924,
                                 "src": "3021:3:4",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -5203,7 +5203,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "3079:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -5263,7 +5263,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 957,
+                              "referencedDeclaration": 1924,
                               "src": "3109:3:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -5562,7 +5562,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "3288:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -5707,7 +5707,7 @@
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 957,
+                                  "referencedDeclaration": 1924,
                                   "src": "3418:3:4",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
@@ -5885,7 +5885,7 @@
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 957,
+                                  "referencedDeclaration": 1924,
                                   "src": "3364:3:4",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
@@ -5987,7 +5987,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "3498:3:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -6047,7 +6047,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 957,
+                              "referencedDeclaration": 1924,
                               "src": "3528:3:4",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -6294,7 +6294,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-14T16:51:38.168Z",
+  "updatedAt": "2019-10-14T20:59:56.875Z",
   "devdoc": {
     "details": "Implementation of the basic standard token.https://github.com/ethereum/EIPs/issues/20Based on code by FirstBlood: https://github.com/Firstbloodio/token/blob/master/smart_contract/FirstBloodToken.sol",
     "methods": {

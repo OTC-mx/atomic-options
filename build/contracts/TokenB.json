@@ -347,9 +347,9 @@
           }
         ],
         "contractDependencies": [
-          76,
           119,
           148,
+          76,
           474
         ],
         "contractKind": "contract",
@@ -746,7 +746,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "781:3:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -894,9 +894,9 @@
           }
         ],
         "contractDependencies": [
-          76,
           119,
           148,
+          76,
           474
         ],
         "contractKind": "contract",
@@ -1293,7 +1293,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "781:3:7",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1390,7 +1390,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-14T16:51:38.174Z",
+  "updatedAt": "2019-10-14T20:59:56.880Z",
   "devdoc": {
     "details": "Very simple ERC20 Token example, where all tokens are pre-assigned to the creator. Note they can later distribute these tokens as they wish using `transfer` and other `StandardToken` functions.",
     "methods": {

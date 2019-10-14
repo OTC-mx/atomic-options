@@ -350,10 +350,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        960,
-                        961
+                        1927,
+                        1928
                       ],
-                      "referencedDeclaration": 960,
+                      "referencedDeclaration": 1927,
                       "src": "599:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -410,7 +410,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "704:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -492,7 +492,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 957,
+                              "referencedDeclaration": 1924,
                               "src": "727:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -726,7 +726,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "817:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1354,10 +1354,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        960,
-                        961
+                        1927,
+                        1928
                       ],
-                      "referencedDeclaration": 960,
+                      "referencedDeclaration": 1927,
                       "src": "599:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1414,7 +1414,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "704:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1496,7 +1496,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 957,
+                              "referencedDeclaration": 1924,
                               "src": "727:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1730,7 +1730,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 957,
+                          "referencedDeclaration": 1924,
                           "src": "817:3:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2101,7 +2101,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-14T16:51:38.163Z",
+  "updatedAt": "2019-10-14T20:59:56.870Z",
   "devdoc": {
     "details": "Basic version of StandardToken, with no allowances.",
     "methods": {

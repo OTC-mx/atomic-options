@@ -2,13 +2,12 @@ pragma solidity >=0.4.21 <0.6.0;
 
 import "../../lib/ERC20.sol";
 import "../parent_contracts/OptionCommon.sol";
-import "../parent_contracts/IndivisibleCommon.sol";
 
 /**
  * @title SilentOption
  * @dev Option that doesn't reveal strike price until exercised
  */
-contract SilentOption is IndivisibleCommon {
+contract SilentOption is OptionCommon {
   // // Strike price [i.e. (strike_price_quote * base_volume) / strike_price_base  = asset_volume]
   bytes32 public strike_price_base_hash;
   bytes32 public strike_price_quote_hash;

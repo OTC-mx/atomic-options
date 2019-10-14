@@ -2,13 +2,12 @@ pragma solidity >=0.4.21 <0.6.0;
 
 import "../../lib/ERC20.sol";
 import "../parent_contracts/OptionCommon.sol";
-import "../parent_contracts/IndivisibleCommon.sol";
 
 /**
  * @title StandardOption
  * @dev Basic Option
  */
-contract StandardOption is IndivisibleCommon {
+contract StandardOption is OptionCommon {
   // // Strike price [i.e. (strike_price_quote * base_volume) / strike_price_base  = asset_volume]
   uint256 public strike_price_base;
   uint256 public strike_price_quote;

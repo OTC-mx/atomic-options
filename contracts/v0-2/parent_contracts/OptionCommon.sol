@@ -84,4 +84,34 @@ contract OptionCommon {
 
     state = STATE_ACTIVE;
   }
+
+  function exercise_internal(uint256 base_volume_exercised,
+                              uint256 asset_volume_exercised) internal {
+    require((expiry_time > block.timestamp) && (maturity_time <= block.timestamp));
+    require((state == STATE_ACTIVE) || (state == STATE_EXERCISED));
+    require(base_volume_exercised > 0);
+    require((asset_volume_exercised > 0) && (asset_volume_exercised <= volume));
+
+    bool base_transfer = base.transferFrom(buyer, issuer, base_volume_exercised);
+    require(base_transfer);
+    bool asset_transfer = asset.transfer(buyer, asset_volume_exercised);
+    require(asset_transfer);
+
+    volume = volume - asset_volume_exercised;
+
+    state = STATE_EXERCISED;
+  }
+
+  function expire() public {
+    require(msg.sender == issuer);
+    require((expiry_time <= block.timestamp) ||
+            (state == STATE_COLLATERALIZED) ||
+            (volume == 0));
+    require(state != STATE_EXPIRED);
+
+    bool asset_transfer = asset.transfer(issuer, volume);
+    require(asset_transfer);
+
+    state = STATE_EXPIRED;
+  }
 }
