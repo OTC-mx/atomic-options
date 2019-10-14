@@ -1,6 +1,6 @@
 pragma solidity >=0.4.21 <0.6.0;
 
-import "../lib/StandardToken.sol";
+import "../../lib/StandardToken.sol";
 
 contract PoolToken is StandardToken {
 
@@ -13,7 +13,7 @@ contract PoolToken is StandardToken {
   event Burn(address from, uint256 value);
 
   // Initialize the contract
-  function setup(uint256 _initial_supply) public {
+  constructor(uint256 _initial_supply) public {
     totalSupply = _initial_supply;
     balances[msg.sender] = _initial_supply;
     owner = msg.sender;
