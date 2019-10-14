@@ -23,4 +23,17 @@ contract IndivisibleCommon is OptionCommon {
 
     state = STATE_EXERCISED;
   }
+
+  function expire() public {
+    require(msg.sender == issuer);
+    require((expiry_time <= block.timestamp) ||
+            (state == STATE_COLLATERALIZED) ||
+            (volume == 0));
+    require(state != STATE_EXPIRED);
+
+    bool asset_transfer = asset.transfer(issuer, volume);
+    require(asset_transfer);
+
+    state = STATE_EXPIRED;
+  }
 }
