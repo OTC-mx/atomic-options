@@ -24,6 +24,7 @@ contract("OptionFactory/Option test suite", async accounts => {
 
   it("should create Option contract", async () => {
     let option_factory = await OptionFactory.deployed();
+    console.log("Option Factory Address", option_factory.address);
     let token_a = await TokenA.deployed();
     let token_b = await TokenB.deployed();
     console.log("Base Token Address:", token_b.address);

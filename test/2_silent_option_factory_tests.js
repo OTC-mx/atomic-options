@@ -30,6 +30,7 @@ contract("SilentOptionFactory test suite", async accounts => {
 
   it("should create SilentOption contract", async () => {
     let silent_option_factory = await SilentOptionFactory.deployed();
+    console.log("Silent Option Factory Address", silent_option_factory.address);
     let token_a = await TokenA.deployed();
     let token_b = await TokenB.deployed();
 
