@@ -1,7 +1,7 @@
 pragma solidity >=0.4.21 <0.6.0;
 
-import "../lib/ERC20.sol";
-import "./parent_contracts/IndivisibleCommon.sol";
+import "../../lib/ERC20.sol";
+import "../parent_contracts/IndivisibleCommon.sol";
 
 /**
  * @title SilentOption
