@@ -90,4 +90,13 @@ contract SilentOption is IndivisibleCommon {
 
     exercise_internal(base_volume_exercised, asset_volume_exercised);
   }
+
+  // Returns all information about the contract in one go
+  function get_info() public view returns (address, address, address, address,
+                                            uint256, bytes32, bytes32,
+                                            uint256, uint256, uint256, uint256) {
+    return(issuer, buyer, base_addr, asset_addr,
+            fee, strike_price_base_hash, strike_price_quote_hash,
+            volume, maturity_time, expiry_time, state);
+  }
 }
