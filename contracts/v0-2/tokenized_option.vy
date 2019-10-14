@@ -157,8 +157,6 @@ def exercise_from_asset(asset_volume_exercised: uint256):
 # Specify how many to sell
 @public
 def exercise_from_base(base_volume_exercised: uint256):
-    assert (msg.sender == self.buyer)
-
     asset_volume_exercised: uint256 = (base_volume_exercised * self.strike_price_quote) / self.strike_price_base
 
     self.exercise_internal(msg.sender, base_volume_exercised, asset_volume_exercised)
