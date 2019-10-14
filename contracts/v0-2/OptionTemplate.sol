@@ -38,11 +38,31 @@ contract OptionTemplate {
   // Callable base and asset ERC20s
   ERC20 public base;
   ERC20 public asset;
-  
-  /*
-  uint256 public totalSupply;
-  function balanceOf(address who) public view returns (uint256);
-  function transfer(address to, uint256 value) public returns (bool);
-  event Transfer(address indexed from, address indexed to, uint256 value);
-  */
+
+
+  // // Collateralizes option
+  function collateralize() public {
+    require(msg.sender == issuer);
+    require(state == STATE_INITIALIZED);
+    require(expiry_time > block.timestamp);
+
+    bool asset_transfer = asset.transferFrom(issuer, address(this), volume);
+    require(asset_transfer);
+
+    state = STATE_COLLATERALIZED;
+  }
+
+  // // Pays fee to issuer
+  function pay_fee() public {
+    require(msg.sender == buyer);
+    require(state == STATE_COLLATERALIZED);
+    require(expiry_time > block.timestamp);
+
+    bool base_transfer = base.transferFrom(buyer, issuer, fee);
+    require(base_transfer);
+
+    state = STATE_ACTIVE;
+  }
+
+
 }
