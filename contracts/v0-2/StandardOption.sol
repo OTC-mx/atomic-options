@@ -38,4 +38,23 @@ contract StandardOption is IndivisibleCommon {
 
     state = STATE_INITIALIZED;
   }
+
+  // // Exercise wrappers: can only be called by buyer.
+  // Specify how many to buy
+  function exercise_from_asset(uint256 asset_volume_exercised) public {
+    require(msg.sender == buyer);
+
+    uint256 base_volume_exercised = (asset_volume_exercised * strike_price_base) / strike_price_quote;
+
+    exercise_internal(base_volume_exercised, asset_volume_exercised);
+  }
+
+  // Specify how many to sell
+  function exercise_from_base(uint256 base_volume_exercised) public {
+    assert(msg.sender == buyer);
+
+    uint256 asset_volume_exercised = (base_volume_exercised * strike_price_quote) / strike_price_base;
+
+    exercise_internal(base_volume_exercised, asset_volume_exercised);
+  }
 }
