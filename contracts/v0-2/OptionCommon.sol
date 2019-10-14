@@ -3,10 +3,10 @@ pragma solidity >=0.4.21 <0.6.0;
 import "../lib/ERC20.sol";
 
 /**
- * @title OptionTemplate
+ * @title OptionCommon
  * @dev Template for entire Option family
  */
-contract OptionTemplate {
+contract OptionCommon {
 
   // // Basic information
   // Buyer and issuer of the option
@@ -38,7 +38,6 @@ contract OptionTemplate {
   // Callable base and asset ERC20s
   ERC20 public base;
   ERC20 public asset;
-
 
   // // Collateralizes option
   function collateralize() public {
