@@ -4,6 +4,9 @@ import "../options/SilentOption.sol";
 
 contract SilentOptionFactory {
   event NewSilentOption(address silent_option);
+
+  mapping(address => bool) public created_silent_options;
+
   function create_silent_option(address _issuer, address _buyer,
                                   address _base_addr, address _asset_addr,
                                   uint256 _fee,
@@ -19,6 +22,11 @@ contract SilentOptionFactory {
                                     _volume,
                                     _maturity_time, _expiry_time);
     emit NewSilentOption(address(silent_option));
+    created_silent_options[address(silent_option)] = true;
     return address(silent_option);
+  }
+
+  function get_created_option(address created_option_address) public view returns (bool) {
+    return created_silent_options[created_option_address];
   }
 }

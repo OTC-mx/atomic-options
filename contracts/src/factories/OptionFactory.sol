@@ -4,6 +4,9 @@ import "../options/Option.sol";
 
 contract OptionFactory {
   event NewOption(address option);
+
+  mapping(address => bool) public created_options;
+
   function create_option(address _issuer, address _buyer,
                           address _base_addr, address _asset_addr,
                           uint256 _fee,
@@ -18,6 +21,11 @@ contract OptionFactory {
                                 _volume,
                                 _maturity_time, _expiry_time);
     emit NewOption(address(option));
+    created_options[address(option)] = true;
     return address(option);
+  }
+
+  function get_created_option(address created_option_address) public view returns (bool) {
+    return created_options[created_option_address];
   }
 }

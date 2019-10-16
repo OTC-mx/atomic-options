@@ -4,6 +4,9 @@ import "../options/TokenizedOption.sol";
 
 contract TokenizedOptionFactory {
   event NewTokenizedOption(address tokenized_option);
+
+  mapping(address => bool) public created_tokenized_options;
+
   function create_tokenized_option(address _issuer, address _buyer,
                                   address _base_addr, address _asset_addr,
                                   uint256 _fee,
@@ -19,6 +22,11 @@ contract TokenizedOptionFactory {
                                     _volume,
                                     _maturity_time, _expiry_time);
     emit NewTokenizedOption(address(tokenized_option));
+    created_tokenized_options[address(tokenized_option)] = true;
     return address(tokenized_option);
+  }
+
+  function get_created_option(address created_option_address) public view returns (bool) {
+    return created_tokenized_options[created_option_address];
   }
 }
