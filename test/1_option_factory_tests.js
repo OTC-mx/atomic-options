@@ -75,13 +75,13 @@ contract("OptionFactory/Option test suite", async accounts => {
 
     let expected = [issuer, buyer, base_addr, asset_addr, fee,
       strike_price_base, strike_price_quote, volume, maturity_time, expiry_time,
-      common.state_vals.initialized]
+      common.state_vals.initialized];
 
     let observed = [issuer_observed, buyer_observed, base_addr_observed,
       asset_addr_observed, fee_observed, strike_price_base_observed,
       strike_price_quote_observed, volume_observed,
       maturity_time_observed, expiry_time_observed,
-      state_observed]
+      state_observed];
 
     for (var i = 0; i < expected.length; i++) {
       assert.equal(expected[i], observed[i]);

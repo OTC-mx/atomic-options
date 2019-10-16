@@ -8,14 +8,6 @@ import "./DerivativeCommon.sol";
  * @dev Template for entire Option family
  */
 contract OptionCommon is DerivativeCommon {
-  // // Basic information
-  // Buyer and issuer of the option
-  address public issuer;
-  address public buyer;
-  // Address of the base (that you pay), asset (being bought)
-  address public base_addr;
-  address public asset_addr;
-
   // // Financial information
   // Fee
   uint256 public fee;
