@@ -40,12 +40,12 @@ contract Forward is DerivativeCommon {
     }
     bool base_transfer = base.transferFrom(buyer, address(this), base_volume);
     require(base_transfer);
-    
+
     state = STATE_ACTIVE;
   }
 
   // Executes the forward trade
-  function execute() public {
+  function settle() public {
     require((msg.sender == buyer) || (msg.sender == issuer));
     require(maturity_time <= block.timestamp);
     require(volume > 0);
@@ -65,8 +65,7 @@ contract Forward is DerivativeCommon {
   // Conditions and call mostly kept consistent with OptionCommon
   function expire() public {
     require(msg.sender == issuer);
-    require((state == STATE_COLLATERALIZED) ||
-            (volume == 0));
+    require(state == STATE_COLLATERALIZED);
     require(state != STATE_EXPIRED);
 
     bool asset_transfer = asset.transfer(issuer, volume);
