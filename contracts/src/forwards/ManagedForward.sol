@@ -26,18 +26,14 @@ contract ManagedForward is Forward {
   address public asset_matched_addr;
   address public base_matched_addr;
 
-  // DEBUG: do we really need fees?
-
   constructor(address _issuer, address _buyer,
               address _base_addr, address _asset_addr,
-              uint256 _fee,
               uint256 _strike_price_base, uint256 _strike_price_quote,
               uint256 _volume,
               uint256 _maturity_time,
               address _issuer_portfolio_addr, address _buyer_portfolio_addr)
     Forward(_issuer, _buyer,
               _base_addr, _asset_addr,
-              _fee,
               _strike_price_base, _strike_price_quote,
               _volume,
               _maturity_time) public {

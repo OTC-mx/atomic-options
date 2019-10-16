@@ -16,8 +16,6 @@ contract DerivativeCommon {
   address public asset_addr;
 
   // // Financial information
-  // Fee
-  uint256 public fee;
   // Asset volume traded
   uint256 public volume;
   // Option can be exercised between maturity_time and expiry_time
@@ -40,7 +38,6 @@ contract DerivativeCommon {
 
   constructor(address _issuer, address _buyer,
               address _base_addr, address _asset_addr,
-              uint256 _fee,
               uint256 _volume,
               uint256 _maturity_time) public {
     require(_base_addr != _asset_addr);
@@ -49,7 +46,6 @@ contract DerivativeCommon {
     buyer = _buyer;
     base_addr = _base_addr;
     asset_addr = _asset_addr;
-    fee = _fee;
     volume = _volume;
     maturity_time = _maturity_time;
 

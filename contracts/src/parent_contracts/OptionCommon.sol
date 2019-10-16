@@ -17,6 +17,8 @@ contract OptionCommon is DerivativeCommon {
   address public asset_addr;
 
   // // Financial information
+  // Fee
+  uint256 public fee;
   // Option can be exercised between maturity_time (declared in DerivativeCommon) and expiry_time
   uint256 public expiry_time;
 
@@ -27,12 +29,12 @@ contract OptionCommon is DerivativeCommon {
               uint256 _maturity_time, uint256 _expiry_time)
     DerivativeCommon(_issuer, _buyer,
                     _base_addr, _asset_addr,
-                    _fee,
                     _volume,
                     _maturity_time) public {
     require(_base_addr != _asset_addr);
     require((_expiry_time > block.timestamp) && (_expiry_time > _maturity_time));
 
+    fee = _fee;
     expiry_time = _expiry_time;
   }
 

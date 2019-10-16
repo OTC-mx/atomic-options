@@ -17,13 +17,11 @@ contract Forward is DerivativeCommon {
 
   constructor(address _issuer, address _buyer,
               address _base_addr, address _asset_addr,
-              uint256 _fee,
               uint256 _strike_price_base, uint256 _strike_price_quote,
               uint256 _volume,
               uint256 _maturity_time)
     DerivativeCommon(_issuer, _buyer,
                     _base_addr, _asset_addr,
-                    _fee,
                     _volume,
                     _maturity_time) public {
     strike_price_base = _strike_price_base;
@@ -34,10 +32,6 @@ contract Forward is DerivativeCommon {
   function activate() public {
     require(msg.sender == buyer);
     require(state == STATE_COLLATERALIZED);
-    if (fee > 0) {
-      bool fee_transfer = base.transferFrom(buyer, issuer, fee);
-      require(fee_transfer);
-    }
     bool base_transfer = base.transferFrom(buyer, address(this), base_volume);
     require(base_transfer);
 
@@ -76,10 +70,10 @@ contract Forward is DerivativeCommon {
 
   // Returns all information about the contract in one go
   function get_info() public view returns (address, address, address, address,
-                                            uint256, uint256, uint256,
+                                            uint256, uint256,
                                             uint256, uint256, uint256) {
     return(issuer, buyer, base_addr, asset_addr,
-            fee, strike_price_base, strike_price_quote,
+            strike_price_base, strike_price_quote,
             volume, maturity_time, state);
   }
 }
