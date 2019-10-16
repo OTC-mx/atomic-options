@@ -6,7 +6,7 @@ const TokenB = artifacts.require("TokenB");
 const ethers = require("ethers")
 const common = require("./common.js")
 
-contract("SilentOptionFactory test suite", async accounts => {
+contract("SilentOptionFactory/SilentOption test suite", async accounts => {
   // Variables consistent with createOption
   let issuer;
   let buyer;
