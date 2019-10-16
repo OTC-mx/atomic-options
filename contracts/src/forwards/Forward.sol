@@ -28,6 +28,7 @@ contract Forward is DerivativeCommon {
                     _maturity_time) public {
     strike_price_base = _strike_price_base;
     strike_price_quote = _strike_price_quote;
+    base_volume = (volume * strike_price_base) / strike_price_quote;
   }
 
   function activate() public {
@@ -37,10 +38,9 @@ contract Forward is DerivativeCommon {
       bool fee_transfer = base.transferFrom(buyer, issuer, fee);
       require(fee_transfer);
     }
-    base_volume = (volume * strike_price_base) / strike_price_quote;
     bool base_transfer = base.transferFrom(buyer, address(this), base_volume);
     require(base_transfer);
-
+    
     state = STATE_ACTIVE;
   }
 
