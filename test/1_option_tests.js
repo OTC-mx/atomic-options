@@ -3,10 +3,10 @@ const OptionFactory = artifacts.require("OptionFactory");
 const TokenA = artifacts.require("TokenA");
 const TokenB = artifacts.require("TokenB");
 
-const common = require("./common.js")
+const common = require("./common.js");
 
 contract("OptionFactory/Option test suite", async accounts => {
-  // Variables consistent with createOption
+  // Variables consistent with create_option
   let issuer;
   let buyer;
   let base_addr;

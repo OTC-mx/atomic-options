@@ -3,11 +3,11 @@ const SilentOptionFactory = artifacts.require("SilentOptionFactory");
 const TokenA = artifacts.require("TokenA");
 const TokenB = artifacts.require("TokenB");
 
-const ethers = require("ethers")
-const common = require("./common.js")
+const ethers = require("ethers");
+const common = require("./common.js");
 
 contract("SilentOptionFactory/SilentOption test suite", async accounts => {
-  // Variables consistent with createOption
+  // Variables consistent with create_option
   let issuer;
   let buyer;
   let base_addr;
