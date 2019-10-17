@@ -136,6 +136,24 @@ contract ManagedForward is Forward {
     state = STATE_EXPIRED;
   }
 
+  // Internal logic for force_settle
+  function force_settle_internal(address matched_addr) internal returns (bool) {
+    ManagedForward matched = ManagedForward(matched_addr);
+    if (matched.state() != STATE_EXPIRED) {
+      matched.force_settle();
+    }
+    return true;
+  }
+
+  // Settles every dependency until this contract can settle
+  // Basically a depth-first-search to settle the contract
+  function force_settle() public returns (bool) {
+    force_settle_internal(base_matched_addr);
+    force_settle_internal(asset_matched_addr);
+    settle();
+    return true;
+  }
+
   // In a forward, only really useful for aborting
   // Conditions and call mostly kept consistent with OptionCommon
   function expire() public {
