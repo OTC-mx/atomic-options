@@ -423,7 +423,7 @@
         "id": 1818,
         "nodeType": "ImportDirective",
         "scope": 2048,
-        "sourceUnit": 3442,
+        "sourceUnit": 3519,
         "src": "64:50:13",
         "symbolAliases": [],
         "unitAlias": ""
@@ -437,10 +437,10 @@
               "id": 1819,
               "name": "DerivativeCommon",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3441,
+              "referencedDeclaration": 3518,
               "src": "184:16:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DerivativeCommon_$3441",
+                "typeIdentifier": "t_contract$_DerivativeCommon_$3518",
                 "typeString": "contract DerivativeCommon"
               }
             },
@@ -450,7 +450,7 @@
           }
         ],
         "contractDependencies": [
-          3441
+          3518
         ],
         "contractKind": "contract",
         "documentation": "@title Forward\n@dev Basic Forward",
@@ -458,7 +458,7 @@
         "id": 2047,
         "linearizedBaseContracts": [
           2047,
-          3441
+          3518
         ],
         "name": "Forward",
         "nodeType": "ContractDefinition",
@@ -693,7 +693,7 @@
                               "name": "volume",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3316,
+                              "referencedDeclaration": 3393,
                               "src": "950:6:13",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -861,10 +861,10 @@
                   "name": "DerivativeCommon",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3441,
+                  "referencedDeclaration": 3518,
                   "src": "688:16:13",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_DerivativeCommon_$3441_$",
+                    "typeIdentifier": "t_type$_t_contract$_DerivativeCommon_$3518_$",
                     "typeString": "type(contract DerivativeCommon)"
                   }
                 },
@@ -1134,7 +1134,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3789,
+                            "referencedDeclaration": 3858,
                             "src": "1048:3:13",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1163,7 +1163,7 @@
                           "name": "buyer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3310,
+                          "referencedDeclaration": 3387,
                           "src": "1062:5:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -1188,10 +1188,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1040:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1237,7 +1237,7 @@
                           "name": "state",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3320,
+                          "referencedDeclaration": 3397,
                           "src": "1082:5:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1252,7 +1252,7 @@
                           "name": "STATE_COLLATERALIZED",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3329,
+                          "referencedDeclaration": 3406,
                           "src": "1091:20:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1277,10 +1277,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1074:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1347,7 +1347,7 @@
                         "name": "buyer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3310,
+                        "referencedDeclaration": 3387,
                         "src": "1157:5:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1363,7 +1363,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3819,
+                            "referencedDeclaration": 3888,
                             "src": "1172:4:13",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Forward_$2047",
@@ -1440,7 +1440,7 @@
                         "name": "base",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3340,
+                        "referencedDeclaration": 3417,
                         "src": "1139:4:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_ERC20_$119",
@@ -1507,10 +1507,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1197:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1549,7 +1549,7 @@
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3320,
+                      "referencedDeclaration": 3397,
                       "src": "1226:5:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1564,7 +1564,7 @@
                       "name": "STATE_ACTIVE",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3332,
+                      "referencedDeclaration": 3409,
                       "src": "1234:12:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1651,7 +1651,7 @@
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3789,
+                                  "referencedDeclaration": 3858,
                                   "src": "1327:3:13",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
@@ -1680,7 +1680,7 @@
                                 "name": "buyer",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 3310,
+                                "referencedDeclaration": 3387,
                                 "src": "1341:5:13",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
@@ -1731,7 +1731,7 @@
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3789,
+                                  "referencedDeclaration": 3858,
                                   "src": "1352:3:13",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
@@ -1760,7 +1760,7 @@
                                 "name": "issuer",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 3308,
+                                "referencedDeclaration": 3385,
                                 "src": "1366:6:13",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
@@ -1805,10 +1805,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1318:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1854,7 +1854,7 @@
                           "name": "maturity_time",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3318,
+                          "referencedDeclaration": 3395,
                           "src": "1388:13:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1871,7 +1871,7 @@
                             "name": "block",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3779,
+                            "referencedDeclaration": 3848,
                             "src": "1405:5:13",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_block",
@@ -1910,10 +1910,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1380:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1959,7 +1959,7 @@
                           "name": "volume",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3316,
+                          "referencedDeclaration": 3393,
                           "src": "1435:6:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -2004,10 +2004,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1427:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2074,7 +2074,7 @@
                         "name": "buyer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3310,
+                        "referencedDeclaration": 3387,
                         "src": "1490:5:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2087,7 +2087,7 @@
                         "name": "volume",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3316,
+                        "referencedDeclaration": 3393,
                         "src": "1497:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2112,7 +2112,7 @@
                         "name": "asset",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3342,
+                        "referencedDeclaration": 3419,
                         "src": "1475:5:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_ERC20_$119",
@@ -2179,10 +2179,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1510:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2249,7 +2249,7 @@
                         "name": "issuer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3308,
+                        "referencedDeclaration": 3385,
                         "src": "1574:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2287,7 +2287,7 @@
                         "name": "base",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3340,
+                        "referencedDeclaration": 3417,
                         "src": "1560:4:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_ERC20_$119",
@@ -2354,10 +2354,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1600:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2396,7 +2396,7 @@
                       "name": "volume",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3316,
+                      "referencedDeclaration": 3393,
                       "src": "1629:6:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2498,7 +2498,7 @@
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3320,
+                      "referencedDeclaration": 3397,
                       "src": "1667:5:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2513,7 +2513,7 @@
                       "name": "STATE_EXPIRED",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3338,
+                      "referencedDeclaration": 3415,
                       "src": "1675:13:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -2586,7 +2586,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3789,
+                            "referencedDeclaration": 3858,
                             "src": "1853:3:13",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2615,7 +2615,7 @@
                           "name": "issuer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3308,
+                          "referencedDeclaration": 3385,
                           "src": "1867:6:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -2640,10 +2640,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1845:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2689,7 +2689,7 @@
                           "name": "state",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3320,
+                          "referencedDeclaration": 3397,
                           "src": "1888:5:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -2704,7 +2704,7 @@
                           "name": "STATE_COLLATERALIZED",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3329,
+                          "referencedDeclaration": 3406,
                           "src": "1897:20:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -2729,10 +2729,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1880:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2778,7 +2778,7 @@
                           "name": "state",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3320,
+                          "referencedDeclaration": 3397,
                           "src": "1932:5:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -2793,7 +2793,7 @@
                           "name": "STATE_EXPIRED",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3338,
+                          "referencedDeclaration": 3415,
                           "src": "1941:13:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -2818,10 +2818,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1924:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2888,7 +2888,7 @@
                         "name": "issuer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3308,
+                        "referencedDeclaration": 3385,
                         "src": "1999:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2901,7 +2901,7 @@
                         "name": "volume",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3316,
+                        "referencedDeclaration": 3393,
                         "src": "2007:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2926,7 +2926,7 @@
                         "name": "asset",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3342,
+                        "referencedDeclaration": 3419,
                         "src": "1984:5:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_ERC20_$119",
@@ -2993,10 +2993,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "2020:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3035,7 +3035,7 @@
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3320,
+                      "referencedDeclaration": 3397,
                       "src": "2050:5:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3050,7 +3050,7 @@
                       "name": "STATE_EXPIRED",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3338,
+                      "referencedDeclaration": 3415,
                       "src": "2058:13:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3110,7 +3110,7 @@
                         "name": "issuer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3308,
+                        "referencedDeclaration": 3385,
                         "src": "2361:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -3123,7 +3123,7 @@
                         "name": "buyer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3310,
+                        "referencedDeclaration": 3387,
                         "src": "2369:5:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -3136,7 +3136,7 @@
                         "name": "base_addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3312,
+                        "referencedDeclaration": 3389,
                         "src": "2376:9:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -3149,7 +3149,7 @@
                         "name": "asset_addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3314,
+                        "referencedDeclaration": 3391,
                         "src": "2387:10:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -3188,7 +3188,7 @@
                         "name": "volume",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3316,
+                        "referencedDeclaration": 3393,
                         "src": "2462:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3201,7 +3201,7 @@
                         "name": "maturity_time",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3318,
+                        "referencedDeclaration": 3395,
                         "src": "2470:13:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3214,7 +3214,7 @@
                         "name": "state",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3320,
+                        "referencedDeclaration": 3397,
                         "src": "2485:5:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3554,7 +3554,7 @@
         "id": 1818,
         "nodeType": "ImportDirective",
         "scope": 2048,
-        "sourceUnit": 3442,
+        "sourceUnit": 3519,
         "src": "64:50:13",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3568,10 +3568,10 @@
               "id": 1819,
               "name": "DerivativeCommon",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3441,
+              "referencedDeclaration": 3518,
               "src": "184:16:13",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DerivativeCommon_$3441",
+                "typeIdentifier": "t_contract$_DerivativeCommon_$3518",
                 "typeString": "contract DerivativeCommon"
               }
             },
@@ -3581,7 +3581,7 @@
           }
         ],
         "contractDependencies": [
-          3441
+          3518
         ],
         "contractKind": "contract",
         "documentation": "@title Forward\n@dev Basic Forward",
@@ -3589,7 +3589,7 @@
         "id": 2047,
         "linearizedBaseContracts": [
           2047,
-          3441
+          3518
         ],
         "name": "Forward",
         "nodeType": "ContractDefinition",
@@ -3824,7 +3824,7 @@
                               "name": "volume",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 3316,
+                              "referencedDeclaration": 3393,
                               "src": "950:6:13",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -3992,10 +3992,10 @@
                   "name": "DerivativeCommon",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 3441,
+                  "referencedDeclaration": 3518,
                   "src": "688:16:13",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_DerivativeCommon_$3441_$",
+                    "typeIdentifier": "t_type$_t_contract$_DerivativeCommon_$3518_$",
                     "typeString": "type(contract DerivativeCommon)"
                   }
                 },
@@ -4265,7 +4265,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3789,
+                            "referencedDeclaration": 3858,
                             "src": "1048:3:13",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -4294,7 +4294,7 @@
                           "name": "buyer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3310,
+                          "referencedDeclaration": 3387,
                           "src": "1062:5:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -4319,10 +4319,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1040:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -4368,7 +4368,7 @@
                           "name": "state",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3320,
+                          "referencedDeclaration": 3397,
                           "src": "1082:5:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -4383,7 +4383,7 @@
                           "name": "STATE_COLLATERALIZED",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3329,
+                          "referencedDeclaration": 3406,
                           "src": "1091:20:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -4408,10 +4408,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1074:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -4478,7 +4478,7 @@
                         "name": "buyer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3310,
+                        "referencedDeclaration": 3387,
                         "src": "1157:5:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -4494,7 +4494,7 @@
                             "name": "this",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3819,
+                            "referencedDeclaration": 3888,
                             "src": "1172:4:13",
                             "typeDescriptions": {
                               "typeIdentifier": "t_contract$_Forward_$2047",
@@ -4571,7 +4571,7 @@
                         "name": "base",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3340,
+                        "referencedDeclaration": 3417,
                         "src": "1139:4:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_ERC20_$119",
@@ -4638,10 +4638,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1197:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -4680,7 +4680,7 @@
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3320,
+                      "referencedDeclaration": 3397,
                       "src": "1226:5:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -4695,7 +4695,7 @@
                       "name": "STATE_ACTIVE",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3332,
+                      "referencedDeclaration": 3409,
                       "src": "1234:12:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -4782,7 +4782,7 @@
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3789,
+                                  "referencedDeclaration": 3858,
                                   "src": "1327:3:13",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
@@ -4811,7 +4811,7 @@
                                 "name": "buyer",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 3310,
+                                "referencedDeclaration": 3387,
                                 "src": "1341:5:13",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
@@ -4862,7 +4862,7 @@
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3789,
+                                  "referencedDeclaration": 3858,
                                   "src": "1352:3:13",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
@@ -4891,7 +4891,7 @@
                                 "name": "issuer",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 3308,
+                                "referencedDeclaration": 3385,
                                 "src": "1366:6:13",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_address",
@@ -4936,10 +4936,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1318:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -4985,7 +4985,7 @@
                           "name": "maturity_time",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3318,
+                          "referencedDeclaration": 3395,
                           "src": "1388:13:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -5002,7 +5002,7 @@
                             "name": "block",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3779,
+                            "referencedDeclaration": 3848,
                             "src": "1405:5:13",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_block",
@@ -5041,10 +5041,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1380:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -5090,7 +5090,7 @@
                           "name": "volume",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3316,
+                          "referencedDeclaration": 3393,
                           "src": "1435:6:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -5135,10 +5135,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1427:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -5205,7 +5205,7 @@
                         "name": "buyer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3310,
+                        "referencedDeclaration": 3387,
                         "src": "1490:5:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -5218,7 +5218,7 @@
                         "name": "volume",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3316,
+                        "referencedDeclaration": 3393,
                         "src": "1497:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -5243,7 +5243,7 @@
                         "name": "asset",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3342,
+                        "referencedDeclaration": 3419,
                         "src": "1475:5:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_ERC20_$119",
@@ -5310,10 +5310,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1510:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -5380,7 +5380,7 @@
                         "name": "issuer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3308,
+                        "referencedDeclaration": 3385,
                         "src": "1574:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -5418,7 +5418,7 @@
                         "name": "base",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3340,
+                        "referencedDeclaration": 3417,
                         "src": "1560:4:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_ERC20_$119",
@@ -5485,10 +5485,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1600:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -5527,7 +5527,7 @@
                       "name": "volume",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3316,
+                      "referencedDeclaration": 3393,
                       "src": "1629:6:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -5629,7 +5629,7 @@
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3320,
+                      "referencedDeclaration": 3397,
                       "src": "1667:5:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -5644,7 +5644,7 @@
                       "name": "STATE_EXPIRED",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3338,
+                      "referencedDeclaration": 3415,
                       "src": "1675:13:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -5717,7 +5717,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3789,
+                            "referencedDeclaration": 3858,
                             "src": "1853:3:13",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -5746,7 +5746,7 @@
                           "name": "issuer",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3308,
+                          "referencedDeclaration": 3385,
                           "src": "1867:6:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -5771,10 +5771,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1845:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -5820,7 +5820,7 @@
                           "name": "state",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3320,
+                          "referencedDeclaration": 3397,
                           "src": "1888:5:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -5835,7 +5835,7 @@
                           "name": "STATE_COLLATERALIZED",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3329,
+                          "referencedDeclaration": 3406,
                           "src": "1897:20:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -5860,10 +5860,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1880:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -5909,7 +5909,7 @@
                           "name": "state",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3320,
+                          "referencedDeclaration": 3397,
                           "src": "1932:5:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -5924,7 +5924,7 @@
                           "name": "STATE_EXPIRED",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3338,
+                          "referencedDeclaration": 3415,
                           "src": "1941:13:13",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -5949,10 +5949,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "1924:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -6019,7 +6019,7 @@
                         "name": "issuer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3308,
+                        "referencedDeclaration": 3385,
                         "src": "1999:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -6032,7 +6032,7 @@
                         "name": "volume",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3316,
+                        "referencedDeclaration": 3393,
                         "src": "2007:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -6057,7 +6057,7 @@
                         "name": "asset",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3342,
+                        "referencedDeclaration": 3419,
                         "src": "1984:5:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_contract$_ERC20_$119",
@@ -6124,10 +6124,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3792,
-                        3793
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3792,
+                      "referencedDeclaration": 3861,
                       "src": "2020:7:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -6166,7 +6166,7 @@
                       "name": "state",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3320,
+                      "referencedDeclaration": 3397,
                       "src": "2050:5:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -6181,7 +6181,7 @@
                       "name": "STATE_EXPIRED",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3338,
+                      "referencedDeclaration": 3415,
                       "src": "2058:13:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -6241,7 +6241,7 @@
                         "name": "issuer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3308,
+                        "referencedDeclaration": 3385,
                         "src": "2361:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -6254,7 +6254,7 @@
                         "name": "buyer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3310,
+                        "referencedDeclaration": 3387,
                         "src": "2369:5:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -6267,7 +6267,7 @@
                         "name": "base_addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3312,
+                        "referencedDeclaration": 3389,
                         "src": "2376:9:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -6280,7 +6280,7 @@
                         "name": "asset_addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3314,
+                        "referencedDeclaration": 3391,
                         "src": "2387:10:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -6319,7 +6319,7 @@
                         "name": "volume",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3316,
+                        "referencedDeclaration": 3393,
                         "src": "2462:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -6332,7 +6332,7 @@
                         "name": "maturity_time",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3318,
+                        "referencedDeclaration": 3395,
                         "src": "2470:13:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -6345,7 +6345,7 @@
                         "name": "state",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3320,
+                        "referencedDeclaration": 3397,
                         "src": "2485:5:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -6650,7 +6650,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-16T16:48:40.994Z",
+  "updatedAt": "2019-10-17T02:13:23.551Z",
   "devdoc": {
     "details": "Basic Forward",
     "methods": {},

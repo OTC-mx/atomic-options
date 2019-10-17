@@ -394,8 +394,8 @@
         "contractDependencies": [
           76,
           119,
-          148,
-          474
+          474,
+          148
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -721,7 +721,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3781,
+                          "referencedDeclaration": 3858,
                           "src": "415:3:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -809,7 +809,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3781,
+                        "referencedDeclaration": 3858,
                         "src": "458:3:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -923,7 +923,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3781,
+                            "referencedDeclaration": 3858,
                             "src": "601:3:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -977,10 +977,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3784,
-                        3785
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3784,
+                      "referencedDeclaration": 3861,
                       "src": "593:7:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1524,8 +1524,8 @@
         "contractDependencies": [
           76,
           119,
-          148,
-          474
+          474,
+          148
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -1851,7 +1851,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 3781,
+                          "referencedDeclaration": 3858,
                           "src": "415:3:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1939,7 +1939,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3781,
+                        "referencedDeclaration": 3858,
                         "src": "458:3:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -2053,7 +2053,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3781,
+                            "referencedDeclaration": 3858,
                             "src": "601:3:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2107,10 +2107,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        3784,
-                        3785
+                        3861,
+                        3862
                       ],
-                      "referencedDeclaration": 3784,
+                      "referencedDeclaration": 3861,
                       "src": "593:7:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2601,7 +2601,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-16T23:12:05.148Z",
+  "updatedAt": "2019-10-17T02:13:23.516Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {

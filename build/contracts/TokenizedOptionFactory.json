@@ -144,7 +144,7 @@
         "id": 1733,
         "nodeType": "ImportDirective",
         "scope": 1815,
-        "sourceUnit": 3304,
+        "sourceUnit": 3381,
         "src": "34:40:12",
         "symbolAliases": [],
         "unitAlias": ""
@@ -152,7 +152,7 @@
       {
         "baseContracts": [],
         "contractDependencies": [
-          3303
+          3380
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -273,7 +273,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                        "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                         "typeString": "contract TokenizedOption"
                       },
                       "typeName": {
@@ -281,10 +281,10 @@
                         "id": 1766,
                         "name": "TokenizedOption",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 3303,
+                        "referencedDeclaration": 3380,
                         "src": "707:15:12",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                           "typeString": "contract TokenizedOption"
                         }
                       },
@@ -478,7 +478,7 @@
                       "nodeType": "NewExpression",
                       "src": "742:19:12",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_contract$_TokenizedOption_$3303_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_contract$_TokenizedOption_$3380_$",
                         "typeString": "function (address,address,address,address,uint256,uint256,uint256,uint256,uint256,uint256) returns (contract TokenizedOption)"
                       },
                       "typeName": {
@@ -486,10 +486,10 @@
                         "id": 1768,
                         "name": "TokenizedOption",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 3303,
+                        "referencedDeclaration": 3380,
                         "src": "746:15:12",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                           "typeString": "contract TokenizedOption"
                         }
                       }
@@ -504,7 +504,7 @@
                     "nodeType": "FunctionCall",
                     "src": "742:364:12",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                      "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                       "typeString": "contract TokenizedOption"
                     }
                   },
@@ -527,7 +527,7 @@
                             "referencedDeclaration": 1767,
                             "src": "1144:16:12",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                               "typeString": "contract TokenizedOption"
                             }
                           }
@@ -535,7 +535,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                               "typeString": "contract TokenizedOption"
                             }
                           ],
@@ -639,7 +639,7 @@
                             "referencedDeclaration": 1767,
                             "src": "1202:16:12",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                               "typeString": "contract TokenizedOption"
                             }
                           }
@@ -647,7 +647,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                               "typeString": "contract TokenizedOption"
                             }
                           ],
@@ -732,7 +732,7 @@
                         "referencedDeclaration": 1767,
                         "src": "1248:16:12",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                           "typeString": "contract TokenizedOption"
                         }
                       }
@@ -740,7 +740,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                           "typeString": "contract TokenizedOption"
                         }
                       ],
@@ -1267,7 +1267,7 @@
         "id": 1733,
         "nodeType": "ImportDirective",
         "scope": 1815,
-        "sourceUnit": 3304,
+        "sourceUnit": 3381,
         "src": "34:40:12",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1275,7 +1275,7 @@
       {
         "baseContracts": [],
         "contractDependencies": [
-          3303
+          3380
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -1396,7 +1396,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                        "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                         "typeString": "contract TokenizedOption"
                       },
                       "typeName": {
@@ -1404,10 +1404,10 @@
                         "id": 1766,
                         "name": "TokenizedOption",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 3303,
+                        "referencedDeclaration": 3380,
                         "src": "707:15:12",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                           "typeString": "contract TokenizedOption"
                         }
                       },
@@ -1601,7 +1601,7 @@
                       "nodeType": "NewExpression",
                       "src": "742:19:12",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_contract$_TokenizedOption_$3303_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_contract$_TokenizedOption_$3380_$",
                         "typeString": "function (address,address,address,address,uint256,uint256,uint256,uint256,uint256,uint256) returns (contract TokenizedOption)"
                       },
                       "typeName": {
@@ -1609,10 +1609,10 @@
                         "id": 1768,
                         "name": "TokenizedOption",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 3303,
+                        "referencedDeclaration": 3380,
                         "src": "746:15:12",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                           "typeString": "contract TokenizedOption"
                         }
                       }
@@ -1627,7 +1627,7 @@
                     "nodeType": "FunctionCall",
                     "src": "742:364:12",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                      "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                       "typeString": "contract TokenizedOption"
                     }
                   },
@@ -1650,7 +1650,7 @@
                             "referencedDeclaration": 1767,
                             "src": "1144:16:12",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                               "typeString": "contract TokenizedOption"
                             }
                           }
@@ -1658,7 +1658,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                               "typeString": "contract TokenizedOption"
                             }
                           ],
@@ -1762,7 +1762,7 @@
                             "referencedDeclaration": 1767,
                             "src": "1202:16:12",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                               "typeString": "contract TokenizedOption"
                             }
                           }
@@ -1770,7 +1770,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                               "typeString": "contract TokenizedOption"
                             }
                           ],
@@ -1855,7 +1855,7 @@
                         "referencedDeclaration": 1767,
                         "src": "1248:16:12",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                           "typeString": "contract TokenizedOption"
                         }
                       }
@@ -1863,7 +1863,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3303",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3380",
                           "typeString": "contract TokenizedOption"
                         }
                       ],
@@ -2366,7 +2366,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-16T23:12:05.156Z",
+  "updatedAt": "2019-10-17T02:13:23.549Z",
   "devdoc": {
     "methods": {}
   },

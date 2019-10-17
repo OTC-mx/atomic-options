@@ -144,7 +144,7 @@
         "id": 1565,
         "nodeType": "ImportDirective",
         "scope": 1647,
-        "sourceUnit": 2743,
+        "sourceUnit": 2820,
         "src": "34:31:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -152,7 +152,7 @@
       {
         "baseContracts": [],
         "contractDependencies": [
-          2742
+          2819
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -273,7 +273,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Option_$2742",
+                        "typeIdentifier": "t_contract$_Option_$2819",
                         "typeString": "contract Option"
                       },
                       "typeName": {
@@ -281,10 +281,10 @@
                         "id": 1598,
                         "name": "Option",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2742,
+                        "referencedDeclaration": 2819,
                         "src": "580:6:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Option_$2742",
+                          "typeIdentifier": "t_contract$_Option_$2819",
                           "typeString": "contract Option"
                         }
                       },
@@ -478,7 +478,7 @@
                       "nodeType": "NewExpression",
                       "src": "596:10:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_contract$_Option_$2742_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_contract$_Option_$2819_$",
                         "typeString": "function (address,address,address,address,uint256,uint256,uint256,uint256,uint256,uint256) returns (contract Option)"
                       },
                       "typeName": {
@@ -486,10 +486,10 @@
                         "id": 1600,
                         "name": "Option",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2742,
+                        "referencedDeclaration": 2819,
                         "src": "600:6:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Option_$2742",
+                          "typeIdentifier": "t_contract$_Option_$2819",
                           "typeString": "contract Option"
                         }
                       }
@@ -504,7 +504,7 @@
                     "nodeType": "FunctionCall",
                     "src": "596:298:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Option_$2742",
+                      "typeIdentifier": "t_contract$_Option_$2819",
                       "typeString": "contract Option"
                     }
                   },
@@ -527,7 +527,7 @@
                             "referencedDeclaration": 1599,
                             "src": "923:6:10",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Option_$2742",
+                              "typeIdentifier": "t_contract$_Option_$2819",
                               "typeString": "contract Option"
                             }
                           }
@@ -535,7 +535,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_Option_$2742",
+                              "typeIdentifier": "t_contract$_Option_$2819",
                               "typeString": "contract Option"
                             }
                           ],
@@ -639,7 +639,7 @@
                             "referencedDeclaration": 1599,
                             "src": "961:6:10",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Option_$2742",
+                              "typeIdentifier": "t_contract$_Option_$2819",
                               "typeString": "contract Option"
                             }
                           }
@@ -647,7 +647,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_Option_$2742",
+                              "typeIdentifier": "t_contract$_Option_$2819",
                               "typeString": "contract Option"
                             }
                           ],
@@ -732,7 +732,7 @@
                         "referencedDeclaration": 1599,
                         "src": "997:6:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Option_$2742",
+                          "typeIdentifier": "t_contract$_Option_$2819",
                           "typeString": "contract Option"
                         }
                       }
@@ -740,7 +740,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_Option_$2742",
+                          "typeIdentifier": "t_contract$_Option_$2819",
                           "typeString": "contract Option"
                         }
                       ],
@@ -1267,7 +1267,7 @@
         "id": 1565,
         "nodeType": "ImportDirective",
         "scope": 1647,
-        "sourceUnit": 2743,
+        "sourceUnit": 2820,
         "src": "34:31:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1275,7 +1275,7 @@
       {
         "baseContracts": [],
         "contractDependencies": [
-          2742
+          2819
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -1396,7 +1396,7 @@
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Option_$2742",
+                        "typeIdentifier": "t_contract$_Option_$2819",
                         "typeString": "contract Option"
                       },
                       "typeName": {
@@ -1404,10 +1404,10 @@
                         "id": 1598,
                         "name": "Option",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2742,
+                        "referencedDeclaration": 2819,
                         "src": "580:6:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Option_$2742",
+                          "typeIdentifier": "t_contract$_Option_$2819",
                           "typeString": "contract Option"
                         }
                       },
@@ -1601,7 +1601,7 @@
                       "nodeType": "NewExpression",
                       "src": "596:10:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_contract$_Option_$2742_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_contract$_Option_$2819_$",
                         "typeString": "function (address,address,address,address,uint256,uint256,uint256,uint256,uint256,uint256) returns (contract Option)"
                       },
                       "typeName": {
@@ -1609,10 +1609,10 @@
                         "id": 1600,
                         "name": "Option",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2742,
+                        "referencedDeclaration": 2819,
                         "src": "600:6:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Option_$2742",
+                          "typeIdentifier": "t_contract$_Option_$2819",
                           "typeString": "contract Option"
                         }
                       }
@@ -1627,7 +1627,7 @@
                     "nodeType": "FunctionCall",
                     "src": "596:298:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Option_$2742",
+                      "typeIdentifier": "t_contract$_Option_$2819",
                       "typeString": "contract Option"
                     }
                   },
@@ -1650,7 +1650,7 @@
                             "referencedDeclaration": 1599,
                             "src": "923:6:10",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Option_$2742",
+                              "typeIdentifier": "t_contract$_Option_$2819",
                               "typeString": "contract Option"
                             }
                           }
@@ -1658,7 +1658,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_Option_$2742",
+                              "typeIdentifier": "t_contract$_Option_$2819",
                               "typeString": "contract Option"
                             }
                           ],
@@ -1762,7 +1762,7 @@
                             "referencedDeclaration": 1599,
                             "src": "961:6:10",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_Option_$2742",
+                              "typeIdentifier": "t_contract$_Option_$2819",
                               "typeString": "contract Option"
                             }
                           }
@@ -1770,7 +1770,7 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_Option_$2742",
+                              "typeIdentifier": "t_contract$_Option_$2819",
                               "typeString": "contract Option"
                             }
                           ],
@@ -1855,7 +1855,7 @@
                         "referencedDeclaration": 1599,
                         "src": "997:6:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_Option_$2742",
+                          "typeIdentifier": "t_contract$_Option_$2819",
                           "typeString": "contract Option"
                         }
                       }
@@ -1863,7 +1863,7 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_Option_$2742",
+                          "typeIdentifier": "t_contract$_Option_$2819",
                           "typeString": "contract Option"
                         }
                       ],
@@ -2366,7 +2366,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-16T23:12:05.151Z",
+  "updatedAt": "2019-10-17T02:13:23.536Z",
   "devdoc": {
     "methods": {}
   },

@@ -3,12 +3,16 @@ pragma solidity >=0.4.21 <0.6.0;
 import "../../lib/ERC20.sol";
 import "./Forward.sol";
 import "../auxiliary/Portfolio.sol";
+import "../factories/ManagedForwardFactory.sol";
 
 /**
  * @title ManagedForward
  * @dev Forward contract managed by Portfolio
  */
 contract ManagedForward is Forward {
+
+  address public factory_addr;
+  ManagedForwardFactory public factory;
 
   // // Address of Issuer and Buyer portfolios
   address public issuer_portfolio_addr;
@@ -37,6 +41,9 @@ contract ManagedForward is Forward {
               _strike_price_base, _strike_price_quote,
               _volume,
               _maturity_time) public {
+    factory_addr = msg.sender;
+    factory = ManagedForwardFactory(factory_addr);
+
     issuer_portfolio_addr = _issuer_portfolio_addr;
     buyer_portfolio_addr = _buyer_portfolio_addr;
     issuer_portfolio = Portfolio(issuer_portfolio_addr);
@@ -74,6 +81,7 @@ contract ManagedForward is Forward {
   // Collateralize this forward using the payoff from another forward
   function collateralize_from_match(address _matched_addr) public {
     require(msg.sender == issuer);
+    require(factory.get_created_forward(_matched_addr));
     bool match_collateralized = issuer_portfolio.match_collateralize(address(this), _matched_addr);
     require(match_collateralized);
     asset_matched_addr = _matched_addr;
@@ -103,6 +111,7 @@ contract ManagedForward is Forward {
 
   function activate_from_match(address _matched_addr) public {
     require(msg.sender == buyer);
+    require(factory.get_created_forward(_matched_addr));
     bool match_activated = buyer_portfolio.match_activate(address(this), _matched_addr);
     require(match_activated);
     base_matched_addr = _matched_addr;
