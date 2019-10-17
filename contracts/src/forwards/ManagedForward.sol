@@ -1,7 +1,7 @@
 pragma solidity >=0.4.21 <0.6.0;
 
 import "../../lib/ERC20.sol";
-import "./Forward.sol";
+import "../parent_contracts/DerivativeCommon.sol";
 import "../auxiliary/Portfolio.sol";
 import "../factories/ManagedForwardFactory.sol";
 
@@ -9,8 +9,15 @@ import "../factories/ManagedForwardFactory.sol";
  * @title ManagedForward
  * @dev Forward contract managed by Portfolio
  */
-contract ManagedForward is Forward {
+contract ManagedForward is DerivativeCommon {
+  // // Strike price [i.e. (strike_price_quote * base_volume) / strike_price_base  = asset_volume]
+  uint256 public strike_price_base;
+  uint256 public strike_price_quote;
 
+  // Volume of the base token held
+  uint256 public base_volume;
+
+  // Factory Info
   address public factory_addr;
   ManagedForwardFactory public factory;
 
@@ -36,11 +43,14 @@ contract ManagedForward is Forward {
               uint256 _volume,
               uint256 _maturity_time,
               address _issuer_portfolio_addr, address _buyer_portfolio_addr)
-    Forward(_issuer, _buyer,
-              _base_addr, _asset_addr,
-              _strike_price_base, _strike_price_quote,
-              _volume,
-              _maturity_time) public {
+    DerivativeCommon(_issuer, _buyer,
+                    _base_addr, _asset_addr,
+                    _volume,
+                    _maturity_time) public {
+    strike_price_base = _strike_price_base;
+    strike_price_quote = _strike_price_quote;
+    base_volume = (volume * strike_price_base) / strike_price_quote;
+
     factory_addr = msg.sender;
     factory = ManagedForwardFactory(factory_addr);
 

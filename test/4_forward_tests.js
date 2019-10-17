@@ -28,8 +28,6 @@ contract("ForwardFactory/Forward test suite", async accounts => {
     console.log("Forward Factory Address", forward_factory.address);
     let token_a = await TokenA.deployed();
     let token_b = await TokenB.deployed();
-    console.log("Base Token Address:", token_b.address);
-    console.log("Asset Token Address:", token_a.address);
 
     // Variables consistent with create_forward
     issuer = accounts[0];

@@ -1,21 +1,11 @@
 pragma solidity >=0.4.21 <0.6.0;
 
-import "../auxiliary/Portfolio.sol";
 import "../forwards/ManagedForward.sol";
 
 contract ManagedForwardFactory {
-  event NewPortfolio(address portfolio);
   event NewManagedForward(address managed_forward);
 
-  mapping(address => bool) public created_portfolios;
   mapping(address => bool) public created_managed_forwards;
-
-  function create_portfolio(address _base_addr, address _asset_addr) public returns (address) {
-    Portfolio portfolio = new Portfolio(_base_addr, _asset_addr, msg.sender, address(this));
-    created_portfolios[address(portfolio)] = true;
-    emit NewPortfolio(address(portfolio));
-    return address(portfolio);
-  }
 
   function create_managed_forward(address _issuer, address _buyer,
                                   address _base_addr, address _asset_addr,

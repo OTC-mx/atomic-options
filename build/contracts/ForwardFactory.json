@@ -2184,9 +2184,50 @@
     "name": "solc",
     "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "4": {
+      "events": {
+        "0xe9613a40bfe0ade98a4ecc63fa5e211f73f0bc3d06cec968e46760e65160fdc3": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "forward",
+              "type": "address"
+            }
+          ],
+          "name": "NewForward",
+          "type": "event",
+          "signature": "0xe9613a40bfe0ade98a4ecc63fa5e211f73f0bc3d06cec968e46760e65160fdc3"
+        }
+      },
+      "links": {},
+      "address": "0x791a5b2a25C341B14660FdbC4405dF10716F1f30",
+      "transactionHash": "0x2e7b2a335afdcd6c0632bcd0df5fdf86fb403bed9379d44a0630999d4dcc59fe"
+    },
+    "1571341059192": {
+      "events": {
+        "0xe9613a40bfe0ade98a4ecc63fa5e211f73f0bc3d06cec968e46760e65160fdc3": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "forward",
+              "type": "address"
+            }
+          ],
+          "name": "NewForward",
+          "type": "event",
+          "signature": "0xe9613a40bfe0ade98a4ecc63fa5e211f73f0bc3d06cec968e46760e65160fdc3"
+        }
+      },
+      "links": {},
+      "address": "0x59d3631c86BbE35EF041872d502F218A39FBa150",
+      "transactionHash": "0xfd41c710c5a0ad096aadd02516406d1128fa28ef49d7684f3d89c7ebfddf991e"
+    }
+  },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-17T02:13:23.530Z",
+  "updatedAt": "2019-10-17T19:37:48.976Z",
   "devdoc": {
     "methods": {}
   },

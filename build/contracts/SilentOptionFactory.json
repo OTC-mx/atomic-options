@@ -2364,9 +2364,50 @@
     "name": "solc",
     "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "4": {
+      "events": {
+        "0xfaa68c609961515d6a428850f037e3720721a5e3f5b11d218df762fed1ac8c24": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "silent_option",
+              "type": "address"
+            }
+          ],
+          "name": "NewSilentOption",
+          "type": "event",
+          "signature": "0xfaa68c609961515d6a428850f037e3720721a5e3f5b11d218df762fed1ac8c24"
+        }
+      },
+      "links": {},
+      "address": "0xBD80C29B1E2f77519027335935b55c75b9BfCcF2",
+      "transactionHash": "0xa141d05cc63a9bfa382aeb51ea7350a8a222651118e4dc0b179ff720ad11d6ff"
+    },
+    "1571341059192": {
+      "events": {
+        "0xfaa68c609961515d6a428850f037e3720721a5e3f5b11d218df762fed1ac8c24": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "silent_option",
+              "type": "address"
+            }
+          ],
+          "name": "NewSilentOption",
+          "type": "event",
+          "signature": "0xfaa68c609961515d6a428850f037e3720721a5e3f5b11d218df762fed1ac8c24"
+        }
+      },
+      "links": {},
+      "address": "0xC89Ce4735882C9F0f0FE26686c53074E09B0D550",
+      "transactionHash": "0x1dc98334573eb01c575b2140a9d25b371cf0c6ad94783e8d0ff2ff3a99a7c9aa"
+    }
+  },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-17T02:13:23.547Z",
+  "updatedAt": "2019-10-17T19:37:48.318Z",
   "devdoc": {
     "methods": {}
   },
