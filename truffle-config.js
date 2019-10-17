@@ -59,7 +59,7 @@ module.exports = {
     // Rinkeby
     rinkeby: {
       provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`, 0, 2),
-      network_id: 4,       // Ropsten's id
+      network_id: 4,
       gas: 5500000,
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)

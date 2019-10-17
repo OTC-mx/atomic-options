@@ -16,6 +16,9 @@ contract("ForwardFactory/Forward test suite", async accounts => {
   let volume;
   let maturity_time;
 
+  // Base volume info
+  let base_volume
+
   // Forward
   let forward;
   let forward_address;
@@ -37,6 +40,11 @@ contract("ForwardFactory/Forward test suite", async accounts => {
     strike_price_quote = 5;
     volume = '5' + ('0'.repeat(21));
     maturity_time = '0';
+
+    base_volume = (web3.utils.toBN(volume)
+                              .mul(web3.utils.toBN(strike_price_base))
+                              .div(web3.utils.toBN(strike_price_quote))
+                              .toString());
 
     let create_forward_call = await (forward_factory
       .create_forward(issuer, buyer,
@@ -83,63 +91,56 @@ contract("ForwardFactory/Forward test suite", async accounts => {
     }
   });
 
-/*
-  it("option should be collateralizable", async () => {
+  it("forward should be collateralizable", async () => {
     let token_a = await TokenA.deployed();
 
-    let approve_call = await token_a.approve(option_address, volume, { from: accounts[0] });
+    let approve_call = await token_a.approve(forward_address, volume, { from: accounts[0] });
     let collateralize_call = await (
-      option
+      forward
       .methods
       .collateralize()
       .send({ from: accounts[0] })
     );
 
-    let info_observed = await option.methods.get_info().call();
-    let asset_balance_observed = await token_a.balanceOf(option_address);
+    let info_observed = await forward.methods.get_info().call();
+    let asset_balance_observed = await token_a.balanceOf(forward_address);
     assert.equal(asset_balance_observed, volume)
-    assert.equal(info_observed[10], common.state_vals.collateralized)
+    assert.equal(info_observed[8], common.state_vals.collateralized)
   });
-  it("option should be fee-payable", async () => {
+
+  it("forward should be activatable", async () => {
     let token_b = await TokenB.deployed();
 
-    let approve_call = await token_b.approve(option_address, fee, { from: accounts[1] });
+    let approve_call = await token_b.approve(forward_address, base_volume, { from: accounts[1] });
     let pay_fee_call = await (
-      option
+      forward
       .methods
-      .pay_fee()
+      .activate()
       .send({ from: accounts[1] })
     );
 
-    let info_observed = await option.methods.get_info().call();
-    let base_balance_observed = await token_b.balanceOf(accounts[0]);
-    assert.equal(base_balance_observed, fee);
-    assert.equal(info_observed[10], common.state_vals.active);
+    let info_observed = await forward.methods.get_info().call();
+    let base_balance_observed = await token_b.balanceOf(forward_address);
+    assert.equal(base_balance_observed, base_volume);
+    assert.equal(info_observed[8], common.state_vals.active);
   });
 
-  it("option should be exercisable from asset", async () => {
+  it("forward should be settlable", async () => {
     let token_a = await TokenA.deployed();
     let token_b = await TokenB.deployed();
-    let asset_balance_initial = await token_a.balanceOf(accounts[1]);
 
-    let asset_exercised = web3.utils.toBN(volume).div(web3.utils.toBN(2));
-    let base_exercised = (asset_exercised
-      .mul(web3.utils.toBN(strike_price_base))
-      .div(web3.utils.toBN(strike_price_quote))
-    );
-
-    let approve_call = await token_b.approve(option_address, base_exercised.toString(), { from: accounts[1] });
-    let exercise_call = await (
-      option
+    let settle_call = await (
+      forward
       .methods
-      .exercise_from_asset(asset_exercised.toString())
-      .send({ from: accounts[1] })
+      .settle()
+      .send({ from: accounts[1], gas: 180000 })
     );
 
-    let info_observed = await option.methods.get_info().call();
+    let info_observed = await forward.methods.get_info().call();
+    let base_balance_observed = await token_b.balanceOf(accounts[0]);
     let asset_balance_observed = await token_a.balanceOf(accounts[1]);
-    assert.equal(asset_balance_observed.sub(asset_balance_initial).toString(), asset_exercised.toString());
-    assert.equal(info_observed[10], common.state_vals.exercised);
+    assert.equal(base_balance_observed, base_volume);
+    assert.equal(asset_balance_observed, volume)
+    assert.equal(info_observed[8], common.state_vals.expired);
   });
-*/
 });
