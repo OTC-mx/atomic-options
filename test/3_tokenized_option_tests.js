@@ -30,6 +30,11 @@ contract("TokenizedOptionFactory/TokenizedOption test suite", async accounts => 
   let option_claim_supply;
   let collateral_claim_supply;
 
+  let option_claim_name;
+  let option_claim_symbol;
+  let collateral_claim_name;
+  let collateral_claim_symbol;
+
   it("should create TokenizedOption contract", async () => {
     let tokenized_option_factory = await TokenizedOptionFactory.deployed();
     console.log("Tokenized Option Factory Address", tokenized_option_factory.address);
@@ -53,6 +58,11 @@ contract("TokenizedOptionFactory/TokenizedOption test suite", async accounts => 
                               .mul(web3.utils.toBN(strike_price_base))
                               .div(web3.utils.toBN(strike_price_quote))
                               .toString());
+    option_claim_name = "BBB AAA 3/5 Option";
+    option_claim_symbol = "BA3/5O";
+    collateral_claim_name = "BBB AAA 3/5 Collateral";
+    collateral_claim_symbol = "BA3/5C";
+
 
     let create_tokenized_option_call = await (tokenized_option_factory
       .create_tokenized_option(issuer, buyer,
@@ -60,6 +70,8 @@ contract("TokenizedOptionFactory/TokenizedOption test suite", async accounts => 
         fee, strike_price_base, strike_price_quote,
         volume,
         maturity_time, expiry_time,
+        option_claim_name, option_claim_symbol,
+        collateral_claim_name, collateral_claim_symbol,
         { from: accounts[0] })
     );
     tokenized_option_address = create_tokenized_option_call.logs[0].args[0];

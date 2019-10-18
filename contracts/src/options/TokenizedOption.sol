@@ -35,11 +35,21 @@ contract TokenizedOption is Option {
     option_claim_supply = (_volume * _strike_price_base) / _strike_price_quote;
     collateral_claim_supply = _volume;
 
-    option_claim = new PoolToken(option_claim_supply);
-    collateral_claim = new PoolToken(collateral_claim_supply);
+    state = STATE_UNINITIALIZED;
+  }
+
+  // Too many variables to initialize in one go :(
+  function initialize_tokens(string memory option_claim_name, string memory option_claim_symbol,
+                              string memory collateral_claim_name, string memory collateral_claim_symbol) public {
+    require(state == STATE_UNINITIALIZED);
+
+    option_claim = new PoolToken(option_claim_supply, option_claim_name, option_claim_symbol);
+    collateral_claim = new PoolToken(collateral_claim_supply, collateral_claim_name, collateral_claim_symbol);
 
     option_claim_addr = address(option_claim);
     collateral_claim_addr = address(collateral_claim);
+
+    state = STATE_INITIALIZED;
   }
 
   function exercise_internal(address exerciser, uint256 base_volume_exercised, uint256 asset_volume_exercised)
@@ -86,7 +96,8 @@ contract TokenizedOption is Option {
   }
 
   // Returns information about the tokens
-  function get_token_info() public view returns (address, address, uint256, uint256) {
+  function get_token_info() public view returns (address, address,
+                                                  uint256, uint256) {
     return(option_claim_addr, collateral_claim_addr,
             option_claim_supply, collateral_claim_supply);
   }

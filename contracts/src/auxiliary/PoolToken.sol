@@ -4,8 +4,8 @@ import "../../lib/StandardToken.sol";
 
 contract PoolToken is StandardToken {
 
-  string public name = "PoolToken";
-  string public symbol = "POOL";
+  string public name;
+  string public symbol;
   address public owner;
 
   uint8 public constant decimals = 18;
@@ -13,10 +13,13 @@ contract PoolToken is StandardToken {
   event Burn(address from, uint256 value);
 
   // Initialize the contract
-  constructor(uint256 _initial_supply) public {
+  constructor(uint256 _initial_supply, string memory _name, string memory _symbol) public {
     totalSupply = _initial_supply;
     balances[msg.sender] = _initial_supply;
     owner = msg.sender;
+
+    name = _name;
+    symbol = _symbol;
   }
 
   // Delete tokens from supply and balance

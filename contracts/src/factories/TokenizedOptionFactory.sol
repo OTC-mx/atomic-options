@@ -12,7 +12,9 @@ contract TokenizedOptionFactory {
                                   uint256 _fee,
                                   uint256 _strike_price_base, uint256 _strike_price_quote,
                                   uint256 _volume,
-                                  uint256 _maturity_time, uint256 _expiry_time)
+                                  uint256 _maturity_time, uint256 _expiry_time,
+                                  string memory option_claim_name, string memory option_claim_symbol,
+                                  string memory collateral_claim_name, string memory collateral_claim_symbol)
                                     public returns (address) {
     TokenizedOption tokenized_option = new TokenizedOption(
                                     _issuer, _buyer,
@@ -21,6 +23,8 @@ contract TokenizedOptionFactory {
                                     _strike_price_base, _strike_price_quote,
                                     _volume,
                                     _maturity_time, _expiry_time);
+    tokenized_option.initialize_tokens(option_claim_name, option_claim_symbol,
+                                        collateral_claim_name, collateral_claim_symbol);
     emit NewTokenizedOption(address(tokenized_option));
     created_tokenized_options[address(tokenized_option)] = true;
     return address(tokenized_option);
