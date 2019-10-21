@@ -5,9 +5,10 @@ const ManagedForwardFactory = artifacts.require("ManagedForwardFactory");
 const TokenA = artifacts.require("TokenA");
 const TokenB = artifacts.require("TokenB");
 
+const ethers = require("ethers");
 const common = require("./common.js");
 
-contract("ManagedForwardFactory/Portfolio/ManagedForward test suite", async accounts => {
+contract("Portfolio[Factory]/ManagedForward[Factory] test suite", async accounts => {
   // Variables consistent with create_forward
   let issuer;
   let buyer;
@@ -19,7 +20,7 @@ contract("ManagedForwardFactory/Portfolio/ManagedForward test suite", async acco
   let maturity_time;
 
   // Base volume info
-  let base_volume
+  let base_volume;
 
   // Managed Forward
   let managed_forward;
@@ -60,14 +61,11 @@ contract("ManagedForwardFactory/Portfolio/ManagedForward test suite", async acco
     assert.equal(Boolean(buyer_portfolio_address), true);
   });
 
-  /*
-  it("should create Forward contract", async () => {
-    let forward_factory = await ForwardFactory.deployed();
-    console.log("Forward Factory Address", forward_factory.address);
+
+  it("should create ManagedForward contract", async () => {
+    let managed_forward_factory = await ManagedForwardFactory.deployed();
     let token_a = await TokenA.deployed();
     let token_b = await TokenB.deployed();
-    console.log("Base Token Address:", token_b.address);
-    console.log("Asset Token Address:", token_a.address);
 
     // Variables consistent with create_forward
     issuer = accounts[0];
@@ -84,35 +82,36 @@ contract("ManagedForwardFactory/Portfolio/ManagedForward test suite", async acco
                               .div(web3.utils.toBN(strike_price_quote))
                               .toString());
 
-    let create_forward_call = await (forward_factory
-      .create_forward(issuer, buyer,
+    let create_managed_forward_call = await (managed_forward_factory
+      .create_managed_forward(issuer, buyer,
         base_addr, asset_addr,
         strike_price_base, strike_price_quote,
         volume,
         maturity_time,
+        issuer_portfolio_address, buyer_portfolio_address,
         { from: accounts[0] })
     );
-    forward_address = create_forward_call.logs[0].args[0];
-    console.log("Address of Forward Created:", forward_address);
+    managed_forward_address = create_managed_forward_call.logs[0].args[0];
+    console.log("Address of Managed Forward Created:", managed_forward_address);
 
-    assert.equal(Boolean(forward_address), true);
+    assert.equal(Boolean(managed_forward_address), true);
   });
 
 
   it("should output contract with correct variables", async () => {
     // Variables consistent with create_forward
-    forward = new web3.eth.Contract(Forward.abi, forward_address);
-    let issuer_observed = await forward.methods.issuer().call();
-    let buyer_observed = await forward.methods.buyer().call();
-    let base_addr_observed = await forward.methods.base_addr().call();
-    let asset_addr_observed = await forward.methods.asset_addr().call();
-    let strike_price_base_observed = await forward.methods.strike_price_base().call();
-    let strike_price_quote_observed = await forward.methods.strike_price_quote().call();
-    let volume_observed = await forward.methods.volume().call();
-    let maturity_time_observed = await forward.methods.maturity_time().call();
-    let state_observed = await forward.methods.state().call();
+    managed_forward = new web3.eth.Contract(ManagedForward.abi, managed_forward_address);
+    let issuer_observed = await managed_forward.methods.issuer().call();
+    let buyer_observed = await managed_forward.methods.buyer().call();
+    let base_addr_observed = await managed_forward.methods.base_addr().call();
+    let asset_addr_observed = await managed_forward.methods.asset_addr().call();
+    let strike_price_base_observed = await managed_forward.methods.strike_price_base().call();
+    let strike_price_quote_observed = await managed_forward.methods.strike_price_quote().call();
+    let volume_observed = await managed_forward.methods.volume().call();
+    let maturity_time_observed = await managed_forward.methods.maturity_time().call();
+    let state_observed = await managed_forward.methods.state().call();
 
-    let info_observed = await forward.methods.get_info().call();
+    let info_observed = await managed_forward.methods.get_info().call();
 
     let expected = [issuer, buyer, base_addr, asset_addr,
       strike_price_base, strike_price_quote, volume, maturity_time,
@@ -130,6 +129,30 @@ contract("ManagedForwardFactory/Portfolio/ManagedForward test suite", async acco
     }
   });
 
+  it("should output contract with correct managed-specific variables", async () => {
+    let issuer_portfolio_addr_observed = await managed_forward.methods.issuer_portfolio_addr().call();
+    let buyer_portfolio_addr_observed = await managed_forward.methods.buyer_portfolio_addr().call();
+    let unmatched_base_volume_observed = await managed_forward.methods.unmatched_base_volume().call();
+    let unmatched_asset_volume_observed = await managed_forward.methods.unmatched_asset_volume().call();
+    let asset_matched_addr_observed = await managed_forward.methods.asset_matched_addr().call();
+    let base_matched_addr_observed = await managed_forward.methods.base_matched_addr().call();
+
+    let portfolio_info_observed = await managed_forward.methods.get_portfolio_info().call();
+
+    let portfolio_observed = [issuer_portfolio_addr_observed, buyer_portfolio_addr_observed,
+      unmatched_base_volume_observed, unmatched_asset_volume_observed,
+      asset_matched_addr_observed, base_matched_addr_observed];
+
+    let portfolio_expected = [issuer_portfolio_address, buyer_portfolio_address,
+      base_volume, volume,
+      ethers.utils.hexZeroPad('0x0', 20), ethers.utils.hexZeroPad('0x0', 20)];
+
+    for (var i = 0; i < portfolio_expected.length; i++) {
+      assert.equal(portfolio_expected[i], portfolio_observed[i]);
+      assert.equal(portfolio_expected[i], portfolio_info_observed[i]);
+    }
+  });
+/*
   it("forward should be collateralizable", async () => {
     let token_a = await TokenA.deployed();
 
