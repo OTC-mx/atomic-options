@@ -198,6 +198,15 @@ contract ManagedForward is DerivativeCommon {
     unmatched_asset_volume = value;
   }
 
+  // Returns standard information about the contract in one go
+  function get_info() public view returns (address, address, address, address,
+                                            uint256, uint256,
+                                            uint256, uint256, uint256) {
+    return(issuer, buyer, base_addr, asset_addr,
+            strike_price_base, strike_price_quote,
+            volume, maturity_time, state);
+  }
+
   // Returns all portfolio information in one go
   function get_portfolio_info() public view returns (address, address,
                                                       uint256, uint256,
