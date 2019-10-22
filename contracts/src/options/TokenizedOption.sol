@@ -77,6 +77,21 @@ contract TokenizedOption is Option {
     state = STATE_EXERCISED;
   }
 
+  // // Exercise wrappers
+  // Specify how many to buy
+  function exercise_from_asset(uint256 asset_volume_exercised) public {
+    uint256 base_volume_exercised = (asset_volume_exercised * strike_price_base) / strike_price_quote;
+
+    exercise_internal(base_volume_exercised, asset_volume_exercised);
+  }
+
+  // Specify how many to sell
+  function exercise_from_base(uint256 base_volume_exercised) public {
+    uint256 asset_volume_exercised = (base_volume_exercised * strike_price_quote) / strike_price_base;
+
+    exercise_internal(base_volume_exercised, asset_volume_exercised);
+  }
+
   // // Marks option as expired and refunds claim.
   // Can call either before activation (to abort) or after expiry time
   // OR can call after all options have been exercised
