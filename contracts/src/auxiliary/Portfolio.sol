@@ -137,6 +137,8 @@ contract Portfolio {
                                               old_unmatched :
                                               new_volume);
     volume_available[new_fwd.base_addr()] += additional_credit;
+
+    return true;
   }
 
   // Deposit a token into this Portfolio
