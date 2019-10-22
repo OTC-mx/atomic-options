@@ -160,4 +160,8 @@ contract Portfolio {
   function get_volume_available(address token_addr) public view returns (uint256) {
     return volume_available[token_addr];
   }
+
+  function get_forward_index(address forward_address) public view returns (uint256) {
+    return my_forward_indices[forward_address];
+  }
 }
