@@ -125,14 +125,17 @@ contract("TokenizedOptionFactory/TokenizedOption test suite", async accounts => 
       option_claim_supply_observed, collateral_claim_supply_observed];
 
     let token_expected = [ethers.utils.hexZeroPad('0x0', 20),
-      ethers.utils.hexZeroPad('0x0', 20), option_claim_supply, collateral_claim_supply];
+      ethers.utils.hexZeroPad('0x0', 20), option_claim_supply, collateral_claim_supply,
+      '0', collateral_claim_supply];
 
     for (var i = 0; i < token_expected.length; i++) {
-      if (i < 2){
+      if (i < 2) {
         assert.notEqual(ethers.utils.hexZeroPad(token_expected[i], 20), token_observed[i]);
         assert.equal(token_observed[i], token_info_observed[i]);
-      } else {
+      } else if (i < 4) {
         assert.equal(token_expected[i], token_observed[i]);
+        assert.equal(token_expected[i], token_info_observed[i]);
+      } else {
         assert.equal(token_expected[i], token_info_observed[i]);
       }
     }

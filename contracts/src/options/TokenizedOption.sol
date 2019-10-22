@@ -46,6 +46,11 @@ contract TokenizedOption is Option {
     option_claim = new PoolToken(option_claim_supply, option_claim_name, option_claim_symbol);
     collateral_claim = new PoolToken(collateral_claim_supply, collateral_claim_name, collateral_claim_symbol);
 
+    bool option_claim_transferred = option_claim.transfer(buyer, option_claim_supply);
+    require(option_claim_transferred);
+    bool collateral_claim_transferred = collateral_claim.transfer(issuer, collateral_claim_supply);
+    require(collateral_claim_transferred);
+
     option_claim_addr = address(option_claim);
     collateral_claim_addr = address(collateral_claim);
 
@@ -97,8 +102,12 @@ contract TokenizedOption is Option {
 
   // Returns information about the tokens
   function get_token_info() public view returns (address, address,
+                                                  uint256, uint256,
                                                   uint256, uint256) {
+    uint256 option_claim_balance = option_claim.balanceOf(msg.sender);
+    uint256 collateral_claim_balance = collateral_claim.balanceOf(msg.sender);
     return(option_claim_addr, collateral_claim_addr,
-            option_claim_supply, collateral_claim_supply);
+            option_claim_supply, collateral_claim_supply,
+            option_claim_balance, collateral_claim_balance);
   }
 }
