@@ -22,9 +22,11 @@ contract("Portfolio[Factory]/ManagedForward[Factory] test suite", async accounts
   // Base volume info
   let base_volume;
 
-  // Managed Forward
+  // Managed Forwards
   let managed_forward;
   let managed_forward_address;
+  let managed_forward_2;
+  let managed_forward_address_2;
 
   // Portfolios
   let issuer_portfolio;
@@ -212,11 +214,50 @@ contract("Portfolio[Factory]/ManagedForward[Factory] test suite", async accounts
     assert.equal(info_observed[8], common.state_vals.active);
   });
 
-/*
   it("forward should be a valid input to another forward", async () => {
+    let managed_forward_factory = await ManagedForwardFactory.deployed();
+    let create_managed_forward_call = await (managed_forward_factory
+      .create_managed_forward(buyer, issuer,
+        base_addr, asset_addr,
+        strike_price_base, strike_price_quote,
+        volume,
+        maturity_time,
+        buyer_portfolio_address, issuer_portfolio_address,
+        { from: accounts[1] })
+    );
+    managed_forward_address_2 = create_managed_forward_call.logs[0].args[0];
+    console.log("Address of Second Managed Forward Created:", managed_forward_address);
+    assert.equal(Boolean(managed_forward_address), true);
 
+    managed_forward_2 = new web3.eth.Contract(ManagedForward.abi, managed_forward_address_2);
+    let issuer_add_managed_forward_call = await (issuer_portfolio
+      .methods
+      .add_managed_forward(managed_forward_address_2)
+      .send({ from: accounts[0] })
+    );
+    let buyer_add_managed_forward_call = await (buyer_portfolio
+      .methods
+      .add_managed_forward(managed_forward_address_2)
+      .send({ from: accounts[1] })
+    );
+    let issuer_forward_index = await issuer_portfolio.methods.get_forward_index(managed_forward_address_2).call();
+    let buyer_forward_index = await buyer_portfolio.methods.get_forward_index(managed_forward_address_2).call();
+    assert.equal(issuer_forward_index, '2');
+    assert.equal(buyer_forward_index, '2');
+
+    let collateralize_call = await (
+      managed_forward_2
+      .methods
+      .collateralize_from_match(managed_forward_address)
+      .send({ from: accounts[1], gas: 240000 })
+    );
+    let activate_call = await (
+      managed_forward_2
+      .methods
+      .activate_from_match(managed_forward_address)
+      .send({ from: accounts[0], gas: 240000 })
+    );
   });
-*/
 
   it("first forward should be settlable", async () => {
     let token_a = await TokenA.deployed();
@@ -232,6 +273,25 @@ contract("Portfolio[Factory]/ManagedForward[Factory] test suite", async accounts
     let info_observed = await managed_forward.methods.get_info().call();
     let base_balance_observed = await token_b.balanceOf(issuer_portfolio_address);
     let asset_balance_observed = await token_a.balanceOf(buyer_portfolio_address);
+    assert.equal(base_balance_observed, base_volume);
+    assert.equal(asset_balance_observed, volume)
+    assert.equal(info_observed[8], common.state_vals.expired);
+  });
+
+  it("second forward should be settlable", async () => {
+    let token_a = await TokenA.deployed();
+    let token_b = await TokenB.deployed();
+
+    let settle_call = await (
+      managed_forward_2
+      .methods
+      .settle()
+      .send({ from: accounts[1], gas: 240000 })
+    );
+
+    let info_observed = await managed_forward_2.methods.get_info().call();
+    let base_balance_observed = await token_b.balanceOf(buyer_portfolio_address);
+    let asset_balance_observed = await token_a.balanceOf(issuer_portfolio_address);
     assert.equal(base_balance_observed, base_volume);
     assert.equal(asset_balance_observed, volume)
     assert.equal(info_observed[8], common.state_vals.expired);
