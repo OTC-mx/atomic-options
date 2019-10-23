@@ -71,9 +71,11 @@ contract Forward is DerivativeCommon {
   // Returns all information about the contract in one go
   function get_info() public view returns (address, address, address, address,
                                             uint256, uint256,
-                                            uint256, uint256, uint256) {
+                                            uint256, uint256,
+                                            uint256, uint256) {
     return(issuer, buyer, base_addr, asset_addr,
             strike_price_base, strike_price_quote,
-            volume, maturity_time, state);
+            volume, base_volume,
+            maturity_time, state);
   }
 }

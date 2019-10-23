@@ -112,18 +112,19 @@ contract("Portfolio[Factory]/ManagedForward[Factory] test suite", async accounts
     let strike_price_base_observed = await managed_forward.methods.strike_price_base().call();
     let strike_price_quote_observed = await managed_forward.methods.strike_price_quote().call();
     let volume_observed = await managed_forward.methods.volume().call();
+    let base_volume_observed = await managed_forward.methods.base_volume().call();
     let maturity_time_observed = await managed_forward.methods.maturity_time().call();
     let state_observed = await managed_forward.methods.state().call();
 
     let info_observed = await managed_forward.methods.get_info().call();
 
     let expected = [issuer, buyer, base_addr, asset_addr,
-      strike_price_base, strike_price_quote, volume, maturity_time,
+      strike_price_base, strike_price_quote, volume, base_volume, maturity_time,
       common.state_vals.initialized];
 
     let observed = [issuer_observed, buyer_observed, base_addr_observed,
       asset_addr_observed, strike_price_base_observed,
-      strike_price_quote_observed, volume_observed,
+      strike_price_quote_observed, volume_observed, base_volume_observed,
       maturity_time_observed,
       state_observed];
 
@@ -193,7 +194,7 @@ contract("Portfolio[Factory]/ManagedForward[Factory] test suite", async accounts
     let info_observed = await managed_forward.methods.get_info().call();
     let asset_balance_observed = await token_a.balanceOf(issuer_portfolio_address);
     assert.equal(asset_balance_observed, volume)
-    assert.equal(info_observed[8], common.state_vals.collateralized)
+    assert.equal(info_observed[9], common.state_vals.collateralized)
   });
 
 
@@ -211,7 +212,7 @@ contract("Portfolio[Factory]/ManagedForward[Factory] test suite", async accounts
     let info_observed = await managed_forward.methods.get_info().call();
     let base_balance_observed = await token_b.balanceOf(buyer_portfolio_address);
     assert.equal(base_balance_observed, base_volume);
-    assert.equal(info_observed[8], common.state_vals.active);
+    assert.equal(info_observed[9], common.state_vals.active);
   });
 
   it("forward should be a valid input to another forward", async () => {
@@ -275,7 +276,7 @@ contract("Portfolio[Factory]/ManagedForward[Factory] test suite", async accounts
     let asset_balance_observed = await token_a.balanceOf(buyer_portfolio_address);
     assert.equal(base_balance_observed, base_volume);
     assert.equal(asset_balance_observed, volume)
-    assert.equal(info_observed[8], common.state_vals.expired);
+    assert.equal(info_observed[9], common.state_vals.expired);
   });
 
   it("second forward should be settlable", async () => {
@@ -294,6 +295,6 @@ contract("Portfolio[Factory]/ManagedForward[Factory] test suite", async accounts
     let asset_balance_observed = await token_a.balanceOf(issuer_portfolio_address);
     assert.equal(base_balance_observed, base_volume);
     assert.equal(asset_balance_observed, volume)
-    assert.equal(info_observed[8], common.state_vals.expired);
+    assert.equal(info_observed[9], common.state_vals.expired);
   });
 });
