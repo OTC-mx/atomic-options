@@ -198,6 +198,8 @@ contract("TokenizedOptionFactory/TokenizedOption test suite", async accounts => 
     );
 
     let info_observed = await tokenized_option.methods.get_info().call();
+    // let token_observed = await tokenized_option.methods.get_token_info().call();
+    // console.log(token_observed);
     let asset_balance_observed = await token_a.balanceOf(accounts[1]);
     assert.equal(asset_balance_observed.sub(asset_balance_initial).toString(), asset_exercised.toString());
     assert.equal(info_observed[10], common.state_vals.exercised);

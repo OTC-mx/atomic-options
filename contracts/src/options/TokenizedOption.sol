@@ -68,7 +68,7 @@ contract TokenizedOption is Option {
     require(base_transfer);
     bool option_claim_burn = option_claim.burn(exerciser, base_volume_exercised);
     require(option_claim_burn);
-    bool asset_transfer = asset.transfer(buyer, asset_volume_exercised);
+    bool asset_transfer = asset.transfer(exerciser, asset_volume_exercised);
     require(asset_transfer);
 
     option_claim_supply = option_claim.totalSupply();
