@@ -166,4 +166,8 @@ contract Portfolio {
   function get_forward_index(address forward_address) public view returns (uint256) {
     return my_forward_indices[forward_address];
   }
+
+  function get_info() public view returns (address, address, address, address) {
+    return(base_addr, asset_addr, owner, managed_forward_factory_addr);
+  }
 }
