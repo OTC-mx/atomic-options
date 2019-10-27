@@ -12857,7 +12857,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-27T18:42:20.308Z",
+  "updatedAt": "2019-10-27T18:50:56.321Z",
   "devdoc": {
     "details": "Option where you can trade claims on the collateral and options",
     "methods": {},

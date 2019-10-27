@@ -1439,12 +1439,12 @@
         }
       },
       "links": {},
-      "address": "0xf70E4D59A9268d777996e00aB41604D40936BD12",
-      "transactionHash": "0x03a8281a1467a455a30e5b70f5c08726ad982639d638a15c1c8da3252f0baf00"
+      "address": "0x05a4bE57F57B9E071600f0845F2065C905ee07AF",
+      "transactionHash": "0x13208b41a7c0153a3a91210de7412465526e43f9d2c1b7319643b8931722128e"
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-27T16:30:05.664Z",
+  "updatedAt": "2019-10-27T18:59:21.148Z",
   "devdoc": {
     "details": "Very simple ERC20 Token example, where all tokens are pre-assigned to the creator. Note they can later distribute these tokens as they wish using `transfer` and other `StandardToken` functions.",
     "methods": {
