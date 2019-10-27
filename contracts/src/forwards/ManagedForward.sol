@@ -157,9 +157,11 @@ contract ManagedForward is DerivativeCommon {
 
   // Internal logic for force_settle
   function force_settle_internal(address matched_addr) internal returns (bool) {
-    ManagedForward matched = ManagedForward(matched_addr);
-    if (matched.state() != STATE_EXPIRED) {
-      matched.force_settle();
+    if (matched_addr != address(0)) {
+      ManagedForward matched = ManagedForward(matched_addr);
+      if (matched.state() != STATE_EXPIRED) {
+        matched.force_settle();
+      }
     }
     return true;
   }
