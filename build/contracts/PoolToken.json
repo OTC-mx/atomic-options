@@ -695,7 +695,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4106,
+                          "referencedDeclaration": 4110,
                           "src": "436:3:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -783,7 +783,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4106,
+                        "referencedDeclaration": 4110,
                         "src": "479:3:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -1041,7 +1041,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4106,
+                            "referencedDeclaration": 4110,
                             "src": "663:3:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1095,10 +1095,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4109,
-                        4110
+                        4113,
+                        4114
                       ],
-                      "referencedDeclaration": 4109,
+                      "referencedDeclaration": 4113,
                       "src": "655:7:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1935,7 +1935,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4106,
+                          "referencedDeclaration": 4110,
                           "src": "436:3:6",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2023,7 +2023,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4106,
+                        "referencedDeclaration": 4110,
                         "src": "479:3:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -2281,7 +2281,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4106,
+                            "referencedDeclaration": 4110,
                             "src": "663:3:6",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -2335,10 +2335,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4109,
-                        4110
+                        4113,
+                        4114
                       ],
-                      "referencedDeclaration": 4109,
+                      "referencedDeclaration": 4113,
                       "src": "655:7:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2829,7 +2829,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-27T16:21:41.367Z",
+  "updatedAt": "2019-10-27T18:42:20.280Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {

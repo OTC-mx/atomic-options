@@ -180,6 +180,9 @@ contract("TokenizedOptionFactory/TokenizedOption test suite", async accounts => 
   it("tokenized option should be exercisable from asset", async () => {
     let token_a = await TokenA.deployed();
     let token_b = await TokenB.deployed();
+    let option_claim_token_addr = await tokenized_option.methods.option_claim_addr().call();
+    let option_claim_token = new web3.eth.Contract(PoolToken.abi, option_claim_token_addr);
+    let total_supply_initial = await option_claim_token.methods.totalSupply().call();
 
     let asset_balance_initial = await token_a.balanceOf(accounts[1]);
 
@@ -194,13 +197,14 @@ contract("TokenizedOptionFactory/TokenizedOption test suite", async accounts => 
       tokenized_option
       .methods
       .exercise_from_asset(asset_exercised.toString())
-      .send({ from: accounts[1] })
+      .send({ from: accounts[1], gas: 240000  })
     );
 
     let info_observed = await tokenized_option.methods.get_info().call();
-    // let token_observed = await tokenized_option.methods.get_token_info().call();
-    // console.log(token_observed);
+    let total_supply_final = await option_claim_token.methods.totalSupply().call();
     let asset_balance_observed = await token_a.balanceOf(accounts[1]);
+
+    assert.notEqual(total_supply_initial, total_supply_final)
     assert.equal(asset_balance_observed.sub(asset_balance_initial).toString(), asset_exercised.toString());
     assert.equal(info_observed[10], common.state_vals.exercised);
   });
