@@ -134,14 +134,14 @@
     "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/src/factories/TokenizedOptionFactory.sol",
     "exportedSymbols": {
       "TokenizedOptionFactory": [
-        1858
+        1886
       ]
     },
-    "id": 1859,
+    "id": 1887,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1759,
+        "id": 1787,
         "literals": [
           "solidity",
           ">=",
@@ -157,10 +157,10 @@
       {
         "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/src/options/TokenizedOption.sol",
         "file": "../options/TokenizedOption.sol",
-        "id": 1760,
+        "id": 1788,
         "nodeType": "ImportDirective",
-        "scope": 1859,
-        "sourceUnit": 3595,
+        "scope": 1887,
+        "sourceUnit": 3629,
         "src": "34:40:13",
         "symbolAliases": [],
         "unitAlias": ""
@@ -168,14 +168,14 @@
       {
         "baseContracts": [],
         "contractDependencies": [
-          3594
+          3628
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1858,
+        "id": 1886,
         "linearizedBaseContracts": [
-          1858
+          1886
         ],
         "name": "TokenizedOptionFactory",
         "nodeType": "ContractDefinition",
@@ -183,20 +183,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1764,
+            "id": 1792,
             "name": "NewTokenizedOption",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1763,
+              "id": 1791,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1762,
+                  "id": 1790,
                   "indexed": false,
                   "name": "tokenized_option",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1764,
+                  "scope": 1792,
                   "src": "137:24:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -205,7 +205,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1761,
+                    "id": 1789,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "137:7:13",
@@ -225,10 +225,10 @@
           },
           {
             "constant": false,
-            "id": 1768,
+            "id": 1796,
             "name": "created_tokenized_options",
             "nodeType": "VariableDeclaration",
-            "scope": 1858,
+            "scope": 1886,
             "src": "167:57:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -237,9 +237,9 @@
               "typeString": "mapping(address => bool)"
             },
             "typeName": {
-              "id": 1767,
+              "id": 1795,
               "keyType": {
-                "id": 1765,
+                "id": 1793,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "175:7:13",
@@ -255,7 +255,7 @@
                 "typeString": "mapping(address => bool)"
               },
               "valueType": {
-                "id": 1766,
+                "id": 1794,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "186:4:13",
@@ -270,37 +270,37 @@
           },
           {
             "body": {
-              "id": 1844,
+              "id": 1872,
               "nodeType": "Block",
               "src": "913:737:13",
               "statements": [
                 {
                   "assignments": [
-                    1802
+                    1830
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1802,
+                      "id": 1830,
                       "name": "tokenized_option",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1844,
+                      "scope": 1872,
                       "src": "919:32:13",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                        "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                         "typeString": "contract TokenizedOption"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1801,
+                        "id": 1829,
                         "name": "TokenizedOption",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 3594,
+                        "referencedDeclaration": 3628,
                         "src": "919:15:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                           "typeString": "contract TokenizedOption"
                         }
                       },
@@ -308,17 +308,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1816,
+                  "id": 1844,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1805,
+                        "id": 1833,
                         "name": "_issuer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1770,
+                        "referencedDeclaration": 1798,
                         "src": "1011:7:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -327,11 +327,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1806,
+                        "id": 1834,
                         "name": "_buyer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1772,
+                        "referencedDeclaration": 1800,
                         "src": "1020:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -340,11 +340,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1807,
+                        "id": 1835,
                         "name": "_base_addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1774,
+                        "referencedDeclaration": 1802,
                         "src": "1064:10:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -353,11 +353,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1808,
+                        "id": 1836,
                         "name": "_asset_addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1776,
+                        "referencedDeclaration": 1804,
                         "src": "1076:11:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -366,11 +366,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1809,
+                        "id": 1837,
                         "name": "_fee",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1778,
+                        "referencedDeclaration": 1806,
                         "src": "1125:4:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -379,11 +379,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1810,
+                        "id": 1838,
                         "name": "_strike_price_base",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1780,
+                        "referencedDeclaration": 1808,
                         "src": "1167:18:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -392,11 +392,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1811,
+                        "id": 1839,
                         "name": "_strike_price_quote",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1782,
+                        "referencedDeclaration": 1810,
                         "src": "1187:19:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -405,11 +405,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1812,
+                        "id": 1840,
                         "name": "_volume",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1784,
+                        "referencedDeclaration": 1812,
                         "src": "1244:7:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -418,11 +418,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1813,
+                        "id": 1841,
                         "name": "_maturity_time",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1786,
+                        "referencedDeclaration": 1814,
                         "src": "1289:14:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -431,11 +431,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1814,
+                        "id": 1842,
                         "name": "_expiry_time",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1788,
+                        "referencedDeclaration": 1816,
                         "src": "1305:12:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -486,7 +486,7 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1804,
+                      "id": 1832,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -494,23 +494,23 @@
                       "nodeType": "NewExpression",
                       "src": "954:19:13",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_contract$_TokenizedOption_$3594_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_contract$_TokenizedOption_$3628_$",
                         "typeString": "function (address,address,address,address,uint256,uint256,uint256,uint256,uint256,uint256) returns (contract TokenizedOption)"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1803,
+                        "id": 1831,
                         "name": "TokenizedOption",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 3594,
+                        "referencedDeclaration": 3628,
                         "src": "958:15:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                           "typeString": "contract TokenizedOption"
                         }
                       }
                     },
-                    "id": 1815,
+                    "id": 1843,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -520,7 +520,7 @@
                     "nodeType": "FunctionCall",
                     "src": "954:364:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                      "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                       "typeString": "contract TokenizedOption"
                     }
                   },
@@ -533,11 +533,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1820,
+                        "id": 1848,
                         "name": "option_claim_name",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1790,
+                        "referencedDeclaration": 1818,
                         "src": "1359:17:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -546,11 +546,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1821,
+                        "id": 1849,
                         "name": "option_claim_symbol",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1792,
+                        "referencedDeclaration": 1820,
                         "src": "1378:19:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -559,11 +559,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1822,
+                        "id": 1850,
                         "name": "collateral_claim_name",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1794,
+                        "referencedDeclaration": 1822,
                         "src": "1439:21:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -572,11 +572,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1823,
+                        "id": 1851,
                         "name": "collateral_claim_symbol",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1796,
+                        "referencedDeclaration": 1824,
                         "src": "1462:23:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -605,32 +605,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1817,
+                        "id": 1845,
                         "name": "tokenized_option",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1802,
+                        "referencedDeclaration": 1830,
                         "src": "1324:16:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                           "typeString": "contract TokenizedOption"
                         }
                       },
-                      "id": 1819,
+                      "id": 1847,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "initialize_tokens",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3304,
+                      "referencedDeclaration": 3338,
                       "src": "1324:34:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory,string memory,string memory,string memory) external"
                       }
                     },
-                    "id": 1824,
+                    "id": 1852,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -644,7 +644,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1825,
+                  "id": 1853,
                   "nodeType": "ExpressionStatement",
                   "src": "1324:162:13"
                 },
@@ -657,14 +657,14 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 1828,
+                            "id": 1856,
                             "name": "tokenized_option",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1802,
+                            "referencedDeclaration": 1830,
                             "src": "1524:16:13",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                               "typeString": "contract TokenizedOption"
                             }
                           }
@@ -672,11 +672,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                               "typeString": "contract TokenizedOption"
                             }
                           ],
-                          "id": 1827,
+                          "id": 1855,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -689,7 +689,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 1829,
+                        "id": 1857,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -711,18 +711,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1826,
+                      "id": 1854,
                       "name": "NewTokenizedOption",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1764,
+                      "referencedDeclaration": 1792,
                       "src": "1497:18:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 1830,
+                    "id": 1858,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -736,14 +736,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1831,
+                  "id": 1859,
                   "nodeType": "EmitStatement",
                   "src": "1492:50:13"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1838,
+                    "id": 1866,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -752,31 +752,31 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 1832,
+                        "id": 1860,
                         "name": "created_tokenized_options",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1768,
+                        "referencedDeclaration": 1796,
                         "src": "1548:25:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 1836,
+                      "id": 1864,
                       "indexExpression": {
                         "argumentTypes": null,
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 1834,
+                            "id": 1862,
                             "name": "tokenized_option",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1802,
+                            "referencedDeclaration": 1830,
                             "src": "1582:16:13",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                               "typeString": "contract TokenizedOption"
                             }
                           }
@@ -784,11 +784,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                               "typeString": "contract TokenizedOption"
                             }
                           ],
-                          "id": 1833,
+                          "id": 1861,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -801,7 +801,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 1835,
+                        "id": 1863,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -831,7 +831,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 1837,
+                      "id": 1865,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -852,7 +852,7 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1839,
+                  "id": 1867,
                   "nodeType": "ExpressionStatement",
                   "src": "1548:59:13"
                 },
@@ -862,14 +862,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1841,
+                        "id": 1869,
                         "name": "tokenized_option",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1802,
+                        "referencedDeclaration": 1830,
                         "src": "1628:16:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                           "typeString": "contract TokenizedOption"
                         }
                       }
@@ -877,11 +877,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                           "typeString": "contract TokenizedOption"
                         }
                       ],
-                      "id": 1840,
+                      "id": 1868,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -894,7 +894,7 @@
                       },
                       "typeName": "address"
                     },
-                    "id": 1842,
+                    "id": 1870,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -908,30 +908,30 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 1800,
-                  "id": 1843,
+                  "functionReturnParameters": 1828,
+                  "id": 1871,
                   "nodeType": "Return",
                   "src": "1613:32:13"
                 }
               ]
             },
             "documentation": null,
-            "id": 1845,
+            "id": 1873,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "create_tokenized_option",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1797,
+              "id": 1825,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1770,
+                  "id": 1798,
                   "name": "_issuer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "262:15:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -940,7 +940,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1769,
+                    "id": 1797,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "262:7:13",
@@ -955,10 +955,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1772,
+                  "id": 1800,
                   "name": "_buyer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "279:14:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -967,7 +967,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1771,
+                    "id": 1799,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "279:7:13",
@@ -982,10 +982,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1774,
+                  "id": 1802,
                   "name": "_base_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "329:18:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -994,7 +994,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1773,
+                    "id": 1801,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "329:7:13",
@@ -1009,10 +1009,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1776,
+                  "id": 1804,
                   "name": "_asset_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "349:19:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1021,7 +1021,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1775,
+                    "id": 1803,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "349:7:13",
@@ -1036,10 +1036,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1778,
+                  "id": 1806,
                   "name": "_fee",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "404:12:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1048,7 +1048,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1777,
+                    "id": 1805,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "404:7:13",
@@ -1062,10 +1062,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1780,
+                  "id": 1808,
                   "name": "_strike_price_base",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "452:26:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1074,7 +1074,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1779,
+                    "id": 1807,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "452:7:13",
@@ -1088,10 +1088,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1782,
+                  "id": 1810,
                   "name": "_strike_price_quote",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "480:27:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1100,7 +1100,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1781,
+                    "id": 1809,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "480:7:13",
@@ -1114,10 +1114,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1784,
+                  "id": 1812,
                   "name": "_volume",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "543:15:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1126,7 +1126,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1783,
+                    "id": 1811,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "543:7:13",
@@ -1140,10 +1140,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1786,
+                  "id": 1814,
                   "name": "_maturity_time",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "594:22:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1152,7 +1152,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1785,
+                    "id": 1813,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "594:7:13",
@@ -1166,10 +1166,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1788,
+                  "id": 1816,
                   "name": "_expiry_time",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "618:20:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1178,7 +1178,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1787,
+                    "id": 1815,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "618:7:13",
@@ -1192,10 +1192,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1790,
+                  "id": 1818,
                   "name": "option_claim_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "674:31:13",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1204,7 +1204,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1789,
+                    "id": 1817,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "674:6:13",
@@ -1218,10 +1218,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1792,
+                  "id": 1820,
                   "name": "option_claim_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "707:33:13",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1230,7 +1230,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1791,
+                    "id": 1819,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "707:6:13",
@@ -1244,10 +1244,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1794,
+                  "id": 1822,
                   "name": "collateral_claim_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "776:35:13",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1256,7 +1256,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1793,
+                    "id": 1821,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "776:6:13",
@@ -1270,10 +1270,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1796,
+                  "id": 1824,
                   "name": "collateral_claim_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "813:37:13",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1282,7 +1282,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1795,
+                    "id": 1823,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "813:6:13",
@@ -1298,15 +1298,15 @@
               "src": "261:590:13"
             },
             "returnParameters": {
-              "id": 1800,
+              "id": 1828,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1799,
+                  "id": 1827,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "904:7:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1315,7 +1315,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1798,
+                    "id": 1826,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "904:7:13",
@@ -1331,7 +1331,7 @@
               ],
               "src": "903:9:13"
             },
-            "scope": 1858,
+            "scope": 1886,
             "src": "229:1421:13",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1339,7 +1339,7 @@
           },
           {
             "body": {
-              "id": 1856,
+              "id": 1884,
               "nodeType": "Block",
               "src": "1741:67:13",
               "statements": [
@@ -1348,25 +1348,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 1852,
+                      "id": 1880,
                       "name": "created_tokenized_options",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1768,
+                      "referencedDeclaration": 1796,
                       "src": "1754:25:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                         "typeString": "mapping(address => bool)"
                       }
                     },
-                    "id": 1854,
+                    "id": 1882,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 1853,
+                      "id": 1881,
                       "name": "created_option_address",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1847,
+                      "referencedDeclaration": 1875,
                       "src": "1780:22:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1384,30 +1384,30 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 1851,
-                  "id": 1855,
+                  "functionReturnParameters": 1879,
+                  "id": 1883,
                   "nodeType": "Return",
                   "src": "1747:56:13"
                 }
               ]
             },
             "documentation": null,
-            "id": 1857,
+            "id": 1885,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "get_created_option",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1848,
+              "id": 1876,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1847,
+                  "id": 1875,
                   "name": "created_option_address",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1857,
+                  "scope": 1885,
                   "src": "1682:30:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1416,7 +1416,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1846,
+                    "id": 1874,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1682:7:13",
@@ -1433,15 +1433,15 @@
               "src": "1681:32:13"
             },
             "returnParameters": {
-              "id": 1851,
+              "id": 1879,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1850,
+                  "id": 1878,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1857,
+                  "scope": 1885,
                   "src": "1735:4:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1450,7 +1450,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1849,
+                    "id": 1877,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1735:4:13",
@@ -1465,14 +1465,14 @@
               ],
               "src": "1734:6:13"
             },
-            "scope": 1858,
+            "scope": 1886,
             "src": "1654:154:13",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1859,
+        "scope": 1887,
         "src": "76:1734:13"
       }
     ],
@@ -1482,14 +1482,14 @@
     "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/src/factories/TokenizedOptionFactory.sol",
     "exportedSymbols": {
       "TokenizedOptionFactory": [
-        1858
+        1886
       ]
     },
-    "id": 1859,
+    "id": 1887,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1759,
+        "id": 1787,
         "literals": [
           "solidity",
           ">=",
@@ -1505,10 +1505,10 @@
       {
         "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/src/options/TokenizedOption.sol",
         "file": "../options/TokenizedOption.sol",
-        "id": 1760,
+        "id": 1788,
         "nodeType": "ImportDirective",
-        "scope": 1859,
-        "sourceUnit": 3595,
+        "scope": 1887,
+        "sourceUnit": 3629,
         "src": "34:40:13",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1516,14 +1516,14 @@
       {
         "baseContracts": [],
         "contractDependencies": [
-          3594
+          3628
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1858,
+        "id": 1886,
         "linearizedBaseContracts": [
-          1858
+          1886
         ],
         "name": "TokenizedOptionFactory",
         "nodeType": "ContractDefinition",
@@ -1531,20 +1531,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1764,
+            "id": 1792,
             "name": "NewTokenizedOption",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1763,
+              "id": 1791,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1762,
+                  "id": 1790,
                   "indexed": false,
                   "name": "tokenized_option",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1764,
+                  "scope": 1792,
                   "src": "137:24:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1553,7 +1553,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1761,
+                    "id": 1789,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "137:7:13",
@@ -1573,10 +1573,10 @@
           },
           {
             "constant": false,
-            "id": 1768,
+            "id": 1796,
             "name": "created_tokenized_options",
             "nodeType": "VariableDeclaration",
-            "scope": 1858,
+            "scope": 1886,
             "src": "167:57:13",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1585,9 +1585,9 @@
               "typeString": "mapping(address => bool)"
             },
             "typeName": {
-              "id": 1767,
+              "id": 1795,
               "keyType": {
-                "id": 1765,
+                "id": 1793,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "175:7:13",
@@ -1603,7 +1603,7 @@
                 "typeString": "mapping(address => bool)"
               },
               "valueType": {
-                "id": 1766,
+                "id": 1794,
                 "name": "bool",
                 "nodeType": "ElementaryTypeName",
                 "src": "186:4:13",
@@ -1618,37 +1618,37 @@
           },
           {
             "body": {
-              "id": 1844,
+              "id": 1872,
               "nodeType": "Block",
               "src": "913:737:13",
               "statements": [
                 {
                   "assignments": [
-                    1802
+                    1830
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1802,
+                      "id": 1830,
                       "name": "tokenized_option",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1844,
+                      "scope": 1872,
                       "src": "919:32:13",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                        "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                         "typeString": "contract TokenizedOption"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1801,
+                        "id": 1829,
                         "name": "TokenizedOption",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 3594,
+                        "referencedDeclaration": 3628,
                         "src": "919:15:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                           "typeString": "contract TokenizedOption"
                         }
                       },
@@ -1656,17 +1656,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1816,
+                  "id": 1844,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1805,
+                        "id": 1833,
                         "name": "_issuer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1770,
+                        "referencedDeclaration": 1798,
                         "src": "1011:7:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1675,11 +1675,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1806,
+                        "id": 1834,
                         "name": "_buyer",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1772,
+                        "referencedDeclaration": 1800,
                         "src": "1020:6:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1688,11 +1688,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1807,
+                        "id": 1835,
                         "name": "_base_addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1774,
+                        "referencedDeclaration": 1802,
                         "src": "1064:10:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1701,11 +1701,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1808,
+                        "id": 1836,
                         "name": "_asset_addr",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1776,
+                        "referencedDeclaration": 1804,
                         "src": "1076:11:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1714,11 +1714,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1809,
+                        "id": 1837,
                         "name": "_fee",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1778,
+                        "referencedDeclaration": 1806,
                         "src": "1125:4:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1727,11 +1727,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1810,
+                        "id": 1838,
                         "name": "_strike_price_base",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1780,
+                        "referencedDeclaration": 1808,
                         "src": "1167:18:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1740,11 +1740,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1811,
+                        "id": 1839,
                         "name": "_strike_price_quote",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1782,
+                        "referencedDeclaration": 1810,
                         "src": "1187:19:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1753,11 +1753,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1812,
+                        "id": 1840,
                         "name": "_volume",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1784,
+                        "referencedDeclaration": 1812,
                         "src": "1244:7:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1766,11 +1766,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1813,
+                        "id": 1841,
                         "name": "_maturity_time",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1786,
+                        "referencedDeclaration": 1814,
                         "src": "1289:14:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1779,11 +1779,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1814,
+                        "id": 1842,
                         "name": "_expiry_time",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1788,
+                        "referencedDeclaration": 1816,
                         "src": "1305:12:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1834,7 +1834,7 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1804,
+                      "id": 1832,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1842,23 +1842,23 @@
                       "nodeType": "NewExpression",
                       "src": "954:19:13",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_contract$_TokenizedOption_$3594_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$_t_address_$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$_t_uint256_$returns$_t_contract$_TokenizedOption_$3628_$",
                         "typeString": "function (address,address,address,address,uint256,uint256,uint256,uint256,uint256,uint256) returns (contract TokenizedOption)"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1803,
+                        "id": 1831,
                         "name": "TokenizedOption",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 3594,
+                        "referencedDeclaration": 3628,
                         "src": "958:15:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                           "typeString": "contract TokenizedOption"
                         }
                       }
                     },
-                    "id": 1815,
+                    "id": 1843,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1868,7 +1868,7 @@
                     "nodeType": "FunctionCall",
                     "src": "954:364:13",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                      "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                       "typeString": "contract TokenizedOption"
                     }
                   },
@@ -1881,11 +1881,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1820,
+                        "id": 1848,
                         "name": "option_claim_name",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1790,
+                        "referencedDeclaration": 1818,
                         "src": "1359:17:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1894,11 +1894,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1821,
+                        "id": 1849,
                         "name": "option_claim_symbol",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1792,
+                        "referencedDeclaration": 1820,
                         "src": "1378:19:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1907,11 +1907,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1822,
+                        "id": 1850,
                         "name": "collateral_claim_name",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1794,
+                        "referencedDeclaration": 1822,
                         "src": "1439:21:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1920,11 +1920,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1823,
+                        "id": 1851,
                         "name": "collateral_claim_symbol",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1796,
+                        "referencedDeclaration": 1824,
                         "src": "1462:23:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1953,32 +1953,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1817,
+                        "id": 1845,
                         "name": "tokenized_option",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1802,
+                        "referencedDeclaration": 1830,
                         "src": "1324:16:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                           "typeString": "contract TokenizedOption"
                         }
                       },
-                      "id": 1819,
+                      "id": 1847,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "initialize_tokens",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3304,
+                      "referencedDeclaration": 3338,
                       "src": "1324:34:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory,string memory,string memory,string memory) external"
                       }
                     },
-                    "id": 1824,
+                    "id": 1852,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1992,7 +1992,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1825,
+                  "id": 1853,
                   "nodeType": "ExpressionStatement",
                   "src": "1324:162:13"
                 },
@@ -2005,14 +2005,14 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 1828,
+                            "id": 1856,
                             "name": "tokenized_option",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1802,
+                            "referencedDeclaration": 1830,
                             "src": "1524:16:13",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                               "typeString": "contract TokenizedOption"
                             }
                           }
@@ -2020,11 +2020,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                               "typeString": "contract TokenizedOption"
                             }
                           ],
-                          "id": 1827,
+                          "id": 1855,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2037,7 +2037,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 1829,
+                        "id": 1857,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2059,18 +2059,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 1826,
+                      "id": 1854,
                       "name": "NewTokenizedOption",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1764,
+                      "referencedDeclaration": 1792,
                       "src": "1497:18:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 1830,
+                    "id": 1858,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2084,14 +2084,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1831,
+                  "id": 1859,
                   "nodeType": "EmitStatement",
                   "src": "1492:50:13"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1838,
+                    "id": 1866,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2100,31 +2100,31 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 1832,
+                        "id": 1860,
                         "name": "created_tokenized_options",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1768,
+                        "referencedDeclaration": 1796,
                         "src": "1548:25:13",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                           "typeString": "mapping(address => bool)"
                         }
                       },
-                      "id": 1836,
+                      "id": 1864,
                       "indexExpression": {
                         "argumentTypes": null,
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 1834,
+                            "id": 1862,
                             "name": "tokenized_option",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1802,
+                            "referencedDeclaration": 1830,
                             "src": "1582:16:13",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                               "typeString": "contract TokenizedOption"
                             }
                           }
@@ -2132,11 +2132,11 @@
                         "expression": {
                           "argumentTypes": [
                             {
-                              "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                              "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                               "typeString": "contract TokenizedOption"
                             }
                           ],
-                          "id": 1833,
+                          "id": 1861,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2149,7 +2149,7 @@
                           },
                           "typeName": "address"
                         },
-                        "id": 1835,
+                        "id": 1863,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2179,7 +2179,7 @@
                     "rightHandSide": {
                       "argumentTypes": null,
                       "hexValue": "74727565",
-                      "id": 1837,
+                      "id": 1865,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2200,7 +2200,7 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1839,
+                  "id": 1867,
                   "nodeType": "ExpressionStatement",
                   "src": "1548:59:13"
                 },
@@ -2210,14 +2210,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1841,
+                        "id": 1869,
                         "name": "tokenized_option",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1802,
+                        "referencedDeclaration": 1830,
                         "src": "1628:16:13",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                           "typeString": "contract TokenizedOption"
                         }
                       }
@@ -2225,11 +2225,11 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_TokenizedOption_$3594",
+                          "typeIdentifier": "t_contract$_TokenizedOption_$3628",
                           "typeString": "contract TokenizedOption"
                         }
                       ],
-                      "id": 1840,
+                      "id": 1868,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2242,7 +2242,7 @@
                       },
                       "typeName": "address"
                     },
-                    "id": 1842,
+                    "id": 1870,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2256,30 +2256,30 @@
                       "typeString": "address"
                     }
                   },
-                  "functionReturnParameters": 1800,
-                  "id": 1843,
+                  "functionReturnParameters": 1828,
+                  "id": 1871,
                   "nodeType": "Return",
                   "src": "1613:32:13"
                 }
               ]
             },
             "documentation": null,
-            "id": 1845,
+            "id": 1873,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "create_tokenized_option",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1797,
+              "id": 1825,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1770,
+                  "id": 1798,
                   "name": "_issuer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "262:15:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2288,7 +2288,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1769,
+                    "id": 1797,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "262:7:13",
@@ -2303,10 +2303,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1772,
+                  "id": 1800,
                   "name": "_buyer",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "279:14:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2315,7 +2315,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1771,
+                    "id": 1799,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "279:7:13",
@@ -2330,10 +2330,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1774,
+                  "id": 1802,
                   "name": "_base_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "329:18:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2342,7 +2342,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1773,
+                    "id": 1801,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "329:7:13",
@@ -2357,10 +2357,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1776,
+                  "id": 1804,
                   "name": "_asset_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "349:19:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2369,7 +2369,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1775,
+                    "id": 1803,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "349:7:13",
@@ -2384,10 +2384,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1778,
+                  "id": 1806,
                   "name": "_fee",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "404:12:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2396,7 +2396,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1777,
+                    "id": 1805,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "404:7:13",
@@ -2410,10 +2410,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1780,
+                  "id": 1808,
                   "name": "_strike_price_base",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "452:26:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2422,7 +2422,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1779,
+                    "id": 1807,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "452:7:13",
@@ -2436,10 +2436,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1782,
+                  "id": 1810,
                   "name": "_strike_price_quote",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "480:27:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2448,7 +2448,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1781,
+                    "id": 1809,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "480:7:13",
@@ -2462,10 +2462,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1784,
+                  "id": 1812,
                   "name": "_volume",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "543:15:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2474,7 +2474,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1783,
+                    "id": 1811,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "543:7:13",
@@ -2488,10 +2488,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1786,
+                  "id": 1814,
                   "name": "_maturity_time",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "594:22:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2500,7 +2500,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1785,
+                    "id": 1813,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "594:7:13",
@@ -2514,10 +2514,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1788,
+                  "id": 1816,
                   "name": "_expiry_time",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "618:20:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2526,7 +2526,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1787,
+                    "id": 1815,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "618:7:13",
@@ -2540,10 +2540,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1790,
+                  "id": 1818,
                   "name": "option_claim_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "674:31:13",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2552,7 +2552,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1789,
+                    "id": 1817,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "674:6:13",
@@ -2566,10 +2566,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1792,
+                  "id": 1820,
                   "name": "option_claim_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "707:33:13",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2578,7 +2578,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1791,
+                    "id": 1819,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "707:6:13",
@@ -2592,10 +2592,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1794,
+                  "id": 1822,
                   "name": "collateral_claim_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "776:35:13",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2604,7 +2604,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1793,
+                    "id": 1821,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "776:6:13",
@@ -2618,10 +2618,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1796,
+                  "id": 1824,
                   "name": "collateral_claim_symbol",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "813:37:13",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2630,7 +2630,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1795,
+                    "id": 1823,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "813:6:13",
@@ -2646,15 +2646,15 @@
               "src": "261:590:13"
             },
             "returnParameters": {
-              "id": 1800,
+              "id": 1828,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1799,
+                  "id": 1827,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1845,
+                  "scope": 1873,
                   "src": "904:7:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2663,7 +2663,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1798,
+                    "id": 1826,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "904:7:13",
@@ -2679,7 +2679,7 @@
               ],
               "src": "903:9:13"
             },
-            "scope": 1858,
+            "scope": 1886,
             "src": "229:1421:13",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2687,7 +2687,7 @@
           },
           {
             "body": {
-              "id": 1856,
+              "id": 1884,
               "nodeType": "Block",
               "src": "1741:67:13",
               "statements": [
@@ -2696,25 +2696,25 @@
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 1852,
+                      "id": 1880,
                       "name": "created_tokenized_options",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1768,
+                      "referencedDeclaration": 1796,
                       "src": "1754:25:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_bool_$",
                         "typeString": "mapping(address => bool)"
                       }
                     },
-                    "id": 1854,
+                    "id": 1882,
                     "indexExpression": {
                       "argumentTypes": null,
-                      "id": 1853,
+                      "id": 1881,
                       "name": "created_option_address",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1847,
+                      "referencedDeclaration": 1875,
                       "src": "1780:22:13",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -2732,30 +2732,30 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 1851,
-                  "id": 1855,
+                  "functionReturnParameters": 1879,
+                  "id": 1883,
                   "nodeType": "Return",
                   "src": "1747:56:13"
                 }
               ]
             },
             "documentation": null,
-            "id": 1857,
+            "id": 1885,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "get_created_option",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1848,
+              "id": 1876,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1847,
+                  "id": 1875,
                   "name": "created_option_address",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1857,
+                  "scope": 1885,
                   "src": "1682:30:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2764,7 +2764,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1846,
+                    "id": 1874,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1682:7:13",
@@ -2781,15 +2781,15 @@
               "src": "1681:32:13"
             },
             "returnParameters": {
-              "id": 1851,
+              "id": 1879,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1850,
+                  "id": 1878,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1857,
+                  "scope": 1885,
                   "src": "1735:4:13",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2798,7 +2798,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1849,
+                    "id": 1877,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "1735:4:13",
@@ -2813,14 +2813,14 @@
               ],
               "src": "1734:6:13"
             },
-            "scope": 1858,
+            "scope": 1886,
             "src": "1654:154:13",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1859,
+        "scope": 1887,
         "src": "76:1734:13"
       }
     ],
@@ -2848,32 +2848,12 @@
         }
       },
       "links": {},
-      "address": "0x51C88706660C898Fd17e097346A68EadF60bbd74",
-      "transactionHash": "0xf6bb68b7767aedf4c659bf30e516bcc4ba1c9ef7d733bb1cc55ad1bcb361c496"
-    },
-    "1571341059192": {
-      "events": {
-        "0xcea167cf8e71480d6bcfe12cb99cd6aef33aa91f1f8b6d0fbb838b59dfda35d7": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": false,
-              "name": "tokenized_option",
-              "type": "address"
-            }
-          ],
-          "name": "NewTokenizedOption",
-          "type": "event",
-          "signature": "0xcea167cf8e71480d6bcfe12cb99cd6aef33aa91f1f8b6d0fbb838b59dfda35d7"
-        }
-      },
-      "links": {},
-      "address": "0x9561C133DD8580860B6b7E504bC5Aa500f0f06a7",
-      "transactionHash": "0x3f5977312a4c4c6507af7c36fd97103b55a89718173881f07ad916b10329c048"
+      "address": "0x82e25dDd36187224c40b0DBA7F487080537bFe4E",
+      "transactionHash": "0x4140ce87893ed7f8fd244700aa1e8abf81c9404569b0033e593eaba02085a7e1"
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-10-23T00:29:34.916Z",
+  "updatedAt": "2019-10-27T16:25:36.214Z",
   "devdoc": {
     "methods": {}
   },
