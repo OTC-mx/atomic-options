@@ -112,6 +112,8 @@ contract TokenizedOption is Option {
     bool asset_transfer = asset.transfer(msg.sender, asset_claimed);
     require(asset_transfer);
 
+    collateral_claim_supply = collateral_claim.totalSupply();
+
     state = STATE_EXPIRED;
   }
 
