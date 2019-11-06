@@ -65,4 +65,15 @@ contract DerivativeCommon {
 
     state = STATE_COLLATERALIZED;
   }
+
+  // Transfer buyer/issuer of contract
+  function transfer_issuer(address _to) public {
+    require(msg.sender == issuer);
+    issuer = _to;
+  }
+
+  function transfer_buyer(address _to) public {
+    require(msg.sender == buyer);
+    buyer = _to;
+  }
 }
