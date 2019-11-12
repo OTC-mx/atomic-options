@@ -1,0 +1,151 @@
+{
+  "contractName": "uniswap_factory",
+  "abi": [
+    {
+      "name": "NewExchange",
+      "inputs": [
+        {
+          "type": "address",
+          "name": "token",
+          "indexed": true
+        },
+        {
+          "type": "address",
+          "name": "exchange",
+          "indexed": true
+        }
+      ],
+      "anonymous": false,
+      "type": "event"
+    },
+    {
+      "name": "initializeFactory",
+      "outputs": [],
+      "inputs": [
+        {
+          "type": "address",
+          "name": "template"
+        }
+      ],
+      "constant": false,
+      "payable": false,
+      "type": "function",
+      "gas": 35742
+    },
+    {
+      "name": "createExchange",
+      "outputs": [
+        {
+          "type": "address",
+          "name": "out"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "address",
+          "name": "token"
+        }
+      ],
+      "constant": false,
+      "payable": false,
+      "type": "function",
+      "gas": 188952
+    },
+    {
+      "name": "getExchange",
+      "outputs": [
+        {
+          "type": "address",
+          "name": "out"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "address",
+          "name": "token"
+        }
+      ],
+      "constant": true,
+      "payable": false,
+      "type": "function",
+      "gas": 765
+    },
+    {
+      "name": "getToken",
+      "outputs": [
+        {
+          "type": "address",
+          "name": "out"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "address",
+          "name": "exchange"
+        }
+      ],
+      "constant": true,
+      "payable": false,
+      "type": "function",
+      "gas": 795
+    },
+    {
+      "name": "getTokenWithId",
+      "outputs": [
+        {
+          "type": "address",
+          "name": "out"
+        }
+      ],
+      "inputs": [
+        {
+          "type": "uint256",
+          "name": "token_id"
+        }
+      ],
+      "constant": true,
+      "payable": false,
+      "type": "function",
+      "gas": 786
+    },
+    {
+      "name": "exchangeTemplate",
+      "outputs": [
+        {
+          "type": "address",
+          "name": "out"
+        }
+      ],
+      "inputs": [],
+      "constant": true,
+      "payable": false,
+      "type": "function",
+      "gas": 701
+    },
+    {
+      "name": "tokenCount",
+      "outputs": [
+        {
+          "type": "uint256",
+          "name": "out"
+        }
+      ],
+      "inputs": [],
+      "constant": true,
+      "payable": false,
+      "type": "function",
+      "gas": 731
+    }
+  ],
+  "bytecode": "0x6103cd56600436101561000d576103c3565b600035601c52740100000000000000000000000000000000000000006020526f7fffffffffffffffffffffffffffffff6040527fffffffffffffffffffffffffffffffff8000000000000000000000000000000060605274012a05f1fffffffffffffffffffffffffdabf41c006080527ffffffffffffffffffffffffed5fa0e000000000000000000000000000000000060a05263538a3f0e60005114156100f05734156100ba57600080fd5b60043560205181106100cb57600080fd5b50600054156100d957600080fd5b6000600435186100e857600080fd5b600435600055005b631648f38e60005114156102b157341561010957600080fd5b600435602051811061011a57600080fd5b5060006004351861012a57600080fd5b60006000541861013957600080fd5b600260043560e05260c052604060c020541561015457600080fd5b7f6033600c60003960336000f33660006000376110006000366000730000000000610160526c010000000000000000000000006000540261017b527f5af4602c57600080fd5b6110006000f30000000000000000000000000000000061018f5260606101606000f0806101c657600080fd5b61014052610140513b6101d857600080fd5b6101405130186101e757600080fd5b6000600060246366d38203610200526004356102205261021c6000610140515af161021157600080fd5b61014051600260043560e05260c052604060c0205560043560036101405160e05260c052604060c02055600154600160015401101561024f57600080fd5b600160015401610280526102805160015560043560046102805160e05260c052604060c02055610140516004357f9d42cb017eb05bd8944ab536a8b35bc68085931dd5f4356489801453923953f960006000a36101405160005260206000f350005b6306f2bf6260005114156102f85734156102ca57600080fd5b60043560205181106102db57600080fd5b50600260043560e05260c052604060c0205460005260206000f350005b6359770438600051141561033f57341561031157600080fd5b600435602051811061032257600080fd5b50600360043560e05260c052604060c0205460005260206000f350005b63aa65a6c0600051141561037457341561035857600080fd5b600460043560e05260c052604060c0205460005260206000f350005b631c2bbd18600051141561039b57341561038d57600080fd5b60005460005260206000f350005b639f181b5e60005114156103c25734156103b457600080fd5b60015460005260206000f350005b5b60006000fd5b6100046103cd036100046000396100046103cd036000f3",
+  "deployedBytecode": "0x600436101561000d576103c3565b600035601c52740100000000000000000000000000000000000000006020526f7fffffffffffffffffffffffffffffff6040527fffffffffffffffffffffffffffffffff8000000000000000000000000000000060605274012a05f1fffffffffffffffffffffffffdabf41c006080527ffffffffffffffffffffffffed5fa0e000000000000000000000000000000000060a05263538a3f0e60005114156100f05734156100ba57600080fd5b60043560205181106100cb57600080fd5b50600054156100d957600080fd5b6000600435186100e857600080fd5b600435600055005b631648f38e60005114156102b157341561010957600080fd5b600435602051811061011a57600080fd5b5060006004351861012a57600080fd5b60006000541861013957600080fd5b600260043560e05260c052604060c020541561015457600080fd5b7f6033600c60003960336000f33660006000376110006000366000730000000000610160526c010000000000000000000000006000540261017b527f5af4602c57600080fd5b6110006000f30000000000000000000000000000000061018f5260606101606000f0806101c657600080fd5b61014052610140513b6101d857600080fd5b6101405130186101e757600080fd5b6000600060246366d38203610200526004356102205261021c6000610140515af161021157600080fd5b61014051600260043560e05260c052604060c0205560043560036101405160e05260c052604060c02055600154600160015401101561024f57600080fd5b600160015401610280526102805160015560043560046102805160e05260c052604060c02055610140516004357f9d42cb017eb05bd8944ab536a8b35bc68085931dd5f4356489801453923953f960006000a36101405160005260206000f350005b6306f2bf6260005114156102f85734156102ca57600080fd5b60043560205181106102db57600080fd5b50600260043560e05260c052604060c0205460005260206000f350005b6359770438600051141561033f57341561031157600080fd5b600435602051811061032257600080fd5b50600360043560e05260c052604060c0205460005260206000f350005b63aa65a6c0600051141561037457341561035857600080fd5b600460043560e05260c052604060c0205460005260206000f350005b631c2bbd18600051141561039b57341561038d57600080fd5b60005460005260206000f350005b639f181b5e60005114156103c25734156103b457600080fd5b60015460005260206000f350005b5b60006000fd",
+  "source": "# Modified from UniSwap: https://github.com/uniswap\n\ncontract Exchange():\n    def setup(token_addr: address): modifying\n\nNewExchange: event({token: indexed(address), exchange: indexed(address)})\n\nexchangeTemplate: public(address)\ntokenCount: public(uint256)\ntoken_to_exchange: map(address, address)\nexchange_to_token: map(address, address)\nid_to_token: map(uint256, address)\n\n@public\ndef initializeFactory(template: address):\n    assert self.exchangeTemplate == ZERO_ADDRESS\n    assert template != ZERO_ADDRESS\n    self.exchangeTemplate = template\n\n@public\ndef createExchange(token: address) -> address:\n    assert token != ZERO_ADDRESS\n    assert self.exchangeTemplate != ZERO_ADDRESS\n    assert self.token_to_exchange[token] == ZERO_ADDRESS\n    exchange: address = create_forwarder_to(self.exchangeTemplate)\n    Exchange(exchange).setup(token)\n    self.token_to_exchange[token] = exchange\n    self.exchange_to_token[exchange] = token\n    token_id: uint256 = self.tokenCount + 1\n    self.tokenCount = token_id\n    self.id_to_token[token_id] = token\n    log.NewExchange(token, exchange)\n    return exchange\n\n@public\n@constant\ndef getExchange(token: address) -> address:\n    return self.token_to_exchange[token]\n\n@public\n@constant\ndef getToken(exchange: address) -> address:\n    return self.exchange_to_token[exchange]\n\n@public\n@constant\ndef getTokenWithId(token_id: uint256) -> address:\n    return self.id_to_token[token_id]\n",
+  "sourcePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/uniswap/uniswap_factory.vy",
+  "compiler": {
+    "name": "vyper",
+    "version": "0.1.0b12+commit.32ce6c9"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.16",
+  "updatedAt": "2019-11-11T18:43:02.610Z"
+}

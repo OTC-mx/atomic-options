@@ -1,6 +1,6 @@
 pragma solidity >=0.4.21 <0.6.0;
 
-import "../../lib/StandardToken.sol";
+import "../../lib/openzeppelin-solidity/StandardToken.sol";
 
 contract PoolToken is StandardToken {
 

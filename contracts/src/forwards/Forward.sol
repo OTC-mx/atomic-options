@@ -1,6 +1,6 @@
 pragma solidity >=0.4.21 <0.6.0;
 
-import "../../lib/ERC20.sol";
+import "../../lib/openzeppelin-solidity/ERC20.sol";
 import "../parent_contracts/DerivativeCommon.sol";
 
 /**

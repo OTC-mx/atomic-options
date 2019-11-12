@@ -1,6 +1,6 @@
 pragma solidity >=0.4.21 <0.6.0;
 
-import "../../lib/ERC20.sol";
+import "../../lib/openzeppelin-solidity/ERC20.sol";
 import "./DerivativeCommon.sol";
 
 /**
@@ -70,5 +70,29 @@ contract OptionCommon is DerivativeCommon {
     require(asset_transfer);
 
     state = STATE_EXPIRED;
+  }
+
+  // // Exercise wrappers: required for abstraction
+  // Should all throw errors
+  function exercise_from_asset(uint256 asset_volume_exercised) public {
+    require(false);
+  }
+
+  function exercise_from_base(uint256 base_volume_exercised) public {
+    require(false);
+  }
+
+  function exercise_from_asset(uint256 strike_price_base,
+                                uint256 strike_price_quote,
+                                bytes32 salt,
+                                uint256 asset_volume_exercised) public {
+    require(false);
+  }
+
+  function exercise_from_base(uint256 strike_price_base,
+                              uint256 strike_price_quote,
+                              bytes32 salt,
+                              uint256 base_volume_exercised) public {
+    require(false);
   }
 }

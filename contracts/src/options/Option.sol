@@ -1,6 +1,6 @@
 pragma solidity >=0.4.21 <0.6.0;
 
-import "../../lib/ERC20.sol";
+import "../../lib/openzeppelin-solidity/ERC20.sol";
 import "../parent_contracts/OptionCommon.sol";
 
 /**
@@ -39,7 +39,7 @@ contract Option is OptionCommon {
 
   // Specify how many to sell
   function exercise_from_base(uint256 base_volume_exercised) public {
-    assert(msg.sender == buyer);
+    require(msg.sender == buyer);
 
     uint256 asset_volume_exercised = (base_volume_exercised * strike_price_quote) / strike_price_base;
 

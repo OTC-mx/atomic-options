@@ -1,6 +1,6 @@
 pragma solidity >=0.4.21 <0.6.0;
 
-import "../../lib/ERC20.sol";
+import "../../lib/openzeppelin-solidity/ERC20.sol";
 import "../parent_contracts/OptionCommon.sol";
 
 /**
@@ -61,7 +61,7 @@ contract SilentOption is OptionCommon {
                               uint256 strike_price_quote,
                               bytes32 salt,
                               uint256 base_volume_exercised) public {
-    assert(msg.sender == buyer);
+    require(msg.sender == buyer);
 
     bool hashes_valid = check_hashes(strike_price_base, strike_price_quote, salt);
     require(hashes_valid);
