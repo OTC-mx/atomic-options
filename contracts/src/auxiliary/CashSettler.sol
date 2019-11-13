@@ -24,6 +24,7 @@ contract CashSettler is IArbitrage {
 
   // Temporary variables
   bool eth_payout;
+  bool base_payout;
   bool is_silent;
   uint256 strike_price_base;
   uint256 strike_price_quote;
@@ -62,16 +63,18 @@ contract CashSettler is IArbitrage {
   }
 
   // Functions for arbitrage on standard and silent options
-  function option_arbitrage(uint256 amount, bool _eth_payout) public {
+  function option_arbitrage(uint256 amount, bool _eth_payout, bool _base_payout) public {
     eth_payout = _eth_payout;
+    base_payout = _base_payout;
     is_silent = false;
     flash_lender.borrow(address(0x0), amount, owner, bytes(""));
   }
 
-  function silent_option_arbitrage(uint256 amount, bool _eth_payout,
+  function silent_option_arbitrage(uint256 amount, bool _eth_payout, bool _base_payout,
                                     uint256 _strike_price_base, uint256 _strike_price_quote,
                                     bytes32 _salt) public {
     eth_payout = _eth_payout;
+    base_payout = _base_payout;
     is_silent = true;
     strike_price_base = _strike_price_base;
     strike_price_quote = _strike_price_quote;
@@ -104,6 +107,8 @@ contract CashSettler is IArbitrage {
                                                                   block.timestamp, flash_lender_addr);
     if (eth_payout) {
       asset_exchange.tokenToEthTransferInput(asset_bought - asset_sold, 1, block.timestamp, owner);
+    } else if (base_payout) {
+      asset_exchange.tokenToTokenTransferInput(asset_bought - asset_sold, 1, 1, block.timestamp, owner, base_addr);
     } else {
       asset.transfer(owner, asset_bought - asset_sold);
     }
