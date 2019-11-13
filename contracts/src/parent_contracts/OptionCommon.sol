@@ -74,25 +74,29 @@ contract OptionCommon is DerivativeCommon {
 
   // // Exercise wrappers: required for abstraction
   // Should all throw errors
-  function exercise_from_asset(uint256 asset_volume_exercised) public {
+  function exercise_from_asset(uint256 asset_volume_exercised) public returns (uint256) {
     require(false);
+    return 0;
   }
 
-  function exercise_from_base(uint256 base_volume_exercised) public {
+  function exercise_from_base(uint256 base_volume_exercised) public returns (uint256) {
     require(false);
+    return 0;
   }
 
   function exercise_from_asset(uint256 strike_price_base,
                                 uint256 strike_price_quote,
                                 bytes32 salt,
-                                uint256 asset_volume_exercised) public {
+                                uint256 asset_volume_exercised) public returns (uint256) {
     require(false);
+    return 0;
   }
 
   function exercise_from_base(uint256 strike_price_base,
                               uint256 strike_price_quote,
                               bytes32 salt,
-                              uint256 base_volume_exercised) public {
+                              uint256 base_volume_exercised) public returns (uint256) {
     require(false);
+    return 0;
   }
 }
