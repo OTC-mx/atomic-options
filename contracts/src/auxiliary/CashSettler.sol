@@ -115,4 +115,11 @@ contract CashSettler is IArbitrage {
     require(msg.sender == owner);
     option.transfer_buyer(owner);
   }
+
+  // Refund token to owner
+  // Allows unused TokenizedOption tokens to be reclaimed
+  function refund(address token_addr, uint256 value) public {
+    require(msg.sender == owner);
+    ERC20(token_addr).transfer(owner, value);
+  }
 }
