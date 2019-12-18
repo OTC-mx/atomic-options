@@ -8,15 +8,15 @@
       "type": "constructor"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/Context.sol\":\"Context\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/Context.sol\":{\"keccak256\":\"0xe69db129e15a0204f8b43d2dcce7e3dafce6f5abd7299773275c32552578e6a5\",\"urls\":[\"bzzr://6f720fee54e93a7b5ec991ea6b3d48976c2fe9828713374223a8ff74cb5a40de\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/Context.sol\":\"Context\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/Context.sol\":{\"keccak256\":\"0xe69db129e15a0204f8b43d2dcce7e3dafce6f5abd7299773275c32552578e6a5\",\"urls\":[\"bzzr://6f720fee54e93a7b5ec991ea6b3d48976c2fe9828713374223a8ff74cb5a40de\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.21 <0.6.0;\n\n// Modified from OpenZeppelin: https://github.com/OpenZeppelin/openzeppelin-contracts\n/*\n * @dev Provides information about the current execution context, including the\n * sender of the transaction and its data. While these are generally available\n * via msg.sender and msg.data, they should not be accessed in such a direct\n * manner, since when dealing with GSN meta-transactions the account sending and\n * paying for execution may not be the actual sender (as far as an application\n * is concerned).\n *\n * This contract is only required for intermediate, library-like contracts.\n */\ncontract Context {\n    // Empty internal constructor, to prevent people from mistakenly deploying\n    // an instance of this contract, which should be used via inheritance.\n    constructor () internal { }\n    // solhint-disable-previous-line no-empty-blocks\n\n    function _msgSender() internal view returns (address payable) {\n        return msg.sender;\n    }\n\n    function _msgData() internal view returns (bytes memory) {\n        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691\n        return msg.data;\n    }\n}\n",
-  "sourcePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/Context.sol",
+  "sourcePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/Context.sol",
   "ast": {
-    "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/Context.sol",
+    "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/Context.sol",
     "exportedSymbols": {
       "Context": [
         572
@@ -99,7 +99,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4914,
+                      "referencedDeclaration": 5445,
                       "src": "962:3:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -193,7 +193,7 @@
                     "name": "this",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 4928,
+                    "referencedDeclaration": 5459,
                     "src": "1052:4:6",
                     "typeDescriptions": {
                       "typeIdentifier": "t_contract$_Context_$572",
@@ -213,7 +213,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4914,
+                      "referencedDeclaration": 5445,
                       "src": "1192:3:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -301,7 +301,7 @@
     "src": "0:1210:6"
   },
   "legacyAST": {
-    "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/Context.sol",
+    "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/Context.sol",
     "exportedSymbols": {
       "Context": [
         572
@@ -384,7 +384,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4914,
+                      "referencedDeclaration": 5445,
                       "src": "962:3:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -478,7 +478,7 @@
                     "name": "this",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 4928,
+                    "referencedDeclaration": 5459,
                     "src": "1052:4:6",
                     "typeDescriptions": {
                       "typeIdentifier": "t_contract$_Context_$572",
@@ -498,7 +498,7 @@
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4914,
+                      "referencedDeclaration": 5445,
                       "src": "1192:3:6",
                       "typeDescriptions": {
                         "typeIdentifier": "t_magic_message",
@@ -591,7 +591,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-11-11T18:42:59.709Z",
+  "updatedAt": "2019-12-17T19:06:29.665Z",
   "devdoc": {
     "methods": {}
   },

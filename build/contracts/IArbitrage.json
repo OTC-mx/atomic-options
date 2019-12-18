@@ -33,15 +33,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"token\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\"},{\"name\":\"dest\",\"type\":\"address\"},{\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"executeArbitrage\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IArbitrage.sol\":\"IArbitrage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IArbitrage.sol\":{\"keccak256\":\"0x3d12766b336adee75ef9eeebfc5ba840f524723378e5d62efa308a3f310ccee4\",\"urls\":[\"bzzr://baec029f8c8109765f85c89f6aa2198fb8a61dece033b781d902c421322e5e81\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"token\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\"},{\"name\":\"dest\",\"type\":\"address\"},{\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"executeArbitrage\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IArbitrage.sol\":\"IArbitrage\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IArbitrage.sol\":{\"keccak256\":\"0x3d12766b336adee75ef9eeebfc5ba840f524723378e5d62efa308a3f310ccee4\",\"urls\":[\"bzzr://baec029f8c8109765f85c89f6aa2198fb8a61dece033b781d902c421322e5e81\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// Modified from Marble: https://github.com/marbleprotocol/flash-lending\n/*\n  Copyright 2018 Contra Labs Inc.\n  Licensed under the Apache License, Version 2.0 (the \"License\");\n  you may not use this file except in compliance with the License.\n  You may obtain a copy of the License at\n  http://www.apache.org/licenses/LICENSE-2.0\n  Unless required by applicable law or agreed to in writing, software\n  distributed under the License is distributed on an \"AS IS\" BASIS,\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  See the License for the specific language governing permissions and\n  limitations under the License.\n*/\n\npragma solidity >=0.4.21 <0.6.0;\n\n\ninterface IArbitrage {\n    function executeArbitrage(\n      address token,\n      uint256 amount,\n      address dest,\n      bytes calldata data\n    )\n      external\n      returns (bool);\n}\n",
-  "sourcePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IArbitrage.sol",
+  "sourcePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IArbitrage.sol",
   "ast": {
-    "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IArbitrage.sol",
+    "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IArbitrage.sol",
     "exportedSymbols": {
       "IArbitrage": [
         442
@@ -246,7 +246,7 @@
     "src": "650:223:3"
   },
   "legacyAST": {
-    "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IArbitrage.sol",
+    "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IArbitrage.sol",
     "exportedSymbols": {
       "IArbitrage": [
         442
@@ -456,7 +456,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-11-11T18:42:59.705Z",
+  "updatedAt": "2019-12-17T19:06:29.663Z",
   "devdoc": {
     "methods": {}
   },

@@ -61,15 +61,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"token\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"repay\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"token\",\"type\":\"address\"},{\"name\":\"borrower\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"borrowFor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"token\",\"type\":\"address\"}],\"name\":\"totalSupplyOf\",\"outputs\":[{\"name\":\"balance\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IBank.sol\":\"IBank\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IBank.sol\":{\"keccak256\":\"0xd7014b5eb604e1fcfc08034164f507bc7cce771c7a5053fe1a42e94a69e09d83\",\"urls\":[\"bzzr://46c3dff23f556a0ff0a188d1231e041716259f8f2529c16bb2cc948c5ec4f027\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"token\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"repay\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"token\",\"type\":\"address\"},{\"name\":\"borrower\",\"type\":\"address\"},{\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"borrowFor\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"token\",\"type\":\"address\"}],\"name\":\"totalSupplyOf\",\"outputs\":[{\"name\":\"balance\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IBank.sol\":\"IBank\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IBank.sol\":{\"keccak256\":\"0xd7014b5eb604e1fcfc08034164f507bc7cce771c7a5053fe1a42e94a69e09d83\",\"urls\":[\"bzzr://46c3dff23f556a0ff0a188d1231e041716259f8f2529c16bb2cc948c5ec4f027\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "// Modified from Marble: https://github.com/marbleprotocol/flash-lending\n/*\n  Copyright 2018 Contra Labs Inc.\n  Licensed under the Apache License, Version 2.0 (the \"License\");\n  you may not use this file except in compliance with the License.\n  You may obtain a copy of the License at\n  http://www.apache.org/licenses/LICENSE-2.0\n  Unless required by applicable law or agreed to in writing, software\n  distributed under the License is distributed on an \"AS IS\" BASIS,\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  See the License for the specific language governing permissions and\n  limitations under the License.\n*/\n\npragma solidity >=0.4.21 <0.6.0;\n\n\ninterface IBank {\n    function totalSupplyOf(address token) external view returns (uint256 balance);\n    function borrowFor(address token, address borrower, uint256 amount) external;\n    function repay(address token, uint256 amount) external payable;\n}\n",
-  "sourcePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IBank.sol",
+  "sourcePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IBank.sol",
   "ast": {
-    "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IBank.sol",
+    "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IBank.sol",
     "exportedSymbols": {
       "IBank": [
         468
@@ -384,7 +384,7 @@
     "src": "650:288:4"
   },
   "legacyAST": {
-    "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IBank.sol",
+    "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/interface/IBank.sol",
     "exportedSymbols": {
       "IBank": [
         468
@@ -704,7 +704,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-11-11T18:42:59.706Z",
+  "updatedAt": "2019-12-17T19:06:29.664Z",
   "devdoc": {
     "methods": {}
   },

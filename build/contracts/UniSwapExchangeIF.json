@@ -126,15 +126,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"tokens_sold\",\"type\":\"uint256\"},{\"name\":\"min_eth\",\"type\":\"uint256\"},{\"name\":\"deadline\",\"type\":\"uint256\"},{\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"tokenToEthTransferInput\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"eth_bought\",\"type\":\"uint256\"},{\"name\":\"max_tokens\",\"type\":\"uint256\"},{\"name\":\"deadline\",\"type\":\"uint256\"},{\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"tokenToEthTransferOutput\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"min_tokens\",\"type\":\"uint256\"},{\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"ethToTokenSwapInput\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"tokens_sold\",\"type\":\"uint256\"},{\"name\":\"min_tokens_bought\",\"type\":\"uint256\"},{\"name\":\"min_eth_bought\",\"type\":\"uint256\"},{\"name\":\"deadline\",\"type\":\"uint256\"},{\"name\":\"recipient\",\"type\":\"address\"},{\"name\":\"token_addr\",\"type\":\"address\"}],\"name\":\"tokenToTokenTransferInput\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Karim/Desktop/atomicoptions/contracts/lib/uniswap/UniSwapExchangeIF.sol\":\"UniSwapExchangeIF\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Karim/Desktop/atomicoptions/contracts/lib/uniswap/UniSwapExchangeIF.sol\":{\"keccak256\":\"0x98d3d9e3cf8090f32afbf8cc00e4ba7617c14f2ae5dfa5ce692ba565804a654a\",\"urls\":[\"bzzr://07bf3fbfbd8fb22511bc47a5faea20848e40e91df1b438e28d95f0fd1ed45d6b\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"tokens_sold\",\"type\":\"uint256\"},{\"name\":\"min_eth\",\"type\":\"uint256\"},{\"name\":\"deadline\",\"type\":\"uint256\"},{\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"tokenToEthTransferInput\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"eth_bought\",\"type\":\"uint256\"},{\"name\":\"max_tokens\",\"type\":\"uint256\"},{\"name\":\"deadline\",\"type\":\"uint256\"},{\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"tokenToEthTransferOutput\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"min_tokens\",\"type\":\"uint256\"},{\"name\":\"deadline\",\"type\":\"uint256\"}],\"name\":\"ethToTokenSwapInput\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"tokens_sold\",\"type\":\"uint256\"},{\"name\":\"min_tokens_bought\",\"type\":\"uint256\"},{\"name\":\"min_eth_bought\",\"type\":\"uint256\"},{\"name\":\"deadline\",\"type\":\"uint256\"},{\"name\":\"recipient\",\"type\":\"address\"},{\"name\":\"token_addr\",\"type\":\"address\"}],\"name\":\"tokenToTokenTransferInput\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/uniswap/UniSwapExchangeIF.sol\":\"UniSwapExchangeIF\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/uniswap/UniSwapExchangeIF.sol\":{\"keccak256\":\"0x98d3d9e3cf8090f32afbf8cc00e4ba7617c14f2ae5dfa5ce692ba565804a654a\",\"urls\":[\"bzzr://07bf3fbfbd8fb22511bc47a5faea20848e40e91df1b438e28d95f0fd1ed45d6b\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity >=0.4.21 <0.6.0;\n\ncontract UniSwapExchangeIF {\n  function ethToTokenSwapInput(uint256 min_tokens, uint256 deadline) external payable returns (uint256);\n  function tokenToEthTransferInput(uint256 tokens_sold, uint256 min_eth,\n                                    uint256 deadline, address recipient) external returns (uint256);\n  function tokenToEthTransferOutput(uint256 eth_bought, uint256 max_tokens,\n                                    uint256 deadline, address recipient) external returns (uint256);\n  function tokenToTokenTransferInput(uint256 tokens_sold, uint256 min_tokens_bought,\n                                      uint256 min_eth_bought, uint256 deadline,\n                                      address recipient, address token_addr) external returns (uint256);\n}\n",
-  "sourcePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/uniswap/UniSwapExchangeIF.sol",
+  "sourcePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/uniswap/UniSwapExchangeIF.sol",
   "ast": {
-    "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/uniswap/UniSwapExchangeIF.sol",
+    "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/uniswap/UniSwapExchangeIF.sol",
     "exportedSymbols": {
       "UniSwapExchangeIF": [
         1175
@@ -818,7 +818,7 @@
     "src": "0:791:13"
   },
   "legacyAST": {
-    "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/uniswap/UniSwapExchangeIF.sol",
+    "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/uniswap/UniSwapExchangeIF.sol",
     "exportedSymbols": {
       "UniSwapExchangeIF": [
         1175
@@ -1507,7 +1507,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-11-13T17:22:08.683Z",
+  "updatedAt": "2019-12-17T19:06:29.673Z",
   "devdoc": {
     "methods": {}
   },

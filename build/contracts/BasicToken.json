@@ -80,15 +80,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"name\":\"balance\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_to\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"}],\"devdoc\":{\"details\":\"Basic version of StandardToken, with no allowances.\",\"methods\":{\"balanceOf(address)\":{\"details\":\"Gets the balance of the specified address.\",\"params\":{\"_owner\":\"The address to query the the balance of.\"},\"return\":\"An uint256 representing the amount owned by the passed address.\"},\"transfer(address,uint256)\":{\"details\":\"transfer token for a specified address\",\"params\":{\"_to\":\"The address to transfer to.\",\"_value\":\"The amount to be transferred.\"}}},\"title\":\"Basic token\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/BasicToken.sol\":\"BasicToken\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/BasicToken.sol\":{\"keccak256\":\"0xafaa8ffb7469de8259fad4104318a18be0eb8199d8460456d633af6541c3acba\",\"urls\":[\"bzzr://febedba0421105c00791e1f9e8f5d92747b04d7c08160e7721d70b7db364be98\"]},\"/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20Basic.sol\":{\"keccak256\":\"0x2bf0f16772c6ff99e8e82a1135743610a75ef498ad118936d737f6058d4fd246\",\"urls\":[\"bzzr://98e5660b5978ff32d60da587ff2f73de0437818ab29841c095c234d5d10458ea\"]},\"/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/SafeMath.sol\":{\"keccak256\":\"0x129a46aa3bbaee3d13970d0d1a61151eafd37c44cf66da7ba2c7a6d50a0041d4\",\"urls\":[\"bzzr://dd3d2cd66008201d18786f04903e8faff28eee81a14dc790268b7d5e3be963d2\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b506103a4806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806318160ddd1461004657806370a0823114610064578063a9059cbb146100bc575b600080fd5b61004e610122565b6040518082815260200191505060405180910390f35b6100a66004803603602081101561007a57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610128565b6040518082815260200191505060405180910390f35b610108600480360360408110156100d257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610171565b604051808215151515815260200191505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050919050565b60008073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff1614156101ac57600080fd5b6101fe82600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461034590919063ffffffff16565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555061029382600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461035c90919063ffffffff16565b600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a36001905092915050565b60008282111561035157fe5b818303905092915050565b60008082840190508381101561036e57fe5b809150509291505056fea165627a7a72305820a4b5912a7aa20d544d1a50689312c82824f62d8c552ef484755b271db4e5390d0029",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806318160ddd1461004657806370a0823114610064578063a9059cbb146100bc575b600080fd5b61004e610122565b6040518082815260200191505060405180910390f35b6100a66004803603602081101561007a57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610128565b6040518082815260200191505060405180910390f35b610108600480360360408110156100d257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610171565b604051808215151515815260200191505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050919050565b60008073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff1614156101ac57600080fd5b6101fe82600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461034590919063ffffffff16565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555061029382600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461035c90919063ffffffff16565b600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a36001905092915050565b60008282111561035157fe5b818303905092915050565b60008082840190508381101561036e57fe5b809150509291505056fea165627a7a72305820a4b5912a7aa20d544d1a50689312c82824f62d8c552ef484755b271db4e5390d0029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"name\":\"balance\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_to\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"}],\"devdoc\":{\"details\":\"Basic version of StandardToken, with no allowances.\",\"methods\":{\"balanceOf(address)\":{\"details\":\"Gets the balance of the specified address.\",\"params\":{\"_owner\":\"The address to query the the balance of.\"},\"return\":\"An uint256 representing the amount owned by the passed address.\"},\"transfer(address,uint256)\":{\"details\":\"transfer token for a specified address\",\"params\":{\"_to\":\"The address to transfer to.\",\"_value\":\"The amount to be transferred.\"}}},\"title\":\"Basic token\"},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/BasicToken.sol\":\"BasicToken\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/BasicToken.sol\":{\"keccak256\":\"0xafaa8ffb7469de8259fad4104318a18be0eb8199d8460456d633af6541c3acba\",\"urls\":[\"bzzr://febedba0421105c00791e1f9e8f5d92747b04d7c08160e7721d70b7db364be98\"]},\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20Basic.sol\":{\"keccak256\":\"0x2bf0f16772c6ff99e8e82a1135743610a75ef498ad118936d737f6058d4fd246\",\"urls\":[\"bzzr://98e5660b5978ff32d60da587ff2f73de0437818ab29841c095c234d5d10458ea\"]},\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/SafeMath.sol\":{\"keccak256\":\"0x129a46aa3bbaee3d13970d0d1a61151eafd37c44cf66da7ba2c7a6d50a0041d4\",\"urls\":[\"bzzr://dd3d2cd66008201d18786f04903e8faff28eee81a14dc790268b7d5e3be963d2\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506103a4806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806318160ddd1461004657806370a0823114610064578063a9059cbb146100bc575b600080fd5b61004e610122565b6040518082815260200191505060405180910390f35b6100a66004803603602081101561007a57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610128565b6040518082815260200191505060405180910390f35b610108600480360360408110156100d257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610171565b604051808215151515815260200191505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050919050565b60008073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff1614156101ac57600080fd5b6101fe82600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461034590919063ffffffff16565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555061029382600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461035c90919063ffffffff16565b600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a36001905092915050565b60008282111561035157fe5b818303905092915050565b60008082840190508381101561036e57fe5b809150509291505056fea165627a7a723058204ef64da24c0173ab296d3bc9102a2a1e84091a54724989a299b13c4836acf2690029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806318160ddd1461004657806370a0823114610064578063a9059cbb146100bc575b600080fd5b61004e610122565b6040518082815260200191505060405180910390f35b6100a66004803603602081101561007a57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610128565b6040518082815260200191505060405180910390f35b610108600480360360408110156100d257600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff16906020019092919080359060200190929190505050610171565b604051808215151515815260200191505060405180910390f35b60005481565b6000600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050919050565b60008073ffffffffffffffffffffffffffffffffffffffff168373ffffffffffffffffffffffffffffffffffffffff1614156101ac57600080fd5b6101fe82600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461034590919063ffffffff16565b600160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555061029382600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205461035c90919063ffffffff16565b600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a36001905092915050565b60008282111561035157fe5b818303905092915050565b60008082840190508381101561036e57fe5b809150509291505056fea165627a7a723058204ef64da24c0173ab296d3bc9102a2a1e84091a54724989a299b13c4836acf2690029",
   "sourceMap": "264:911:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;264:911:5;;;;;;;",
   "deployedSourceMap": "264:911:5:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;264:911:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;272:26:8;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1065:107:5;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1065:107:5;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;524:339;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;524:339:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;272:26:8;;;;:::o;1065:107:5:-;1121:15;1151:8;:16;1160:6;1151:16;;;;;;;;;;;;;;;;1144:23;;1065:107;;;:::o;524:339::-;587:4;622:1;607:17;;:3;:17;;;;599:26;;;;;;718:32;743:6;718:8;:20;727:10;718:20;;;;;;;;;;;;;;;;:24;;:32;;;;:::i;:::-;695:8;:20;704:10;695:20;;;;;;;;;;;;;;;:55;;;;772:25;790:6;772:8;:13;781:3;772:13;;;;;;;;;;;;;;;;:17;;:25;;;;:::i;:::-;756:8;:13;765:3;756:13;;;;;;;;;;;;;;;:41;;;;829:3;808:33;;817:10;808:33;;;834:6;808:33;;;;;;;;;;;;;;;;;;854:4;847:11;;524:339;;;;:::o;647:110:11:-;705:7;732:1;727;:6;;720:14;;;;751:1;747;:5;740:12;;647:110;;;;:::o;761:129::-;819:7;834:9;850:1;846;:5;834:17;;869:1;864;:6;;857:14;;;;884:1;877:8;;;761:129;;;;:::o",
   "source": "pragma solidity >=0.4.21 <0.6.0;\n\n\nimport './ERC20Basic.sol';\nimport './SafeMath.sol';\n\n// Modified from OpenZeppelin: https://github.com/OpenZeppelin/openzeppelin-contracts\n/**\n * @title Basic token\n * @dev Basic version of StandardToken, with no allowances.\n */\ncontract BasicToken is ERC20Basic {\n  using SafeMath for uint256;\n\n  mapping(address => uint256) balances;\n\n  /**\n  * @dev transfer token for a specified address\n  * @param _to The address to transfer to.\n  * @param _value The amount to be transferred.\n  */\n  function transfer(address _to, uint256 _value) public returns (bool) {\n    require(_to != address(0));\n\n    // SafeMath.sub will throw if there is not enough balance.\n    balances[msg.sender] = balances[msg.sender].sub(_value);\n    balances[_to] = balances[_to].add(_value);\n    emit Transfer(msg.sender, _to, _value);\n    return true;\n  }\n\n  /**\n  * @dev Gets the balance of the specified address.\n  * @param _owner The address to query the the balance of.\n  * @return An uint256 representing the amount owned by the passed address.\n  */\n  function balanceOf(address _owner) public view returns (uint256 balance) {\n    return balances[_owner];\n  }\n\n}\n",
-  "sourcePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/BasicToken.sol",
+  "sourcePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/BasicToken.sol",
   "ast": {
-    "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/BasicToken.sol",
+    "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/BasicToken.sol",
     "exportedSymbols": {
       "BasicToken": [
         545
@@ -112,7 +112,7 @@
         "src": "0:32:5"
       },
       {
-        "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20Basic.sol",
+        "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20Basic.sol",
         "file": "./ERC20Basic.sol",
         "id": 471,
         "nodeType": "ImportDirective",
@@ -123,7 +123,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/SafeMath.sol",
+        "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/SafeMath.sol",
         "file": "./SafeMath.sol",
         "id": 472,
         "nodeType": "ImportDirective",
@@ -350,10 +350,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4917,
-                        4918
+                        5448,
+                        5449
                       ],
-                      "referencedDeclaration": 4917,
+                      "referencedDeclaration": 5448,
                       "src": "599:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -410,7 +410,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4914,
+                          "referencedDeclaration": 5445,
                           "src": "704:3:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -492,7 +492,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4914,
+                              "referencedDeclaration": 5445,
                               "src": "727:3:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -726,7 +726,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4914,
+                          "referencedDeclaration": 5445,
                           "src": "817:3:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1092,7 +1092,7 @@
     "src": "0:1176:5"
   },
   "legacyAST": {
-    "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/BasicToken.sol",
+    "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/BasicToken.sol",
     "exportedSymbols": {
       "BasicToken": [
         545
@@ -1116,7 +1116,7 @@
         "src": "0:32:5"
       },
       {
-        "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20Basic.sol",
+        "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20Basic.sol",
         "file": "./ERC20Basic.sol",
         "id": 471,
         "nodeType": "ImportDirective",
@@ -1127,7 +1127,7 @@
         "unitAlias": ""
       },
       {
-        "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/SafeMath.sol",
+        "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/SafeMath.sol",
         "file": "./SafeMath.sol",
         "id": 472,
         "nodeType": "ImportDirective",
@@ -1354,10 +1354,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4917,
-                        4918
+                        5448,
+                        5449
                       ],
-                      "referencedDeclaration": 4917,
+                      "referencedDeclaration": 5448,
                       "src": "599:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1414,7 +1414,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4914,
+                          "referencedDeclaration": 5445,
                           "src": "704:3:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1496,7 +1496,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4914,
+                              "referencedDeclaration": 5445,
                               "src": "727:3:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1730,7 +1730,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 4914,
+                          "referencedDeclaration": 5445,
                           "src": "817:3:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2101,7 +2101,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-11-11T18:42:59.707Z",
+  "updatedAt": "2019-12-17T19:06:29.664Z",
   "devdoc": {
     "details": "Basic version of StandardToken, with no allowances.",
     "methods": {

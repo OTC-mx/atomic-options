@@ -16,15 +16,15 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"ETH\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/Transfer.sol\":\"Transfer\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/Transfer.sol\":{\"keccak256\":\"0x9a6944757e924951561ef90101dc123a88b63d9eb787837548da56d2cccd3023\",\"urls\":[\"bzzr://c7aca6848828b8e9e48abca6fdec37543db6016fb9a1d9dfdbd5f73aaad1ed26\"]},\"/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20.sol\":{\"keccak256\":\"0x67248085be028b5abbaa9210696c46ba4385f4ac41f383225fa6222c016b4828\",\"urls\":[\"bzzr://5bc567de93cce93eee5c3053a80a21962d879c0f2aed444bb50abf8d27b61bed\"]},\"/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20Basic.sol\":{\"keccak256\":\"0x2bf0f16772c6ff99e8e82a1135743610a75ef498ad118936d737f6058d4fd246\",\"urls\":[\"bzzr://98e5660b5978ff32d60da587ff2f73de0437818ab29841c095c234d5d10458ea\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5060a68061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80638322fff214602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008156fea165627a7a72305820e3a1ecbfb458d37c9c449618aa1b1ea5bcd5d9b42d560397b364a3db2f23450b0029",
-  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80638322fff214602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008156fea165627a7a72305820e3a1ecbfb458d37c9c449618aa1b1ea5bcd5d9b42d560397b364a3db2f23450b0029",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"ETH\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/Transfer.sol\":\"Transfer\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/Transfer.sol\":{\"keccak256\":\"0x9a6944757e924951561ef90101dc123a88b63d9eb787837548da56d2cccd3023\",\"urls\":[\"bzzr://c7aca6848828b8e9e48abca6fdec37543db6016fb9a1d9dfdbd5f73aaad1ed26\"]},\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20.sol\":{\"keccak256\":\"0x67248085be028b5abbaa9210696c46ba4385f4ac41f383225fa6222c016b4828\",\"urls\":[\"bzzr://5bc567de93cce93eee5c3053a80a21962d879c0f2aed444bb50abf8d27b61bed\"]},\"/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20Basic.sol\":{\"keccak256\":\"0x2bf0f16772c6ff99e8e82a1135743610a75ef498ad118936d737f6058d4fd246\",\"urls\":[\"bzzr://98e5660b5978ff32d60da587ff2f73de0437818ab29841c095c234d5d10458ea\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060a68061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80638322fff214602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008156fea165627a7a72305820e05843a96b1842960497e067144665277abd6174cda3cd250fdf78832c68a7f20029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80638322fff214602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b60008156fea165627a7a72305820e05843a96b1842960497e067144665277abd6174cda3cd250fdf78832c68a7f20029",
   "sourceMap": "731:1315:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;731:1315:2;;;;;;;",
   "deployedSourceMap": "731:1315:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;731:1315:2;;;;;;;;;;;;;;;;;;;756:42;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;794:3;756:42;:::o",
   "source": "// Modified from Marble: https://github.com/marbleprotocol/flash-lending\n/*\n  Copyright 2018 Contra Labs Inc.\n  Licensed under the Apache License, Version 2.0 (the \"License\");\n  you may not use this file except in compliance with the License.\n  You may obtain a copy of the License at\n  http://www.apache.org/licenses/LICENSE-2.0\n  Unless required by applicable law or agreed to in writing, software\n  distributed under the License is distributed on an \"AS IS\" BASIS,\n  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n  See the License for the specific language governing permissions and\n  limitations under the License.\n*/\n\npragma solidity >=0.4.21 <0.6.0;\n\nimport \"../openzeppelin-solidity/ERC20.sol\";\n\n\ncontract Transfer {\n\n    address constant public ETH = address(0x0);\n\n    /**\n    * @dev Transfer tokens from this contract to an account.\n    * @param token Address of token to transfer. 0x0 for ETH\n    * @param to Address to send tokens to.\n    * @param amount Amount of token to send.\n    */\n    function transfer(address token, address to, uint256 amount) internal returns (bool) {\n        if (token == ETH) {\n            address payable to_payable = address(uint160(to));\n            to_payable.transfer(amount);\n        } else {\n            require(ERC20(token).transfer(to, amount));\n        }\n        return true;\n    }\n\n    /**\n    * @dev Transfer tokens from an account to this contract.\n    * @param token Address of token to transfer. 0x0 for ETH\n    * @param from Address to send tokens from.\n    * @param to Address to send tokens to.\n    * @param amount Amount of token to send.\n    */\n    function transferFrom(\n        address token,\n        address from,\n        address to,\n        uint256 amount\n    )\n        internal\n        returns (bool)\n    {\n        require(token == ETH && msg.value == amount || msg.value == 0);\n\n        if (token != ETH) {\n            // Remember to approve first\n            require(ERC20(token).transferFrom(from, to, amount));\n        }\n        return true;\n    }\n\n}\n",
-  "sourcePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/Transfer.sol",
+  "sourcePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/Transfer.sol",
   "ast": {
-    "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/Transfer.sol",
+    "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/Transfer.sol",
     "exportedSymbols": {
       "Transfer": [
         426
@@ -48,7 +48,7 @@
         "src": "650:32:2"
       },
       {
-        "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20.sol",
+        "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20.sol",
         "file": "../openzeppelin-solidity/ERC20.sol",
         "id": 328,
         "nodeType": "ImportDirective",
@@ -344,10 +344,10 @@
                             "name": "require",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
-                              4917,
-                              4918
+                              5448,
+                              5449
                             ],
-                            "referencedDeclaration": 4917,
+                            "referencedDeclaration": 5448,
                             "src": "1278:7:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -838,7 +838,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4914,
+                                "referencedDeclaration": 5445,
                                 "src": "1831:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -907,7 +907,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4914,
+                              "referencedDeclaration": 5445,
                               "src": "1854:3:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -972,10 +972,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4917,
-                        4918
+                        5448,
+                        5449
                       ],
-                      "referencedDeclaration": 4917,
+                      "referencedDeclaration": 5448,
                       "src": "1807:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1206,10 +1206,10 @@
                             "name": "require",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
-                              4917,
-                              4918
+                              5448,
+                              5449
                             ],
-                            "referencedDeclaration": 4917,
+                            "referencedDeclaration": 5448,
                             "src": "1953:7:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1431,7 +1431,7 @@
     "src": "650:1397:2"
   },
   "legacyAST": {
-    "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/flash-lending/Transfer.sol",
+    "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/flash-lending/Transfer.sol",
     "exportedSymbols": {
       "Transfer": [
         426
@@ -1455,7 +1455,7 @@
         "src": "650:32:2"
       },
       {
-        "absolutePath": "/Users/Karim/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20.sol",
+        "absolutePath": "/Users/Karim 1/Desktop/atomicoptions/contracts/lib/openzeppelin-solidity/ERC20.sol",
         "file": "../openzeppelin-solidity/ERC20.sol",
         "id": 328,
         "nodeType": "ImportDirective",
@@ -1751,10 +1751,10 @@
                             "name": "require",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
-                              4917,
-                              4918
+                              5448,
+                              5449
                             ],
-                            "referencedDeclaration": 4917,
+                            "referencedDeclaration": 5448,
                             "src": "1278:7:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2245,7 +2245,7 @@
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 4914,
+                                "referencedDeclaration": 5445,
                                 "src": "1831:3:2",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
@@ -2314,7 +2314,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4914,
+                              "referencedDeclaration": 5445,
                               "src": "1854:3:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -2379,10 +2379,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        4917,
-                        4918
+                        5448,
+                        5449
                       ],
-                      "referencedDeclaration": 4917,
+                      "referencedDeclaration": 5448,
                       "src": "1807:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2613,10 +2613,10 @@
                             "name": "require",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
-                              4917,
-                              4918
+                              5448,
+                              5449
                             ],
-                            "referencedDeclaration": 4917,
+                            "referencedDeclaration": 5448,
                             "src": "1953:7:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2843,7 +2843,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.16",
-  "updatedAt": "2019-11-11T18:42:59.703Z",
+  "updatedAt": "2019-12-17T19:06:29.662Z",
   "devdoc": {
     "methods": {}
   },
